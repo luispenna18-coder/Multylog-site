@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multylog — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #ffffff;
+      color: #1C1C1E;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    /* ── Tokens ── */
+    :root {
+      --color-brand:        #CC0000;
+      --color-brand-dark:   #A80000;
+      --color-dark:         #1C1C1E;
+      --color-gold:         #C8973A;
+      --color-surface:      #F5F5F7;
+      --color-surface-dark: #E5E5E7;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-sans:    'Outfit', sans-serif;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 88rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: clamp(1rem, 4vw, 3rem);
+      padding-right: clamp(1rem, 4vw, 3rem);
+    }
+    .section { padding-top: clamp(2.5rem, 5vw, 5rem); padding-bottom: clamp(2.5rem, 5vw, 5rem); }
+    .section + .section { border-top: 1px solid #E5E5E7; }
+
+    /* ── Typography ── */
+    .font-display { font-family: var(--font-display); }
+    h1.ds { font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 5rem); line-height: 1; letter-spacing: 0.02em; }
+    h2.ds { font-family: var(--font-display); font-size: clamp(1.6rem, 2.8vw, 3rem); line-height: 1.1; letter-spacing: 0.02em; }
+    h3.ds { font-family: var(--font-display); font-size: clamp(1.2rem, 2vw, 2rem); line-height: 1.2; letter-spacing: 0.02em; }
+
+    /* ── Page header ── */
+    .page-header {
+      background: var(--color-dark);
+      color: #fff;
+      padding: 3rem clamp(1rem, 4vw, 3rem);
+    }
+    .page-header h1 { font-family: var(--font-display); font-size: 3rem; letter-spacing: 0.04em; }
+    .page-header p  { color: #A0A0A4; margin-top: 0.5rem; font-size: 1rem; }
+
+    /* ── Section title ── */
+    .ds-section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #888;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    /* ── Color swatches ── */
+    .swatch-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .swatch {
+      display: flex; flex-direction: column; gap: 0.5rem;
+      width: 120px;
+    }
+    .swatch-color {
+      width: 120px; height: 80px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .swatch-name  { font-size: 0.75rem; font-weight: 600; color: #1C1C1E; }
+    .swatch-hex   { font-size: 0.7rem; color: #888; font-family: monospace; }
+
+    /* ── Type scale ── */
+    .type-row { display: flex; align-items: baseline; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px solid #F0F0F2; padding-bottom: 1.5rem; }
+    .type-label { width: 140px; flex-shrink: 0; font-size: 0.7rem; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.6; }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .badge-line { width: 1.5rem; height: 2px; background: var(--color-brand); }
+    .badge-text { color: var(--color-brand); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; }
+
+    /* ── Divider ── */
+    .divider-red { width: 3rem; height: 2px; background: var(--color-brand); margin-bottom: 1.25rem; }
+
+    /* ── Buttons ── */
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans); font-weight: 600; font-size: 0.875rem; cursor: pointer; border: none; transition: background 0.15s, color 0.15s, border-color 0.15s; text-decoration: none; }
+    .btn-primary    { background: var(--color-brand); color: #fff; padding: 0.875rem 1.75rem; }
+    .btn-primary:hover { background: var(--color-brand-dark); }
+    .btn-secondary  { background: transparent; color: #aaa; border: 1px solid #666; padding: 0.875rem 1.75rem; }
+    .btn-secondary:hover { border-color: #fff; color: #fff; }
+    .btn-whatsapp   { background: #25D366; color: #fff; padding: 0.75rem 1.5rem; border-radius: 9999px; }
+    .btn-whatsapp:hover { background: #1ebe59; }
+    .btn-link       { background: transparent; color: var(--color-brand); padding: 0; font-size: 0.875rem; }
+    .btn-link:hover { color: var(--color-brand-dark); }
+
+    .btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+
+    /* ── Cards ── */
+    .card {
+      background: #fff;
+      border-radius: 0.75rem;
+      border: 1px solid #E5E5E7;
+      padding: 1.5rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { border-color: rgba(204,0,0,0.3); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; }
+
+    /* ── Hero overlay ── */
+    .hero-overlay-demo {
+      background: linear-gradient(to right, rgba(28,28,30,0.88) 40%, rgba(28,28,30,0.40) 65%, rgba(28,28,30,0.05) 100%);
+      height: 140px; border-radius: 12px;
+      display: flex; align-items: center;
+      padding-left: 2rem;
+      color: #fff;
+      font-size: 0.8rem;
+      font-family: monospace;
+    }
+
+    /* ── Spacing scale ── */
+    .spacing-row { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 0.75rem; }
+    .spacing-bar { background: var(--color-brand); height: 12px; border-radius: 3px; opacity: 0.85; }
+    .spacing-label { font-size: 0.75rem; color: #888; width: 220px; flex-shrink: 0; }
+
+    /* ── Dark bg demo ── */
+    .dark-bg { background: var(--color-dark); color: #fff; padding: 2rem; border-radius: 12px; }
+    .dark-bg .btn-secondary { color: #aaa; }
+
+    /* ── Nav sections ── */
+    nav.ds-nav {
+      position: sticky; top: 0; z-index: 10;
+      background: #fff;
+      border-bottom: 1px solid #E5E5E7;
+      padding: 0.75rem clamp(1rem, 4vw, 3rem);
+      display: flex; gap: 1.5rem; overflow-x: auto;
+    }
+    nav.ds-nav a {
+      font-size: 0.8rem; font-weight: 600; color: #888; text-decoration: none;
+      white-space: nowrap; padding: 0.25rem 0; border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    nav.ds-nav a:hover { color: var(--color-brand); border-bottom-color: var(--color-brand); }
+  </style>
+</head>
+<body>
+
+<!-- Page header -->
+<div class="page-header">
+  <div class="container">
+    <h1>MULTYLOG</h1>
+    <p>Design System — referência visual e de componentes</p>
+  </div>
+</div>
+
+<!-- Sticky nav -->
+<nav class="ds-nav">
+  <a href="#cores">Cores</a>
+  <a href="#tipografia">Tipografia</a>
+  <a href="#botoes">Botões</a>
+  <a href="#componentes">Componentes</a>
+  <a href="#espacamento">Espaçamento</a>
+  <a href="#hero">Hero / Overlay</a>
+  <a href="#backgrounds">Backgrounds</a>
+</nav>
+
+<!-- ── 1. CORES ── -->
+<section class="section" id="cores">
+  <div class="container">
+    <span class="ds-section-label">01 — Paleta de cores</span>
+
+    <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888;margin-bottom:1rem;">Marca</p>
+    <div class="swatch-grid" style="margin-bottom:2.5rem;">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#CC0000;"></div>
+        <span class="swatch-name">Brand</span>
+        <span class="swatch-hex">#CC0000 — --color-brand</span>
+        <span class="swatch-hex" style="color:#aaa;">CTA, ícones, badges ativos</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#A80000;"></div>
+        <span class="swatch-name">Brand Dark</span>
+        <span class="swatch-hex">#A80000 — --color-brand-dark</span>
+        <span class="swatch-hex" style="color:#aaa;">Hover do botão vermelho</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1C1C1E;"></div>
+        <span class="swatch-name">Dark</span>
+        <span class="swatch-hex">#1C1C1E — --color-dark</span>
+        <span class="swatch-hex" style="color:#aaa;">Navbar, hero, footer, seções escuras</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C8973A;"></div>
+        <span class="swatch-name">Gold</span>
+        <span class="swatch-hex">#C8973A — --color-gold</span>
+        <span class="swatch-hex" style="color:#aaa;">Uso pontual — selos/prêmios</span>
+      </div>
+    </div>
+
+    <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888;margin-bottom:1rem;">Superfícies</p>
+    <div class="swatch-grid" style="margin-bottom:2.5rem;">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F5F5F7;"></div>
+        <span class="swatch-name">Surface</span>
+        <span class="swatch-hex">#F5F5F7 — --color-surface</span>
+        <span class="swatch-hex" style="color:#aaa;">Fundo seções claras</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#E5E5E7;"></div>
+        <span class="swatch-name">Surface Dark</span>
+        <span class="swatch-hex">#E5E5E7 — --color-surface-dark</span>
+        <span class="swatch-hex" style="color:#aaa;">Hover sobre surface</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FFFFFF; border:1px solid #E5E5E7;"></div>
+        <span class="swatch-name">White</span>
+        <span class="swatch-hex">#FFFFFF</span>
+        <span class="swatch-hex" style="color:#aaa;">Cards, painéis internos</span>
+      </div>
+    </div>
+
+    <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888;margin-bottom:1rem;">Especial — Seção Vantagens da Locação</p>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0D1B2E;"></div>
+        <span class="swatch-name">Navy</span>
+        <span class="swatch-hex">#0D1B2E</span>
+        <span class="swatch-hex" style="color:#aaa;">Apenas na seção de vantagens. Nunca no footer, navbar ou hero.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. TIPOGRAFIA ── -->
+<section class="section" id="tipografia" style="background:var(--color-surface);">
+  <div class="container">
+    <span class="ds-section-label">02 — Tipografia</span>
+
+    <div class="type-row">
+      <div class="type-label">Display<br/>Bebas Neue<br/><code style="font-size:0.65rem;">font-display</code></div>
+      <h1 class="ds" style="color:var(--color-dark);">TÍTULO HERO — H1</h1>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Heading LG<br/>Bebas Neue<br/><code style="font-size:0.65rem;">heading-lg</code></div>
+      <h2 class="ds" style="color:var(--color-dark);">TÍTULO DE SEÇÃO — H2</h2>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Heading MD<br/>Bebas Neue<br/><code style="font-size:0.65rem;">heading-md</code></div>
+      <h3 class="ds" style="color:var(--color-dark);">Título de Card — H3</h3>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Body LG<br/>Outfit 400<br/>1.125rem</div>
+      <p style="font-size:1.125rem;color:#444;max-width:560px;">Texto de parágrafo principal. Somos uma empresa familiar com mais de 25 anos de experiência em movimentação de cargas intralogísticas.</p>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Body<br/>Outfit 400<br/>1rem</div>
+      <p style="color:#555;max-width:560px;">Texto de corpo padrão. Atendemos clientes em Pernambuco, Paraíba, Alagoas, Rio Grande do Norte e Sergipe com estoque próprio.</p>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Body SM<br/>Outfit 400<br/>0.875rem</div>
+      <p style="font-size:0.875rem;color:#666;max-width:560px;">Texto secundário, descrições de card, tooltips e metadados de produto.</p>
+    </div>
+    <div class="type-row" style="border:none;padding-bottom:0;">
+      <div class="type-label">Label / Badge<br/>Outfit 700<br/>0.7rem uppercase</div>
+      <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--color-brand);">REPRESENTANTE EXCLUSIVO</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3. BOTÕES ── -->
+<section class="section" id="botoes">
+  <div class="container">
+    <span class="ds-section-label">03 — Botões</span>
+
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Fundo claro</p>
+    <div class="btn-row" style="margin-bottom:2.5rem;">
+      <a class="btn btn-primary" href="#">Solicitar Cotação</a>
+      <a class="btn btn-secondary" href="#">Ver Catálogo</a>
+      <a class="btn btn-link" href="#">Conheça nossa história →</a>
+    </div>
+
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Fundo escuro (hero / footer)</p>
+    <div class="dark-bg" style="margin-bottom:2.5rem;">
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#">Solicitar Cotação</a>
+        <a class="btn btn-secondary" href="#">Ver Catálogo</a>
+      </div>
+    </div>
+
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">WhatsApp</p>
+    <div class="btn-row">
+      <a class="btn btn-whatsapp" href="#">💬 Falar no WhatsApp</a>
+    </div>
+
+    <div style="margin-top:2rem;padding:1.25rem;background:#FFF8F8;border:1px solid #FFCCCC;border-radius:10px;font-size:0.8rem;color:#A80000;">
+      <strong>Regra de borda:</strong> botões do hero e da página de locação <strong>não têm border-radius</strong> (estilo industrial). Botões em cards podem ter <code>rounded</code> ou <code>rounded-full</code>.
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. COMPONENTES ── -->
+<section class="section" id="componentes" style="background:var(--color-surface);">
+  <div class="container">
+    <span class="ds-section-label">04 — Componentes recorrentes</span>
+
+    <!-- Badge de seção -->
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Badge de seção</p>
+    <div class="badge" style="margin-bottom:2rem;">
+      <span class="badge-line"></span>
+      <span class="badge-text">Representante Exclusivo</span>
+    </div>
+
+    <!-- Divisor -->
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Divisor vermelho</p>
+    <div class="divider-red" style="margin-bottom:2rem;"></div>
+
+    <!-- Cards de produto -->
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Card de produto</p>
+    <div class="cards-grid" style="margin-bottom:2.5rem;">
+      <div class="card">
+        <div style="width:100%;height:140px;background:#F0F0F2;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.75rem;">Imagem do produto</div>
+        <h3 style="font-family:var(--font-display);font-size:1.25rem;letter-spacing:0.02em;margin-bottom:0.25rem;">RCE 20/25</h3>
+        <p style="font-size:0.8rem;color:#888;margin-bottom:0.75rem;">Empilhadeira Contrabalançada</p>
+        <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-brand);">STILL</span>
+      </div>
+      <div class="card">
+        <div style="width:100%;height:140px;background:#F0F0F2;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.75rem;">Imagem do produto</div>
+        <h3 style="font-family:var(--font-display);font-size:1.25rem;letter-spacing:0.02em;margin-bottom:0.25rem;">EXV 14</h3>
+        <p style="font-size:0.8rem;color:#888;margin-bottom:0.75rem;">Empilhadeira Retrátil</p>
+        <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-brand);">STILL</span>
+      </div>
+      <div class="card">
+        <div style="width:100%;height:140px;background:#F0F0F2;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.75rem;">Imagem do produto</div>
+        <h3 style="font-family:var(--font-display);font-size:1.25rem;letter-spacing:0.02em;margin-bottom:0.25rem;">MX-X 16</h3>
+        <p style="font-size:0.8rem;color:#888;margin-bottom:0.75rem;">Transpaleteira Elétrica</p>
+        <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-brand);">BAOLI</span>
+      </div>
+    </div>
+
+    <!-- Estado ativo de card -->
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Card — estado hover</p>
+    <div class="card" style="border-color:rgba(204,0,0,0.3);box-shadow:0 4px 16px rgba(0,0,0,0.08);max-width:280px;margin-bottom:2.5rem;">
+      <div style="width:100%;height:140px;background:#F0F0F2;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.75rem;">Imagem do produto</div>
+      <h3 style="font-family:var(--font-display);font-size:1.25rem;letter-spacing:0.02em;margin-bottom:0.25rem;">RCE 20/25</h3>
+      <p style="font-size:0.8rem;color:#888;">Empilhadeira Contrabalançada</p>
+    </div>
+
+    <!-- Padrão de título de seção completo -->
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Padrão completo de título de seção</p>
+    <div style="max-width:480px;">
+      <div class="badge">
+        <span class="badge-line"></span>
+        <span class="badge-text">Nossos Produtos</span>
+      </div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.8vw,3rem);line-height:1.1;letter-spacing:0.02em;color:var(--color-dark);margin-bottom:0.75rem;">CATÁLOGO COMPLETO</h2>
+      <p style="color:#666;font-size:0.95rem;">Linha completa de empilhadeiras elétricas, contrabalançadas, retráteis e transpaleteiras para sua operação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. ESPAÇAMENTO ── -->
+<section class="section" id="espacamento">
+  <div class="container">
+    <span class="ds-section-label">05 — Espaçamento</span>
+
+    <div class="spacing-row">
+      <span class="spacing-label"><strong>section-py</strong> — clamp(2.5rem, 5vw, 6rem)<br/><span style="color:#bbb;">Padding vertical de seções</span></span>
+      <div class="spacing-bar" style="width:96px;"></div>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label"><strong>gap-6</strong> — 1.5rem<br/><span style="color:#bbb;">Gap padrão de grid</span></span>
+      <div class="spacing-bar" style="width:24px;"></div>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label"><strong>px-4 sm:px-6 lg:px-8</strong><br/><span style="color:#bbb;">Padding horizontal de container interno</span></span>
+      <div class="spacing-bar" style="width:32px;"></div>
+    </div>
+    <div class="spacing-row" style="margin-bottom:2.5rem;">
+      <span class="spacing-label"><strong>max-w-7xl mx-auto</strong><br/><span style="color:#bbb;">Container interno de seções</span></span>
+      <div class="spacing-bar" style="width:100%;max-width:320px;opacity:0.25;"></div>
+    </div>
+
+    <div style="background:var(--color-surface);border-radius:12px;padding:1.5rem;font-size:0.8rem;line-height:2;color:#555;">
+      <strong style="display:block;margin-bottom:0.5rem;color:#1C1C1E;">Regras de container:</strong>
+      Seção padrão: <code>py-16 lg:py-24</code><br/>
+      Container: <code>max-w-7xl mx-auto px-4 sm:px-6 lg:px-8</code><br/>
+      Container hero: <code>max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20</code><br/>
+      Hero height: <code>clamp(520px, 72vh, 840px)</code> — nunca <code>min-h-screen</code>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. HERO / OVERLAY ── -->
+<section class="section" id="hero" style="background:var(--color-surface);">
+  <div class="container">
+    <span class="ds-section-label">06 — Hero / Overlay</span>
+
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Overlay padrão (gradiente)</p>
+    <div class="hero-overlay-demo" style="margin-bottom:0.75rem;">
+      linear-gradient(to right, rgba(28,28,30,0.88) 40%, rgba(28,28,30,0.40) 65%, rgba(28,28,30,0.05) 100%)
+    </div>
+    <div style="margin-bottom:2.5rem;padding:1rem;background:#F5F5F7;border-radius:8px;font-size:0.8rem;color:#555;line-height:1.8;">
+      Altura: <code>clamp(520px, 72vh, 840px)</code><br/>
+      Largura máxima do conteúdo: <code>max-w-[1400px] mx-auto</code><br/>
+      Imagens: <code>quality=90</code>, <code>sizes</code> adequado ao container
+    </div>
+
+    <p style="font-size:0.75rem;color:#888;margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Hero de locação (split)</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;border-radius:12px;overflow:hidden;height:140px;margin-bottom:2.5rem;">
+      <div style="background:var(--color-dark);display:flex;align-items:center;padding:1.5rem;color:#fff;font-size:0.8rem;">
+        Painel escuro (#1C1C1E) — texto e CTA
+      </div>
+      <div style="background:linear-gradient(to left, #555, #888);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.75rem;position:relative;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to right,var(--color-dark),transparent);"></div>
+        <span style="position:relative;z-index:1;">Foto real à direita</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 7. BACKGROUNDS ── -->
+<section class="section" id="backgrounds">
+  <div class="container">
+    <span class="ds-section-label">07 — Backgrounds de seção</span>
+
+    <div style="display:grid;gap:1rem;">
+      <div style="background:#1C1C1E;padding:1.5rem;border-radius:10px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#888;">Navbar · Hero · Footer · Seções escuras genéricas</span>
+          <p style="font-family:var(--font-display);font-size:1.5rem;margin-top:0.25rem;">FUNDO ESCURO PADRÃO</p>
+        </div>
+        <code style="font-size:0.8rem;color:#666;">#1C1C1E</code>
+      </div>
+
+      <div style="background:#0D1B2E;padding:1.5rem;border-radius:10px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#5577AA;">Apenas: Seção Vantagens da Locação</span>
+          <p style="font-family:var(--font-display);font-size:1.5rem;margin-top:0.25rem;">NAVY EXCLUSIVO</p>
+        </div>
+        <code style="font-size:0.8rem;color:#446;">#0D1B2E</code>
+      </div>
+
+      <div style="background:#F5F5F7;padding:1.5rem;border-radius:10px;border:1px solid #E5E5E7;display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#888;">Catálogo · Listas · Seções claras</span>
+          <p style="font-family:var(--font-display);font-size:1.5rem;margin-top:0.25rem;">SURFACE</p>
+        </div>
+        <code style="font-size:0.8rem;color:#888;">#F5F5F7</code>
+      </div>
+
+      <div style="background:#fff;padding:1.5rem;border-radius:10px;border:1px solid #E5E5E7;display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#888;">Cards · Painéis internos</span>
+          <p style="font-family:var(--font-display);font-size:1.5rem;margin-top:0.25rem;">BRANCO</p>
+        </div>
+        <code style="font-size:0.8rem;color:#888;">#FFFFFF</code>
+      </div>
+    </div>
+
+    <!-- Regras do footer -->
+    <div style="margin-top:2rem;padding:1.25rem;background:#FFF8F8;border:1px solid #FFCCCC;border-radius:10px;font-size:0.8rem;color:#A80000;line-height:1.8;">
+      <strong>Regra crítica:</strong><br/>
+      Footer, Navbar, Hero, seções escuras → sempre <code>#1C1C1E</code><br/>
+      Seção de vantagens da locação → <code>#0D1B2E</code><br/>
+      <strong>Nunca</strong> trocar <code>#1C1C1E</code> por <code>#0D1B2E</code> em componentes globais.
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--color-dark);color:#666;text-align:center;padding:2rem;font-size:0.75rem;letter-spacing:0.05em;">
+  MULTYLOG EMPILHADEIRAS — DESIGN SYSTEM
+</footer>
+
+</body>
+</html>
