@@ -11,7 +11,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -65,7 +64,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/locacao"
-              className="inline-flex items-center gap-1.5 bg-[#CC0000] hover:bg-[#A80000] text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 bg-[#CC0000] hover:bg-[#A80000] text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-xl transition-colors whitespace-nowrap"
             >
               <span className="hidden sm:inline">Solicitar Cotação</span>
               <span className="sm:hidden">Cotação</span>
@@ -100,7 +99,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/locacao"
-              className="mt-3 text-center bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-4 py-3 rounded transition-colors"
+              className="mt-3 text-center bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-4 py-3 rounded-xl transition-colors"
             >
               Solicitar Cotação
             </Link>

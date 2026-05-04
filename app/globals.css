@@ -11,7 +11,7 @@
   --color-surface-dark: #E5E5E7;
 
   /* Fonts */
-  --font-display: var(--font-bebas), 'Bebas Neue', sans-serif;
+  --font-display: var(--font-bebas), 'DM Sans', sans-serif;
   --font-sans: var(--font-outfit), 'Outfit', sans-serif;
 }
 

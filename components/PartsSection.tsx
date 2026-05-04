@@ -57,7 +57,7 @@ export default function PartsSection() {
             </div>
 
             <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide leading-none mb-6">
-              MANUTENÇÃO SEM IMPREVISTOS
+              Manutenção sem Imprevistos
             </h2>
 
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8">
@@ -90,7 +90,7 @@ export default function PartsSection() {
 
             <Link
               href="/pecas-servicos"
-              className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
             >
               Ver Peças e Serviços
             </Link>

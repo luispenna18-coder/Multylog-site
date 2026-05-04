@@ -13,11 +13,11 @@ export default function ProjetoParafusinhoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1C1C1E] pt-32 pb-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#F5F5F7] pt-32 pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-[#1C1C1E]/60 hover:text-[#1C1C1E] text-sm font-semibold border border-[#1C1C1E]/20 hover:border-[#1C1C1E]/50 px-4 py-2 rounded-xl mb-8 transition-all"
           >
             <ArrowLeft size={14} /> Voltar ao Blog
           </Link>
@@ -26,40 +26,44 @@ export default function ProjetoParafusinhoPage() {
             <span className="bg-[#CC0000] text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wide">
               Responsabilidade Social
             </span>
-            <span className="flex items-center gap-1 text-gray-400 text-sm">
+            <span className="flex items-center gap-1 text-gray-500 text-sm">
               <Calendar size={13} />
               07 de abril de 2026
             </span>
           </div>
 
-          <h1 className="font-display text-4xl sm:text-5xl text-white tracking-wide leading-tight mb-4">
-            PROJETO PARAFUSINHO: FORMANDO OS MECÂNICOS DO FUTURO DENTRO DE CASA
+          <h1 className="font-display text-4xl sm:text-5xl text-[#1C1C1E] tracking-wide leading-tight mb-4">
+            Projeto Parafusinho: Formando os Mecânicos do Futuro Dentro de Casa
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed">
-            A Multylog abre as portas da sua oficina para jovens das comunidades
-            do Recife e os transforma em profissionais qualificados. Porque o
-            melhor mecânico pode ser o que ainda não teve a chance de provar.
+          <p className="text-gray-600 text-lg leading-relaxed">
+            A Multylog abre as portas da sua oficina para jovens das comunidades do Recife
+            e os transforma em mecânicos especializados. Porque o melhor mecânico pode ser
+            o que ainda não teve a chance de provar.
           </p>
         </div>
       </section>
 
-      {/* Foto de abertura */}
-      <div className="relative w-full aspect-[16/7] bg-gray-900">
-        <Image
-          src="/images/blog/parafusinho/capa.jpg"
-          alt="Jovens do Projeto Parafusinho na frente das empilhadeiras STILL na Multylog"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+      {/* Vídeo de abertura */}
+      <div className="bg-[#F5F5F7] py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/P6KvlA0YlsE"
+              title="Projeto Parafusinho — Multylog"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Conteúdo */}
       <article className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
-            DE ONDE VEM A IDEIA
+            De Onde Vem a Ideia
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-5">
             Na Multylog, a gente acredita que talento não tem endereço. E que
@@ -76,7 +80,7 @@ export default function ProjetoParafusinhoPage() {
           </p>
 
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
-            O PARAFUSINHO NA PRÁTICA
+            O Parafusinho na Prática
           </h2>
           <p className="text-gray-600 leading-relaxed mb-5">
             O nome não é por acaso. O parafuso é a peça mais básica da
@@ -101,7 +105,7 @@ export default function ProjetoParafusinhoPage() {
           </p>
 
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
-            POR QUE RECIFE PRECISA DISSO
+            Por que Recife Precisa Disso
           </h2>
           <p className="text-gray-600 leading-relaxed mb-5">
             O Nordeste vive um crescimento expressivo na demanda por profissionais
@@ -118,7 +122,7 @@ export default function ProjetoParafusinhoPage() {
           </p>
 
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
-            O QUE MUDA NA VIDA DE QUEM PASSA PELO PROGRAMA
+            O que Muda na Vida de Quem Passa pelo Programa
           </h2>
           <p className="text-gray-600 leading-relaxed mb-5">
             Quem entra no Parafusinho não entra só para aprender mecânica.
@@ -134,14 +138,13 @@ export default function ProjetoParafusinhoPage() {
             excelência.
           </p>
 
-          {/* Vídeo */}
-          <div className="relative w-full aspect-video rounded-xl overflow-hidden my-10">
-            <iframe
-              src="https://www.youtube.com/embed/P6KvlA0YlsE"
-              title="Projeto Parafusinho — Multylog"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
+          {/* Foto */}
+          <div className="relative w-full max-w-xl mx-auto aspect-[4/3] rounded-xl overflow-hidden my-10">
+            <Image
+              src="/images/blog/parafusinho/capa.jpg"
+              alt="Jovens do Projeto Parafusinho na frente das empilhadeiras STILL na Multylog"
+              fill
+              className="object-cover object-center"
             />
           </div>
 

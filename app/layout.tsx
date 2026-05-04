@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Outfit } from "next/font/google";
+import { DM_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
-const bebas = Bebas_Neue({
-  weight: "400",
+const bebas = DM_Sans({
+  weight: ["600", "700", "800"],
   subsets: ["latin"],
   variable: "--font-bebas",
   display: "swap",
@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Multylog Empilhadeiras",
     description: "Representante autorizado STILL no Nordeste",
+    url: "https://www.multylog.com.br",
+    siteName: "Multylog Empilhadeiras",
     locale: "pt_BR",
     type: "website",
   },
@@ -34,14 +36,14 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "Organization"],
-  "@id": "https://multylog-site.vercel.app/#organization",
+  "@id": "https://www.multylog.com.br/#organization",
   name: "Multylog Empilhadeiras",
   alternateName: "Multylog",
   description:
     "Representante autorizado STILL para Pernambuco, Paraíba e Alagoas. Mais de 25 anos de experiência em locação, venda, manutenção e peças de empilhadeiras.",
-  url: "https://multylog-site.vercel.app",
-  logo: "https://multylog-site.vercel.app/images/logo.png",
-  image: "https://multylog-site.vercel.app/images/team.jpg",
+  url: "https://www.multylog.com.br",
+  logo: "https://www.multylog.com.br/images/logo.png",
+  image: "https://www.multylog.com.br/images/team.jpg",
   telephone: "+55-81-3224-0715",
   email: "comercial@multylog.com.br",
   foundingDate: "1999",

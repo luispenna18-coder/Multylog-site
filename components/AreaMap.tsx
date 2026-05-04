@@ -73,7 +73,7 @@ export default function AreaMap() {
             Onde Atuamos
           </span>
           <h2 className="heading-lg font-display text-[#1C1C1E] mt-2 tracking-wide">
-            ÁREA DE ATUAÇÃO
+            Área de Atuação
           </h2>
           <p className="text-gray-600 mt-2 max-w-xl mx-auto text-sm">
             Representante exclusivo STILL para cinco estados do Nordeste, com estoque próprio e logística ágil a partir de Recife.

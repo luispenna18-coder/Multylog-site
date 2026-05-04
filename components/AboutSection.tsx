@@ -57,7 +57,7 @@ export default function AboutSection() {
                 Sobre a Multylog
               </span>
               <h2 className="heading-lg font-display text-[#1C1C1E] mt-2 mb-6 tracking-wide">
-                MUITO MAIS QUE UMA LOCADORA
+                Muito Mais que uma Locadora
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Somos uma empresa familiar com mais de 25 anos de experiência em movimentação de

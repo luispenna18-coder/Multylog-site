@@ -60,20 +60,25 @@
 
 ### Primário (CTA vermelho)
 ```
-bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 transition-colors
+bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors
 ```
 
-### Secundário (outline escuro)
+### Secundário (outline)
 ```
-border border-gray-600 hover:border-white text-gray-300 hover:text-white font-semibold px-7 py-3.5 transition-colors
+border border-gray-300 hover:border-[#1C1C1E] text-[#1C1C1E] font-semibold px-7 py-3.5 rounded-xl transition-colors
+```
+
+### Secundário sobre fundo escuro (outline claro)
+```
+border border-white/40 hover:border-white text-white font-semibold px-7 py-3.5 rounded-xl transition-colors
 ```
 
 ### WhatsApp (verde)
 ```
-bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold rounded-full transition-colors
+bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold rounded-xl transition-colors
 ```
 
-> **Importante:** Os botões do hero e da página de locação **não têm `rounded`** (estilo industrial/corporativo STILL). Botões dentro de seções de cards podem ter `rounded` ou `rounded-full` conforme contexto.
+> **Padrão universal:** Todos os botões CTA usam `rounded-xl`. O `rounded-full` é reservado apenas para elementos de pill/badge (ex: tags de categoria, botão flutuante do WhatsApp).
 
 ---
 

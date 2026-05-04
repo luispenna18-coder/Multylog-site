@@ -40,18 +40,24 @@ function MaquinasCatalog() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1C1C1E] pt-32 pb-16">
-        <div className="site-container">
-          <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
-            Catálogo Completo
-          </span>
-          <h1 className="heading-xl font-display text-white mt-3 mb-4 tracking-wide">
-            MÁQUINAS
-          </h1>
-          <p className="text-gray-400 text-lg max-w-xl">
-            Equipamentos STILL para locação e venda. Qualidade, eficiência e suporte técnico em
-            PE, PB e AL.
-          </p>
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(400px,52vh,600px)]">
+        <Image
+          src="/images/maquinas-banner.png"
+          alt="Máquinas Multylog Empilhadeiras"
+          fill
+          className="object-cover object-center md:object-[center_80%]"
+          priority
+          sizes="100vw"
+          quality={95}
+        />
+        <div className="absolute inset-0" style={{ background: "rgba(10,18,30,0.62)" }} />
+        <div className="site-container relative h-full flex items-end pb-12 lg:pb-16">
+          <div>
+            <h1 className="font-display text-white tracking-wide leading-none" style={{ fontSize: "clamp(2.6rem, 4.5vw, 5.2rem)" }}>
+              Máquinas
+            </h1>
+            <div className="w-12 h-0.5 bg-[#CC0000] mt-4" />
+          </div>
         </div>
       </section>
 
@@ -126,7 +132,7 @@ function MaquinasCatalog() {
                     </span>
                   </div>
 
-                  <h3 className="font-display text-2xl text-[#1C1C1E] tracking-wide mb-1">
+                  <h3 className="font-sans font-bold text-lg text-[#1C1C1E] mb-1">
                     {product.name}
                   </h3>
 

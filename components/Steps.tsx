@@ -18,7 +18,7 @@ export default function Steps() {
       ([entry]) => {
         if (entry.isIntersecting) {
           STEPS.forEach((_, i) => {
-            setTimeout(() => setActive(i), i * 400);
+            setTimeout(() => setActive(i), i * 2000);
           });
         }
       },
@@ -31,21 +31,19 @@ export default function Steps() {
   return (
     <div ref={ref} className="flex flex-col mb-8">
       {STEPS.map((step, i) => (
-        <div key={step.n}>
-          <motion.div
-            className="flex items-center gap-5 py-5 cursor-default group"
-            initial={{ opacity: 0, x: -12 }}
-            animate={active >= i ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-          >
-            {/* Número */}
+        <div key={step.n} className="flex gap-4">
+
+          {/* Coluna esquerda: círculo + linha vertical */}
+          <div className="flex flex-col items-center">
+            {/* Círculo numerado */}
             <motion.div
-              className="w-10 h-10 rounded-full border-2 flex items-center justify-center shrink-0 transition-all duration-500"
+              className="w-10 h-10 rounded-full border-2 flex items-center justify-center shrink-0"
               animate={
                 active >= i
                   ? { borderColor: "#CC0000", backgroundColor: "#CC0000" }
                   : { borderColor: "#E5E5E7", backgroundColor: "transparent" }
               }
+              transition={{ duration: 1.6 }}
             >
               <motion.span
                 className="text-xs font-bold"
@@ -56,27 +54,47 @@ export default function Steps() {
               </motion.span>
             </motion.div>
 
-            {/* Título */}
-            <motion.p
-              className="font-bold text-xl"
-              animate={active >= i ? { color: "#1C1C1E" } : { color: "#A0AEC0" }}
-              transition={{ duration: 0.3 }}
+            {/* Linha vertical animada entre círculos */}
+            {i < STEPS.length - 1 && (
+              <div className="w-px flex-1 my-1 bg-gray-200 overflow-hidden relative" style={{ minHeight: 36 }}>
+                <motion.div
+                  className="absolute top-0 left-0 w-full bg-[#CC0000]"
+                  initial={{ height: "0%" }}
+                  animate={active >= i + 1 ? { height: "100%" } : { height: "0%" }}
+                  transition={{ duration: 1.4, delay: 0.3, ease: "easeInOut" }}
+                />
+                {/* Seta */}
+                {active >= i + 1 && (
+                  <motion.div
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.8 }}
+                  >
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="#CC0000">
+                      <path d="M4 6L0 0h8z" />
+                    </svg>
+                  </motion.div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Coluna direita: título */}
+          <motion.div
+            className="pb-8 pt-2"
+            initial={{ opacity: 0, x: -10 }}
+            animate={active >= i ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 1.6, ease: "easeOut" }}
+          >
+            <p
+              className="font-normal text-lg"
+              style={{ color: active >= i ? "#1C1C1E" : "#A0AEC0" }}
             >
               {step.title}
-            </motion.p>
+            </p>
           </motion.div>
 
-          {/* Separador */}
-          {i < STEPS.length - 1 && (
-            <div className="ml-5 h-px bg-gray-200 overflow-hidden">
-              <motion.div
-                className="h-full bg-gray-400"
-                initial={{ width: "0%" }}
-                animate={active >= i + 1 ? { width: "100%" } : { width: "0%" }}
-                transition={{ duration: 0.4, delay: 0.1, ease: "easeInOut" }}
-              />
-            </div>
-          )}
         </div>
       ))}
     </div>

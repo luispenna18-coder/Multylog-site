@@ -22,7 +22,7 @@ const POSTS = [
     slug: "dia-da-cultura",
     title: "Dia da Cultura na Multylog",
     excerpt: "Dinâmica de grupo, alinhamento de valores e muita energia: a Multylog reuniu toda a equipe para um dia especial de cultura.",
-    date: "2024-11-08",
+    date: "2026-03-09",
     category: "Cultura",
     image: "/imagens/dia-da-cultura/DSC06968.jpg",
   },
@@ -37,7 +37,7 @@ export default function BlogPage() {
             Conteúdo
           </span>
           <h1 className="font-display text-5xl sm:text-6xl text-white mt-3 mb-4 tracking-wide">
-            BLOG
+            Blog
           </h1>
           <p className="text-gray-400 text-lg">
             Notícias, projetos e a cultura da Multylog.

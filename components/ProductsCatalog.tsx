@@ -41,7 +41,7 @@ export default function ProductsCatalog() {
               Catálogo STILL
             </span>
             <h2 className="heading-lg font-display text-[#1C1C1E] mt-1 tracking-wide">
-              EQUIPAMENTOS PRINCIPAIS
+              Equipamentos Principais
             </h2>
           </div>
           <Link
@@ -106,7 +106,7 @@ export default function ProductsCatalog() {
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
                   {CATEGORY_LABELS[product.category]}
                 </p>
-                <h3 className="font-display text-2xl text-[#1C1C1E] tracking-wide mb-2 group-hover:text-[#CC0000] transition-colors duration-200">
+                <h3 className="font-sans font-bold text-lg text-[#1C1C1E] mb-2 group-hover:text-[#CC0000] transition-colors duration-200">
                   {product.name}
                 </h3>
                 <div className="flex items-center gap-3 text-sm text-gray-500 mb-4 flex-wrap">

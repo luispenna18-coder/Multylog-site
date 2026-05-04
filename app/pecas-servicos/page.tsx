@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Package, Wrench, ShieldCheck, Clock, CheckCircle } from "lucide-react";
 import { SITE } from "@/lib/constants";
@@ -20,17 +21,24 @@ const BRANDS = ["STILL", "Linde", "Toyota", "Hyster", "Yale", "Crown", "Baoli", 
 export default function PecasServicosPage() {
   return (
     <>
-      <section className="bg-[#1C1C1E] pt-32 pb-16">
-        <div className="site-container">
-          <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
-            Multipeças
-          </span>
-          <h1 className="heading-xl font-display text-white mt-3 mb-4 tracking-wide">
-            PEÇAS E SERVIÇOS
-          </h1>
-          <p className="text-gray-400 text-lg max-w-xl">
-            Manutenção especializada e peças originais STILL — para que sua operação nunca pare.
-          </p>
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(400px,52vh,600px)]">
+        <Image
+          src="/images/pecas-servicos-banner.jpg"
+          alt="Técnico Multylog realizando manutenção"
+          fill
+          className="object-cover object-center md:object-[center_40%]"
+          priority
+          sizes="100vw"
+          quality={95}
+        />
+        <div className="absolute inset-0" style={{ background: "rgba(10,18,30,0.62)" }} />
+        <div className="site-container relative h-full flex items-end pb-12 lg:pb-16">
+          <div>
+            <h1 className="font-display text-white tracking-wide leading-none" style={{ fontSize: "clamp(2.6rem, 4.5vw, 5.2rem)" }}>
+              Peças e Serviços
+            </h1>
+            <div className="w-12 h-0.5 bg-[#CC0000] mt-4" />
+          </div>
         </div>
       </section>
 
@@ -38,7 +46,7 @@ export default function PecasServicosPage() {
       <section className="section-py bg-[#F5F5F7]">
         <div className="site-container">
           <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide mb-10">
-            NOSSOS SERVIÇOS
+            Nossos Serviços
           </h2>
           <div className="grid sm:grid-cols-2 gap-6">
             {SERVICES.map(({ icon: Icon, title, desc }) => (
@@ -63,7 +71,7 @@ export default function PecasServicosPage() {
                 Atendimento Multimarca
               </span>
               <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide mt-2 mb-5">
-                NÃO APENAS STILL
+                Não Apenas STILL
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Nossa equipe técnica está preparada para atender empilhadeiras de diversas marcas.
@@ -87,20 +95,20 @@ export default function PecasServicosPage() {
             </div>
             <div className="bg-[#1C1C1E] rounded-2xl p-8 text-center">
               <h3 className="font-display text-3xl text-white tracking-wide mb-3">
-                SOLICITAR ATENDIMENTO
+                Solicitar Atendimento
               </h3>
               <p className="text-gray-400 mb-6">Descreva o problema e nossa equipe entra em contato.</p>
               <a
                 href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Preciso%20de%20assistência%20técnica.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded transition-colors mb-3 w-full text-center"
+                className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors mb-3 w-full text-center"
               >
                 Via WhatsApp
               </a>
               <a
                 href="mailto:comercial@multylog.com.br"
-                className="inline-block border border-gray-600 hover:border-white text-gray-300 hover:text-white font-semibold px-7 py-3.5 rounded transition-colors w-full text-center"
+                className="inline-block border border-gray-600 hover:border-white text-gray-300 hover:text-white font-semibold px-7 py-3.5 rounded-xl transition-colors w-full text-center"
               >
                 Via E-mail
               </a>

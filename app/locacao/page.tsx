@@ -3,12 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Truck,
   ShieldCheck,
   DollarSign,
   Wrench,
   Sliders,
   TrendingUp,
+  Truck,
 } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
 import Steps from "@/components/Steps";
@@ -59,13 +59,36 @@ const EQUIPMENT = [
 ];
 
 const COMPARISON = [
-  { label: "PRESERVAÇÃO DE CAIXA",            compra: 5,  locacao: 95  },
-  { label: "PREVISIBILIDADE DE CUSTOS",        compra: 40, locacao: 100 },
-  { label: "DISPONIBILIDADE DA FROTA (UPTIME)", compra: 70, locacao: 98  },
-  { label: "EFICIÊNCIA FISCAL (IRPJ / CSLL)",  compra: 30, locacao: 90  },
-  { label: "TECNOLOGIA E PERFORMANCE",         compra: 50, locacao: 90  },
-  { label: "FOCO NO CORE BUSINESS",            compra: 20, locacao: 95  },
-  { label: "RISCO DE ATIVO (REVENDA)",         compra: 10, locacao: 100 },
+  {
+    label: "Preservação de Caixa",
+    compra: "Capital imobilizado no ativo",
+    locacao: "Caixa 100% livre para o negócio",
+  },
+  {
+    label: "Previsibilidade de Custos",
+    compra: "Manutenção gera custos imprevistos",
+    locacao: "Mensalidade fixa, sem surpresas",
+  },
+  {
+    label: "Disponibilidade da Frota",
+    compra: "Paradas dependem do seu time técnico",
+    locacao: "Substituição garantida em caso de falha",
+  },
+  {
+    label: "Idade Média da Frota",
+    compra: "Equipamento envelhece sem renovação",
+    locacao: "Frota sempre nova, sem envelhecimento",
+  },
+  {
+    label: "Foco no Core Business",
+    compra: "Gestão de frota consome tempo e recursos",
+    locacao: "Zero preocupação com o equipamento",
+  },
+  {
+    label: "Proteção contra Obsolescência",
+    compra: "Risco de desvalorização e revenda difícil",
+    locacao: "Sem risco de ativo — troca quando quiser",
+  },
 ];
 
 const container = "max-w-7xl mx-auto px-4 sm:px-8 lg:px-12";
@@ -76,46 +99,30 @@ export default function LocacaoPage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ height: "clamp(480px, 68vh, 820px)" }}>
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(400px,52vh,600px)]">
         <Image
           src="/images/locacao-banner.jpg"
           alt="Empilhadeiras STILL no galpão"
           fill
-          className="object-cover object-right"
+          className="object-cover object-center"
           priority
           sizes="100vw"
-          quality={90}
+          quality={95}
         />
-
-        <div className="relative z-10 h-full flex items-center">
-          <div className={`${container} w-full`}>
-            <div style={{ maxWidth: "clamp(320px, 40vw, 600px)" }}>
-              <h1
-                className="font-display text-white tracking-wide leading-none mb-8"
-                style={{
-                  fontSize: "clamp(2.6rem, 5vw, 5.2rem)",
-                  textShadow: "0 2px 24px rgba(0,0,0,0.65), 0 0 60px rgba(0,0,0,0.35)",
-                }}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(28,28,30,0.72) 0%, rgba(28,28,30,0.50) 35%, rgba(28,28,30,0.08) 60%, rgba(28,28,30,0) 75%)" }} />
+        <div className="site-container relative h-full flex items-end pb-12 lg:pb-16">
+          <div>
+            <h1 className="font-display text-white tracking-wide leading-none" style={{ fontSize: "clamp(2.6rem, 4.5vw, 5.2rem)" }}>
+              Locação
+            </h1>
+            <div className="w-12 h-0.5 bg-[#CC0000] mt-4 mb-6" />
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/maquinas"
+                className="inline-flex items-center gap-2 border border-white/70 hover:border-white text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
               >
-                NÓS ENTENDEMOS<br />DO SEU NEGÓCIO
-              </h1>
-
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20solicitar%20uma%20cotação%20de%20locação.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 transition-colors"
-                >
-                  Solicitar Cotação
-                </a>
-                <Link
-                  href="/maquinas"
-                  className="inline-flex items-center gap-2 border border-white/70 hover:border-white text-white font-semibold px-7 py-3.5 transition-colors"
-                >
-                  Ver Equipamentos
-                </Link>
-              </div>
+                Ver Equipamentos
+              </Link>
             </div>
           </div>
         </div>
@@ -128,7 +135,7 @@ export default function LocacaoPage() {
             className="font-display text-[#1C1C1E] tracking-wide mb-12"
             style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
           >
-            VANTAGENS DA LOCAÇÃO
+            Vantagens da Locação
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {BENEFITS.map(({ icon: Icon, title, body }) => {
@@ -137,15 +144,15 @@ export default function LocacaoPage() {
                 <button
                   key={title}
                   onClick={() => setActive(isActive ? null : title)}
-                  className={`flex flex-col gap-4 p-8 rounded-xl border text-left transition-all duration-200 cursor-pointer
+                  className={`flex flex-col gap-3 p-5 rounded-xl border text-left transition-all duration-200 cursor-pointer
                     ${isActive
                       ? "bg-[#CC0000] border-[#CC0000] shadow-lg scale-[1.02]"
                       : "bg-[#F5F5F7] border-gray-200 hover:border-[#CC0000]/40 hover:shadow-md"
                     }`}
                 >
-                  <Icon size={40} strokeWidth={1.25} className={isActive ? "text-white" : "text-[#CC0000]"} />
+                  <Icon size={28} strokeWidth={1.25} className={isActive ? "text-white" : "text-[#CC0000]"} />
                   <div>
-                    <h3 className={`font-sans font-bold text-base leading-snug mb-2 ${isActive ? "text-white" : "text-[#1C1C1E]"}`}>
+                    <h3 className={`font-sans font-bold text-base leading-snug mb-1.5 ${isActive ? "text-white" : "text-[#1C1C1E]"}`}>
                       {title}
                     </h3>
                     <p className={`font-sans text-sm leading-relaxed ${isActive ? "text-white/90" : "text-[#3D3D3D]"}`}>
@@ -157,17 +164,9 @@ export default function LocacaoPage() {
             })}
           </div>
           <div className="flex flex-wrap gap-3 mt-12">
-            <a
-              href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20solicitar%20uma%20cotação%20de%20locação.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 transition-colors"
-            >
-              Solicitar Cotação
-            </a>
             <Link
               href="/maquinas"
-              className="inline-flex items-center gap-2 border border-gray-400 hover:border-gray-700 text-[#1C1C1E] font-semibold px-7 py-3.5 transition-colors"
+              className="inline-flex items-center gap-2 border border-gray-400 hover:border-gray-700 text-[#1C1C1E] font-semibold px-7 py-3.5 rounded-xl transition-colors"
             >
               Ver Equipamentos
             </Link>
@@ -180,137 +179,99 @@ export default function LocacaoPage() {
         <div className={container}>
 
           {/* Cabeçalho */}
-          <div className="text-center mb-2">
-            <div className="flex items-center justify-center gap-2 mb-4">
+          <div className="mb-10">
+            <div className="flex items-center justify-center gap-3 mb-8">
               <span className="w-6 h-0.5 bg-[#CC0000]" />
               <span className="text-[#CC0000] text-xs font-semibold uppercase tracking-widest">Tabela Comparativa</span>
               <span className="w-6 h-0.5 bg-[#CC0000]" />
             </div>
-            <h2
-              className="font-display text-[#1C1C1E] tracking-wide leading-none"
-              style={{ fontSize: "clamp(2.2rem, 4.5vw, 4.5rem)" }}
-            >
-              LOCAÇÃO X COMPRA
-            </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm leading-relaxed">
-              Abaixo você conseguirá ver de forma clara as principais vantagens da locação em comparação com a compra de um equipamento.
-            </p>
-          </div>
-
-          <p className="text-center text-[11px] font-semibold text-[#1C1C1E] uppercase tracking-widest mt-8 mb-10">
-            Custo total de propriedade — Ciclo de 3 anos (36 meses)
-          </p>
-
-          {/* VS — desktop */}
-          <div className="hidden sm:grid grid-cols-[1fr_140px_1fr] items-center gap-6 mb-10">
-            <div className="text-right">
-              <h3
-                className="font-display text-[#1C1C1E] tracking-wide leading-tight"
-                style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.4rem)" }}
-              >
-                COMPRA DE<br />EQUIPAMENTO
-              </h3>
-              <p className="text-gray-400 text-sm mt-2 leading-snug">
-                Imobiliza capital e gera custos ocultos<br />com manutenção e depreciação.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-14 h-14 rounded-full bg-[#CC0000] flex items-center justify-center">
-                <Truck size={26} className="text-white" />
+            <div className="hidden sm:grid grid-cols-[1fr_140px_1fr] items-center gap-6">
+              {/* Compra — vermelho, direita */}
+              <div className="text-right">
+                <h2 className="font-display font-bold text-[#CC0000] tracking-wide leading-tight" style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.4rem)" }}>
+                  Compra de<br />Equipamento
+                </h2>
+                <p className="text-gray-700 text-sm mt-2 leading-snug">
+                  Imobiliza capital e gera custos ocultos<br />com manutenção e depreciação.
+                </p>
               </div>
-              <span className="font-display text-[#1C1C1E] text-2xl tracking-widest">VS</span>
-              <div className="w-14 h-14 rounded-full bg-[#1C1C1E] flex items-center justify-center border-2 border-gray-600">
-                <Truck size={26} className="text-white" />
+              {/* Centro — círculo vermelho, VS, círculo escuro */}
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-14 h-14 rounded-full bg-[#CC0000] flex items-center justify-center">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <g transform="translate(24,0) scale(-1,1)">
+                      <path d="M3 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M12 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                      <path d="M7 17l5 0" /><path d="M3 17v-6h13v6" /><path d="M5 11v-4h4" />
+                      <path d="M9 11v-6h4l3 6" /><path d="M22 15h-3v-10" /><path d="M16 13l3 0" />
+                    </g>
+                  </svg>
+                </div>
+                <span className="font-display text-[#1C1C1E] text-2xl tracking-widest">VS</span>
+                <div className="w-14 h-14 rounded-full bg-[#1C1C1E] flex items-center justify-center">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <g transform="translate(24,0) scale(-1,1)">
+                      <path d="M3 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M12 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                      <path d="M7 17l5 0" /><path d="M3 17v-6h13v6" /><path d="M5 11v-4h4" />
+                      <path d="M9 11v-6h4l3 6" /><path d="M22 15h-3v-10" /><path d="M16 13l3 0" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              {/* Locação — escuro, esquerda */}
+              <div>
+                <h2 className="font-display font-bold text-[#1C1C1E] tracking-wide leading-tight" style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.4rem)" }}>
+                  Locação<br />de Frota
+                </h2>
+                <p className="text-gray-700 text-sm mt-2 leading-snug">
+                  Custos fixos, manutenção inclusa, alta<br />disponibilidade e vantagens fiscais.
+                </p>
               </div>
             </div>
-
-            <div>
-              <h3
-                className="font-display text-[#CC0000] tracking-wide leading-tight"
-                style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.4rem)" }}
-              >
-                LOCAÇÃO<br />DE FROTA
-              </h3>
-              <p className="text-gray-400 text-sm mt-2 leading-snug">
-                Custos fixos, manutenção inclusa, alta<br />disponibilidade e vantagens fiscais.
-              </p>
-            </div>
-          </div>
-
-          {/* VS — mobile */}
-          <div className="sm:hidden flex items-center justify-around mb-8">
-            <div className="text-center">
-              <div className="w-12 h-12 rounded-full bg-[#CC0000] flex items-center justify-center mx-auto mb-2">
-                <Truck size={22} className="text-white" />
-              </div>
-              <h3 className="font-display text-[#1C1C1E] text-xl tracking-wide leading-tight">COMPRA</h3>
-            </div>
-            <span className="font-display text-[#1C1C1E] text-3xl tracking-widest">VS</span>
-            <div className="text-center">
-              <div className="w-12 h-12 rounded-full bg-[#1C1C1E] flex items-center justify-center mx-auto mb-2 border-2 border-gray-600">
-                <Truck size={22} className="text-white" />
-              </div>
-              <h3 className="font-display text-[#CC0000] text-xl tracking-wide leading-tight">LOCAÇÃO</h3>
+            {/* Mobile */}
+            <div className="sm:hidden flex items-center justify-around">
+              <h2 className="font-display font-bold text-[#CC0000] text-xl tracking-wide">Compra</h2>
+              <span className="font-display text-[#1C1C1E] text-3xl tracking-widest">VS</span>
+              <h2 className="font-display font-bold text-[#1C1C1E] text-xl tracking-wide">Locação</h2>
             </div>
           </div>
 
           {/* Linhas de comparação */}
-          <div className="flex flex-col gap-2.5">
-            {COMPARISON.map(({ label, compra, locacao }) => (
-              <div
-                key={label}
-                className="grid grid-cols-[1fr_auto_1fr] sm:grid-cols-[1fr_180px_1fr] items-center gap-3 sm:gap-5"
-              >
-                {/* Barra esquerda — compra (vermelho cresce da direita) */}
-                <div className="relative h-10 bg-[#E5E5E7] rounded-full overflow-hidden">
-                  <div
-                    className="absolute right-0 top-0 h-full bg-[#CC0000] rounded-full flex items-center justify-end pr-3"
-                    style={{ width: `max(${compra}%, 3.5rem)` }}
-                  >
-                    <span className="text-white font-bold text-sm leading-none">{compra}%</span>
+          <div className="flex flex-col divide-y divide-gray-200 border border-gray-200 rounded-2xl overflow-hidden">
+            {COMPARISON.map(({ label, compra, locacao }, i) => (
+              <div key={label} className={i % 2 === 0 ? "bg-white" : "bg-[#F9F9FB]"}>
+
+                {/* Mobile — vertical */}
+                <div className="sm:hidden px-4 py-4 flex flex-col gap-3">
+                  <span className="text-[#1C1C1E] font-bold text-[10px] uppercase tracking-widest text-center bg-[#F5F5F7] py-1 rounded">{label}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#1C1C1E] flex items-center justify-center text-white text-xs font-bold">✓</span>
+                    <span className="text-[#1C1C1E] font-semibold text-sm leading-snug">{locacao}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#F0F0F0] flex items-center justify-center text-gray-400 text-xs font-bold">✕</span>
+                    <span className="text-gray-500 text-sm leading-snug">{compra}</span>
                   </div>
                 </div>
 
-                {/* Label central */}
-                <div className="text-center px-1">
-                  <span className="block text-[#1C1C1E] font-bold text-[9px] sm:text-[10px] uppercase tracking-wide leading-tight">
-                    {label}
-                  </span>
-                </div>
-
-                {/* Barra direita — locação (escuro cresce da esquerda) */}
-                <div className="relative h-10 bg-[#E5E5E7] rounded-full overflow-hidden">
-                  <div
-                    className="absolute left-0 top-0 h-full bg-[#1C1C1E] rounded-full flex items-center pl-3"
-                    style={{ width: `${locacao}%` }}
-                  >
-                    <span className="text-white font-bold text-sm leading-none">{locacao}%</span>
+                {/* Desktop — horizontal (inalterado) */}
+                <div className="hidden sm:grid grid-cols-[1fr_160px_1fr] items-stretch">
+                  <div className="flex items-center justify-end gap-3 px-5 py-4 border-r border-gray-200">
+                    <span className="text-gray-800 text-sm leading-snug text-right">{compra}</span>
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#F0F0F0] flex items-center justify-center text-gray-400 text-xs font-bold">✕</span>
+                  </div>
+                  <div className="flex items-center justify-center px-3 py-4 bg-[#F5F5F7] border-x border-gray-200">
+                    <span className="text-[#1C1C1E] font-bold text-[10px] sm:text-xs uppercase tracking-wide leading-tight text-center">{label}</span>
+                  </div>
+                  <div className="flex items-center gap-3 px-5 py-4">
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#1C1C1E] flex items-center justify-center text-white text-xs font-bold">✓</span>
+                    <span className="text-[#1C1C1E] font-semibold text-sm leading-snug">{locacao}</span>
                   </div>
                 </div>
+
               </div>
             ))}
           </div>
 
-          {/* Resumo TCO */}
-          <div className="grid sm:grid-cols-2 gap-6 mt-12 pt-10 border-t border-gray-300">
-            <div>
-              <h4 className="font-sans font-bold text-xs uppercase tracking-widest text-[#1C1C1E] mb-3">
-                Resumo do Custo Total (TCO) Compra:
-              </h4>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Os custos reais de peças, máquinas paradas e desvalorização costumam superar o orçamento em até 40%.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-sans font-bold text-xs uppercase tracking-widest text-[#CC0000] mb-3">
-                Resumo do Custo Total (TCO) Locação:
-              </h4>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Com um custo fixo e otimizado, geralmente é 15% a 25% mais barato alugar do que manter uma frota própria antiga.
-              </p>
-            </div>
-          </div>
 
         </div>
       </section>
@@ -332,13 +293,13 @@ export default function LocacaoPage() {
               className="font-display text-white tracking-wide leading-tight mb-8"
               style={{ fontSize: "clamp(1.8rem, 3.8vw, 4rem)" }}
             >
-              COM A LOCAÇÃO<br />SEU NEGÓCIO<br />NUNCA PARA
+              Com a Locação<br />Seu Negócio<br />Nunca Para
             </h2>
             <a
               href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20solicitar%20uma%20cotação%20de%20locação.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center border border-white text-white text-sm font-semibold uppercase tracking-widest px-7 py-3 hover:bg-white hover:text-[#1C1C1E] transition-colors"
+              className="inline-flex items-center border border-white text-white text-sm font-semibold uppercase tracking-widest px-7 py-3 rounded-xl hover:bg-white hover:text-[#1C1C1E] transition-colors"
             >
               Solicite sua cotação
             </a>
@@ -357,7 +318,7 @@ export default function LocacaoPage() {
               className="font-display text-[#1C1C1E] mt-2 tracking-wide"
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
-              EQUIPAMENTOS PARA LOCAÇÃO
+              Equipamentos para Locação
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
               Clique no equipamento para ver as especificações técnicas completas.
@@ -381,7 +342,7 @@ export default function LocacaoPage() {
                   />
                 </div>
                 <div className="p-4 pb-5">
-                  <p className="text-[#1C1C1E] font-bold text-sm leading-tight mb-3">{eq.name}</p>
+                  <p className="text-[#1C1C1E] font-bold text-base leading-tight mb-3">{eq.name}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {eq.brands.map((brand) => (
                       <span
@@ -411,10 +372,10 @@ export default function LocacaoPage() {
                 </span>
               </div>
               <h2
-                className="font-display text-[#1C1C1E] tracking-wide leading-none mb-5"
+                className="font-display font-normal text-[#1C1C1E] tracking-wide leading-none mb-5"
                 style={{ fontSize: "clamp(1.8rem, 3vw, 3.2rem)" }}
               >
-                PROPOSTA PERSONALIZADA EM ATÉ 24H
+                Proposta Personalizada em até 24h
               </h2>
               <div className="w-12 h-0.5 bg-[#CC0000] mb-6" />
               <Steps />

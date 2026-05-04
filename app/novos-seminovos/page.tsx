@@ -53,7 +53,7 @@ export default function NovosESeminovosPage() {
               Representante Oficial STILL — Nordeste
             </p>
             <h1 className="heading-xl font-display text-[#1C1C1E] tracking-wide mb-4 leading-tight">
-              NOVOS E<br />SEMINOVOS
+              Novos e<br />Seminovos
             </h1>
             <p className="text-gray-500 text-lg mb-8 max-w-sm">
               Soluções completas para sua intralogística
@@ -63,13 +63,13 @@ export default function NovosESeminovosPage() {
                 href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20solicitar%20uma%20cotação%20de%20compra%20de%20equipamento.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-bold px-8 py-3.5 rounded transition-colors"
+                className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-bold px-8 py-3.5 rounded-xl transition-colors"
               >
-                Fale agora
+                Solicitar Cotação
               </a>
               <Link
                 href="/maquinas"
-                className="inline-flex items-center gap-2 border border-gray-300 hover:border-[#CC0000] text-gray-600 hover:text-[#CC0000] font-semibold px-8 py-3.5 rounded transition-colors"
+                className="inline-flex items-center gap-2 border border-gray-300 hover:border-[#CC0000] text-gray-600 hover:text-[#CC0000] font-semibold px-8 py-3.5 rounded-xl transition-colors"
               >
                 Ver Catálogo <ArrowRight size={16} />
               </Link>
@@ -93,7 +93,7 @@ export default function NovosESeminovosPage() {
         <div className="site-container">
           <div className="text-center mb-12">
             <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide">
-              POR QUE COMPRAR COM A MULTYLOG?
+              Por que Comprar com a Multylog?
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
               Seja equipamento novo ou seminovo revisado — você tem a segurança de comprar do representante oficial STILL no Nordeste.
@@ -109,7 +109,7 @@ export default function NovosESeminovosPage() {
                   <Icon size={22} className="text-[#CC0000] group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="font-display text-xl text-[#1C1C1E] tracking-wide mb-3">{title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+                <p className="text-gray-500 text-base leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -124,7 +124,7 @@ export default function NovosESeminovosPage() {
               Modelos Disponíveis
             </span>
             <h2 className="heading-lg font-display text-[#1C1C1E] mt-2 tracking-wide">
-              EQUIPAMENTOS DISPONÍVEIS
+              Equipamentos Disponíveis
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
               Clique no equipamento para ver as especificações técnicas completas.
@@ -146,7 +146,7 @@ export default function NovosESeminovosPage() {
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-[#1C1C1E] font-bold text-base">{eq.name}</p>
+                  <p className="text-[#1C1C1E] font-bold text-xl">{eq.name}</p>
                   <div className="flex items-center gap-1 mt-2 text-[#CC0000] text-xs font-semibold">
                     Ver specs <ArrowRight size={12} />
                   </div>
@@ -158,19 +158,16 @@ export default function NovosESeminovosPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#CC0000] py-16">
+      <section className="bg-[#CC0000] py-24 lg:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="heading-lg font-display text-white tracking-wide mb-4">
-            PRONTO PARA INVESTIR?
+          <h2 className="heading-lg font-display text-white tracking-wide mb-8">
+            Pronto para Investir?
           </h2>
-          <p className="text-red-100 text-lg mb-8">
-            Fale com nosso especialista e receba uma proposta personalizada em até 24h.
-          </p>
           <a
             href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20uma%20cotação%20de%20compra%20de%20empilhadeira.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-[#CC0000] font-bold px-8 py-4 rounded transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-[#CC0000] font-bold px-8 py-4 rounded-xl transition-colors text-lg"
           >
             Solicitar Cotação via WhatsApp
           </a>

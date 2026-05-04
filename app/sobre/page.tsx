@@ -11,22 +11,33 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <>
-      <section className="bg-[#1C1C1E] pt-32 pb-16">
-        <div className="site-container">
-          <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
-            Nossa História
-          </span>
-          <h1 className="heading-xl font-display text-white mt-3 mb-4 tracking-wide">
-            SOBRE A MULTYLOG
-          </h1>
-          <p className="text-gray-400 text-xl max-w-2xl">
-            Empresa familiar. Mais de 25 anos movimentando o Nordeste.
-          </p>
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(400px,52vh,600px)]">
+        <Image
+          src="/images/sobre-whatsapp.jpg"
+          alt="Multylog Empilhadeiras"
+          fill
+          className="object-cover object-center md:object-[center_80%]"
+          priority
+          sizes="100vw"
+          quality={95}
+        />
+        {/* Dark tonal overlay — uniform, Armac-style */}
+        <div className="absolute inset-0" style={{ background: "rgba(10,18,30,0.62)" }} />
+
+        {/* Title at bottom-left */}
+        <div className="site-container relative h-full flex items-end pb-12 lg:pb-16">
+          <div>
+            <h1 className="font-display text-white tracking-wide leading-none" style={{ fontSize: "clamp(2.6rem, 4.5vw, 5.2rem)" }}>
+              Sobre a Multylog
+            </h1>
+            <div className="w-12 h-0.5 bg-[#CC0000] mt-4" />
+          </div>
         </div>
       </section>
 
       {/* Story */}
-      <section className="section-py bg-white">
+      <section id="historia" className="section-py bg-white">
         <div className="site-container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -37,7 +48,7 @@ export default function SobrePage() {
                 </span>
               </div>
               <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide mb-4">
-                TRADIÇÃO E EXPERTISE EM INTRALOGÍSTICA
+                Tradição e Expertise em Intralogística
               </h2>
               <div className="w-12 h-0.5 bg-[#CC0000] mb-6" />
               <p className="text-gray-600 text-lg leading-relaxed mb-5">
@@ -95,7 +106,7 @@ export default function SobrePage() {
               Liderança
             </span>
             <h2 className="heading-lg font-display text-[#1C1C1E] mt-2 tracking-wide">
-              CONHEÇA NOSSOS GESTORES
+              Conheça Nossos Gestores
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
               Nossa equipe é formada por profissionais de diversas áreas para oferecer as melhores soluções em movimentação de cargas.
@@ -152,7 +163,7 @@ export default function SobrePage() {
             Linha do Tempo
           </span>
           <h2 className="font-display text-4xl lg:text-5xl text-[#1C1C1E] mt-1 tracking-wide">
-            NOSSA TRAJETÓRIA
+            Nossa Trajetória
           </h2>
           <p className="text-gray-600 mt-2 text-sm">Longo caminho para chegarmos até aqui</p>
         </div>
@@ -162,7 +173,7 @@ export default function SobrePage() {
           width={1260}
           height={596}
           className="w-full max-w-5xl h-auto mx-auto block"
-          quality={90}
+          quality={95}
         />
       </section>
 

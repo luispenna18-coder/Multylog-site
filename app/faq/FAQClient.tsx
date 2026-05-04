@@ -16,7 +16,7 @@ export default function FAQClient() {
             Tire suas dúvidas
           </span>
           <h1 className="font-display text-5xl sm:text-6xl text-white mt-3 mb-4 tracking-wide">
-            DÚVIDAS FREQUENTES
+            Dúvidas Frequentes
           </h1>
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function FAQClient() {
 
           <div className="mt-12 bg-[#1C1C1E] rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl text-white tracking-wide mb-3">
-              AINDA TEM DÚVIDAS?
+              Ainda tem Dúvidas?
             </h3>
             <p className="text-gray-400 mb-6">Fale diretamente com nosso time comercial.</p>
             <a

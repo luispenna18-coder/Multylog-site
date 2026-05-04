@@ -13,11 +13,11 @@ export default function DiaDaCulturaPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1C1C1E] pt-32 pb-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#F5F5F7] pt-32 pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-[#1C1C1E]/60 hover:text-[#1C1C1E] text-sm font-semibold border border-[#1C1C1E]/20 hover:border-[#1C1C1E]/50 px-4 py-2 rounded-xl mb-8 transition-all"
           >
             <ArrowLeft size={14} /> Voltar ao Blog
           </Link>
@@ -26,16 +26,16 @@ export default function DiaDaCulturaPage() {
             <span className="bg-[#CC0000] text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wide">
               Cultura
             </span>
-            <span className="flex items-center gap-1 text-gray-400 text-sm">
+            <span className="flex items-center gap-1 text-gray-500 text-sm">
               <Calendar size={13} />
-              08 de novembro de 2024
+              09 de março de 2026
             </span>
           </div>
 
-          <h1 className="font-display text-4xl sm:text-5xl text-white tracking-wide leading-tight mb-4">
-            DIA DA CULTURA: DINÂMICA DE GRUPO E ALINHAMENTO DE VALORES
+          <h1 className="font-display text-4xl sm:text-5xl text-[#1C1C1E] tracking-wide leading-tight mb-4">
+            Dia da Cultura: Dinâmica de Grupo e Alinhamento de Valores
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-600 text-lg leading-relaxed">
             A Multylog reuniu toda a equipe para um dia especial de dinâmicas,
             reflexões e alinhamento dos valores que constroem nossa cultura
             todos os dias.
@@ -44,22 +44,26 @@ export default function DiaDaCulturaPage() {
       </section>
 
       {/* Foto de abertura */}
-      <div className="relative w-full aspect-[16/7] bg-gray-900">
-        <Image
-          src="/imagens/dia-da-cultura/DSC06842.jpg"
-          alt="Apresentação de abertura do Dia da Cultura Multylog"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+      <div className="py-8 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
+            <Image
+              src="/imagens/dia-da-cultura/DSC06903.jpg"
+              alt="Equipe reunida no galpão da Multylog para o Dia da Cultura"
+              fill
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+        </div>
       </div>
 
       {/* Conteúdo */}
       <article className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
-            UM DIA PARA CELEBRAR QUEM SOMOS
+            Um Dia para Celebrar Quem Somos
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-5">
             Em novembro de 2024, a Multylog realizou o seu <strong>Dia da Cultura</strong> —
@@ -73,11 +77,11 @@ export default function DiaDaCulturaPage() {
             da rotina operacional e focado nas pessoas.
           </p>
 
-          {/* Foto galpão */}
+          {/* Foto abertura */}
           <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-4">
             <Image
-              src="/imagens/dia-da-cultura/DSC06903.jpg"
-              alt="Equipe reunida no galpão da Multylog para o Dia da Cultura"
+              src="/imagens/dia-da-cultura/DSC06842.jpg"
+              alt="Apresentação de abertura do Dia da Cultura Multylog"
               fill
               className="object-cover"
             />
@@ -87,7 +91,7 @@ export default function DiaDaCulturaPage() {
           </p>
 
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
-            A DINÂMICA: CONSTRUINDO JUNTOS
+            A Dinâmica: Construindo Juntos
           </h2>
           <p className="text-gray-600 leading-relaxed mb-5">
             O ponto alto do evento foi a <strong>dinâmica de grupo com blocos de montar</strong>.
@@ -122,7 +126,7 @@ export default function DiaDaCulturaPage() {
           </div>
 
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
-            ALINHAMENTO DE CULTURA: MAIS QUE UM EVENTO
+            Alinhamento de Cultura: Mais que um Evento
           </h2>
           <p className="text-gray-600 leading-relaxed mb-5">
             Além das dinâmicas, o dia incluiu uma rodada de apresentações sobre os
