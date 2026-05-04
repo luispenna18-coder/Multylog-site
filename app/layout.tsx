@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   description:
     "Representante autorizado STILL para Pernambuco, Paraíba e Alagoas. Mais de 25 anos de experiência em locação, venda, manutenção e peças de empilhadeiras.",
   keywords: "empilhadeiras, locação de empilhadeiras, STILL, Recife, Nordeste, PE, PB, AL",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "Multylog Empilhadeiras",
     description: "Representante autorizado STILL no Nordeste",
