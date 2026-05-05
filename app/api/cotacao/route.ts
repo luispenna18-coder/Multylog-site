@@ -13,8 +13,8 @@ export async function POST(req: Request) {
 
   try {
     await resend.emails.send({
-      from: "Site Multylog <noreply@multylog.com.br>",
-      to: "admcomercial@multylog.com",
+      from: "Site Multylog <onboarding@resend.dev>",
+      to: "admcomercial@multylog.com.br",
       replyTo: email,
       subject: `Nova cotação — ${nome} (${empresa})`,
       html: `
@@ -33,8 +33,8 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: "Erro ao enviar e-mail." }, { status: 500 });
+  } catch (err: unknown) {
+    console.error("RESEND ERROR:", JSON.stringify(err, null, 2));
+    return NextResponse.json({ error: "Erro ao enviar e-mail.", detail: String(err) }, { status: 500 });
   }
 }
