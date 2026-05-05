@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Mountain, Eye, ShieldCheck, Users, Settings, Star, ClipboardList } from "lucide-react";
+import { Mountain, Eye } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -17,18 +17,16 @@ const VALUE_ITEMS = [
     label: "Caráter é\ninegociável",
     icon: (
       <svg viewBox="0 0 48 48" width={56} height={56} {...S}>
-        {/* aperto de mão — braço esquerdo */}
-        <path d="M3 38 L14 26"/>
-        {/* mão esquerda com 3 dedos */}
-        <path d="M14 26 L18 26 L18 21 L21 21 L21 26 L24 21 L27 21 L27 26 L30 26"/>
-        {/* braço direito */}
-        <path d="M45 38 L34 26 L30 26"/>
-        {/* mão direita envolve os dedos por baixo */}
-        <path d="M14 26 L14 32 L30 32 L30 26"/>
-        {/* polegar esquerdo */}
-        <path d="M14 29 L9 33"/>
-        {/* polegar direito */}
-        <path d="M30 29 L35 33"/>
+        {/* Escudo com check — canto superior direito */}
+        <path d="M27 2 L46 2 L46 14 C46 22 36.5 27 36.5 27 C36.5 27 27 22 27 14 Z"/>
+        <polyline points="30,13 35,18 43,9"/>
+        {/* Aperto de mão — área inferior */}
+        <path d="M2 44 L13 30"/>
+        <path d="M46 44 L35 30"/>
+        <path d="M13 30 L16 30 L16 25 L19 25 L19 30 L22 24 L25 24 L25 30 L29 30"/>
+        <path d="M35 30 L29 30 L29 35 L13 35 L13 30"/>
+        <path d="M13 33 L9 37"/>
+        <path d="M35 33 L39 37"/>
       </svg>
     ),
   },
@@ -37,17 +35,15 @@ const VALUE_ITEMS = [
     icon: (
       <svg viewBox="0 0 48 48" width={56} height={56} {...S}>
         {/* 4 braços dos cantos ao centro */}
-        <path d="M5 5 L19 19"/>
-        <path d="M43 5 L29 19"/>
-        <path d="M5 43 L19 29"/>
-        <path d="M43 43 L29 29"/>
-        {/* punhos nos cantos */}
-        <rect x="1" y="1" width="8" height="7" rx="2"/>
-        <rect x="39" y="1" width="8" height="7" rx="2"/>
-        <rect x="1" y="40" width="8" height="7" rx="2"/>
-        <rect x="39" y="40" width="8" height="7" rx="2"/>
-        {/* centro unido */}
-        <path d="M19 19 L29 19 L29 29 L19 29 Z"/>
+        <line x1="4" y1="4" x2="14" y2="15"/>
+        <line x1="44" y1="4" x2="34" y2="15"/>
+        <line x1="4" y1="44" x2="14" y2="33"/>
+        <line x1="44" y1="44" x2="34" y2="33"/>
+        {/* 4 mãos encontrando-se no centro */}
+        <rect x="10" y="11" width="13" height="10" rx="4"/>
+        <rect x="25" y="11" width="13" height="10" rx="4"/>
+        <rect x="10" y="27" width="13" height="10" rx="4"/>
+        <rect x="25" y="27" width="13" height="10" rx="4"/>
       </svg>
     ),
   },
@@ -55,24 +51,22 @@ const VALUE_ITEMS = [
     label: "Encantamento",
     icon: (
       <svg viewBox="0 0 48 48" width={56} height={56} {...S}>
-        {/* engrenagem topo */}
-        <circle cx="24" cy="10" r="5"/>
-        <path d="M24 5 L24 2 M24 15 L24 18 M19 10 L16 10 M29 10 L32 10 M20.5 6.5 L18.4 4.4 M27.5 13.5 L29.6 15.6 M27.5 6.5 L29.6 4.4 M20.5 13.5 L18.4 15.6"/>
-        {/* haste + barra horizontal */}
-        <line x1="24" y1="18" x2="24" y2="25"/>
-        <path d="M12 25 L36 25"/>
-        {/* pessoa esquerda */}
-        <line x1="12" y1="25" x2="12" y2="30"/>
-        <circle cx="12" cy="34" r="3.5"/>
-        <path d="M6 46 C6 41 18 41 18 46"/>
-        {/* pessoa centro */}
-        <line x1="24" y1="25" x2="24" y2="30"/>
-        <circle cx="24" cy="34" r="3.5"/>
-        <path d="M18 46 C18 41 30 41 30 46"/>
-        {/* pessoa direita */}
-        <line x1="36" y1="25" x2="36" y2="30"/>
-        <circle cx="36" cy="34" r="3.5"/>
-        <path d="M30 46 C30 41 42 41 42 46"/>
+        {/* Engrenagem — topo centro */}
+        <circle cx="24" cy="9" r="4.5"/>
+        <path d="M24 4.5 L24 2 M24 13.5 L24 16 M19.5 9 L17 9 M28.5 9 L31 9 M21.2 6.2 L19.4 4.4 M26.8 11.8 L28.6 13.6 M26.8 6.2 L28.6 4.4 M21.2 11.8 L19.4 13.6"/>
+        {/* Haste central + ramificação */}
+        <line x1="24" y1="16" x2="24" y2="22"/>
+        <path d="M10 22 L38 22"/>
+        <line x1="10" y1="22" x2="10" y2="26"/>
+        <line x1="24" y1="22" x2="24" y2="26"/>
+        <line x1="38" y1="22" x2="38" y2="26"/>
+        {/* 3 pessoas */}
+        <circle cx="10" cy="31" r="4"/>
+        <path d="M3 46 C3 39 17 39 17 46"/>
+        <circle cx="24" cy="31" r="4"/>
+        <path d="M17 46 C17 39 31 39 31 46"/>
+        <circle cx="38" cy="31" r="4"/>
+        <path d="M31 46 C31 39 45 39 45 46"/>
       </svg>
     ),
   },
@@ -80,16 +74,16 @@ const VALUE_ITEMS = [
     label: "Somos parceiros\nna produtividade",
     icon: (
       <svg viewBox="0 0 48 48" width={56} height={56} {...S}>
-        {/* pessoa (direita) */}
-        <circle cx="35" cy="10" r="5.5"/>
-        <path d="M24 44 C24 35 29 31 35 31 C41 31 46 35 46 44"/>
-        {/* fita da medalha */}
-        <path d="M13 2 L10 13"/>
-        <path d="M13 2 L16 13"/>
-        {/* círculo da medalha */}
-        <circle cx="13" cy="20" r="8"/>
-        {/* estrela dentro da medalha */}
-        <path d="M13 14 L14.5 18.5 L19 18.5 L15.5 21.3 L16.8 25.5 L13 22.8 L9.2 25.5 L10.5 21.3 L7 18.5 L11.5 18.5 Z"/>
+        {/* Pessoa — lado direito */}
+        <circle cx="34" cy="10" r="6"/>
+        <path d="M22 44 C22 34 28 30 34 30 C40 30 46 34 46 44"/>
+        {/* Fita da medalha */}
+        <path d="M13 3 L10 15"/>
+        <path d="M13 3 L16 15"/>
+        {/* Círculo da medalha */}
+        <circle cx="13" cy="22" r="8"/>
+        {/* Estrela 5 pontas dentro da medalha */}
+        <path d="M13 15.5 L14.5 19.8 L19 19.8 L15.4 22.4 L16.9 26.7 L13 24.1 L9.1 26.7 L10.6 22.4 L7 19.8 L11.5 19.8 Z"/>
       </svg>
     ),
   },
@@ -97,20 +91,20 @@ const VALUE_ITEMS = [
     label: "Excelência com\nMelhoria Contínua",
     icon: (
       <svg viewBox="0 0 48 48" width={56} height={56} {...S}>
-        {/* prancheta */}
-        <rect x="2" y="10" width="26" height="34" rx="2"/>
-        {/* clip */}
-        <path d="M9 10 L9 6 C9 3 21 3 21 6 L21 10"/>
-        {/* itens de checklist */}
-        <path d="M7 20 L9 22 L13 18"/>
-        <line x1="16" y1="20" x2="24" y2="20"/>
-        <path d="M7 28 L9 30 L13 26"/>
-        <line x1="16" y1="28" x2="24" y2="28"/>
-        <path d="M7 36 L9 38 L13 34"/>
-        <line x1="16" y1="36" x2="24" y2="36"/>
-        {/* pessoa (direita) */}
-        <circle cx="38" cy="18" r="5.5"/>
-        <path d="M28 46 C28 37 33 33 38 33 C43 33 48 37 48 46"/>
+        {/* Prancheta */}
+        <rect x="2" y="9" width="27" height="36" rx="2"/>
+        {/* Clip */}
+        <path d="M9 9 L9 5 C9 3 22 3 22 5 L22 9"/>
+        {/* Checklist — 3 linhas com check */}
+        <path d="M7 19 L9 21 L14 17"/>
+        <line x1="17" y1="19" x2="25" y2="19"/>
+        <path d="M7 27 L9 29 L14 25"/>
+        <line x1="17" y1="27" x2="25" y2="27"/>
+        <path d="M7 35 L9 37 L14 33"/>
+        <line x1="17" y1="35" x2="25" y2="35"/>
+        {/* Pessoa — lado direito */}
+        <circle cx="38" cy="17" r="6"/>
+        <path d="M27 46 C27 36 33 32 38 32 C43 32 48 36 48 46"/>
       </svg>
     ),
   },
@@ -169,30 +163,46 @@ export default function TrabalheConoscoPage() {
       </section>
 
       {/* ── Missão & Visão ───────────────────────────────────────────── */}
-      <section className="bg-white section-py">
+      <section className="bg-white section-py border-b border-gray-100">
         <div className="site-container">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
 
             <div>
               <div className="flex items-center gap-4 mb-4">
-                <Mountain size={48} strokeWidth={1.5} className="text-[#CC0000] flex-shrink-0" />
-                <h2 className="font-display text-[#1C1C1E] tracking-wide text-3xl lg:text-4xl">
+                {/* Montanha com bandeira */}
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                  {/* triângulo da montanha */}
+                  <path d="M4 44L26 8L48 44H4Z" stroke="#CC0000" strokeWidth="2.8" strokeLinejoin="round"/>
+                  {/* mastro da bandeira no topo */}
+                  <line x1="26" y1="8" x2="26" y2="2" stroke="#CC0000" strokeWidth="2.8" strokeLinecap="round"/>
+                  {/* bandeira */}
+                  <path d="M26 2L33 4.5L26 7Z" fill="#CC0000"/>
+                </svg>
+                <h2 className="font-display text-[#1C1C1E] tracking-wide text-3xl lg:text-4xl uppercase">
                   Nossa Missão
                 </h2>
               </div>
-              <p className="text-gray-600 text-xl leading-relaxed">
+              <p className="text-gray-700 text-lg font-semibold leading-relaxed">
                 Movimentar cargas e impulsionar entregas, por meio de atendimento ágil e operações sob medida.
               </p>
             </div>
 
             <div>
               <div className="flex items-center gap-4 mb-4">
-                <Eye size={48} strokeWidth={1.5} className="text-[#CC0000] flex-shrink-0" />
-                <h2 className="font-display text-[#1C1C1E] tracking-wide text-3xl lg:text-4xl">
+                {/* Olho */}
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                  {/* forma do olho */}
+                  <path d="M4 26C4 26 12 12 26 12C40 12 48 26 48 26C48 26 40 40 26 40C12 40 4 26 4 26Z" stroke="#CC0000" strokeWidth="2.8" strokeLinejoin="round"/>
+                  {/* íris */}
+                  <circle cx="26" cy="26" r="7" stroke="#CC0000" strokeWidth="2.8"/>
+                  {/* pupila */}
+                  <circle cx="26" cy="26" r="3" fill="#CC0000"/>
+                </svg>
+                <h2 className="font-display text-[#1C1C1E] tracking-wide text-3xl lg:text-4xl uppercase">
                   Nossa Visão
                 </h2>
               </div>
-              <p className="text-gray-600 text-xl leading-relaxed">
+              <p className="text-gray-700 text-lg font-semibold leading-relaxed">
                 Consolidar a Multylog como referência regional intralogística e crescer de forma sustentável até 2030.
               </p>
             </div>
@@ -247,15 +257,9 @@ export default function TrabalheConoscoPage() {
 
               {/* 5 ícones */}
               <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mb-12">
-                {[
-                  { icon: ShieldCheck,   label: "Caráter é\ninegociável" },
-                  { icon: Users,         label: "Trabalho\nem Equipe" },
-                  { icon: Settings,      label: "Encantamento" },
-                  { icon: Star,          label: "Somos parceiros\nna produtividade" },
-                  { icon: ClipboardList, label: "Excelência com\nMelhoria Contínua" },
-                ].map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex flex-col items-center text-center gap-3">
-                    <Icon size={56} strokeWidth={1.25} className="text-[#CC0000]" />
+                {VALUE_ITEMS.map(({ icon, label }) => (
+                  <div key={label} className="flex flex-col items-center text-center gap-3 text-[#CC0000]">
+                    {icon}
                     <p className="text-base text-[#1C1C1E] font-medium leading-snug whitespace-pre-line">{label}</p>
                   </div>
                 ))}
@@ -318,9 +322,12 @@ export default function TrabalheConoscoPage() {
           <p className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest mb-2">
             Formação Técnica da Multylog
           </p>
-          <h2 className="font-display text-4xl lg:text-5xl text-[#1C1C1E] tracking-wide mb-8">
+          <h2 className="font-display text-4xl lg:text-5xl text-[#1C1C1E] tracking-wide mb-4">
             Conheça o Projeto Parafusinho
           </h2>
+          <p className="text-gray-600 text-lg max-w-4xl mx-auto mb-8">
+            O programa existe com o objetivo estratégico de promover o desenvolvimento de jovens talentos, com idade entre 18 e 24 anos, preparando-os para atuarem como futuros Mecânicos.
+          </p>
           <div className="relative w-full aspect-video rounded-xl overflow-hidden max-w-4xl">
             <iframe
               src="https://www.youtube.com/embed/P6KvlA0YlsE"
