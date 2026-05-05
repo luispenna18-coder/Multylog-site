@@ -81,7 +81,7 @@ export default function PecasServicosPage() {
             </span>
           </div>
           <h2 className="font-display text-[#1C1C1E] tracking-wide mb-10" style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}>
-            Peças Genuínas em Recife
+            Peças Genuínas em Estoque
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {PARTS.map(({ src, label }) => (
