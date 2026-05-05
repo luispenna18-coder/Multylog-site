@@ -109,10 +109,10 @@ export default function PecasServicosPage() {
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             <div>
               <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
-                Atendimento Multimarca
+                Não Apenas STILL
               </span>
               <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide mt-2 mb-5">
-                Não Apenas STILL
+                Atendimento Multimarca
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6 text-lg">
                 Nossa equipe técnica está preparada para atender empilhadeiras de diversas marcas.
