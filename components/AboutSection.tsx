@@ -4,10 +4,9 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import FadeUp from "@/components/FadeUp";
 
 const HIGHLIGHTS = [
-  "25 anos de expertise exclusiva em intralogística no Nordeste",
+  "Mais de 25 anos especializados em intralogística no Nordeste",
   "Cobertura completa em PE, PB, AL, RN e SE com logística própria",
-  "Técnicos treinados com padrão internacional KION Group — a maior do mundo no setor",
-  "Resposta rápida garantida: estoque próprio de peças e equipamentos em Recife",
+  "Técnicos certificados com padrão KION Group, um dos maiores grupos de empilhadeiras do mundo",
 ];
 
 export default function AboutSection() {
@@ -45,7 +44,7 @@ export default function AboutSection() {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-xs text-gray-500 mt-2 text-center">Nordeste — PE · PB · AL</p>
+                <p className="text-xs text-gray-500 mt-2 text-center">Nordeste: PE · PB · AL</p>
               </div>
             </div>
           </FadeUp>
@@ -61,14 +60,13 @@ export default function AboutSection() {
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Somos uma empresa familiar com mais de 25 anos de experiência em movimentação de
-                cargas intralogísticas. Como representante exclusivo da STILL no Nordeste, oferecemos
-                soluções completas de locação, venda, assistência técnica e peças para toda a sua
-                operação.
+                cargas intralogísticas. Como representante exclusivo da STILL em Pernambuco, Paraíba
+                e Alagoas, oferecemos soluções completas de locação, venda, assistência técnica e peças.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Nossa sede em Recife atende clientes em Pernambuco, Paraíba, Alagoas, Rio Grande do Norte e Sergipe, com estoque
-                próprio, equipe certificada e o compromisso de manter sua operação funcionando sem
-                imprevistos.
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                Também atendemos Rio Grande do Norte e Sergipe com serviços de locação, manutenção
+                e peças, com estoque próprio em Recife, equipe certificada e o compromisso de
+                manter sua operação funcionando sem imprevistos.
               </p>
 
               <ul className="space-y-3 mb-8">

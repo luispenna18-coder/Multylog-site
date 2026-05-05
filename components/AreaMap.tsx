@@ -70,13 +70,13 @@ export default function AreaMap() {
         <FadeUp>
         <div className="text-center mb-6">
           <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
-            Onde Atuamos
+            Onde Atuamos?
           </span>
-          <h2 className="heading-lg font-display text-[#1C1C1E] mt-2 tracking-wide">
-            Área de Atuação
+          <h2 className="heading-lg font-display text-[#1C1C1E] mt-5 tracking-wide">
+            Presença em 5 Estados
           </h2>
-          <p className="text-gray-600 mt-2 max-w-xl mx-auto text-sm">
-            Representante exclusivo STILL para cinco estados do Nordeste, com estoque próprio e logística ágil a partir de Recife.
+          <p className="text-gray-600 mt-2 max-w-xl mx-auto text-base">
+            Representante exclusivo STILL em PE, PB e AL. Também atendemos RN e SE com peças, locação e manutenção.
           </p>
         </div>
         </FadeUp>
@@ -183,7 +183,7 @@ export default function AreaMap() {
             <div className="bg-white border border-gray-200 rounded-xl p-4">
               <p className="text-gray-600 text-sm leading-relaxed mb-3">
                 Nossa sede em <span className="text-[#1C1C1E] font-medium">Recife (PE)</span> garante
-                logística ágil e estoque próprio para atendimento rápido em toda a região.
+                estoque próprio e logística ágil para atendimento rápido em toda a região.
               </p>
               <Link
                 href="/locacao"

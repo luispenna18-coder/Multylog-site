@@ -61,7 +61,7 @@ export default function PartsSection() {
             </h2>
 
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8">
-              A Multipeças — nossa divisão de peças e serviços — garante
+              A Multipeças, nossa divisão de peças e serviços, garante
               que sua operação nunca para por falta de peças.
               Trabalhamos com peças genuínas STILL e atendemos
               outras marcas do mercado.

@@ -34,7 +34,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="https://tudoedesign.com.br/wp-content/uploads/2026/01/logo_multylog_home_02-1.png"
+              src="/images/logo-multylog.png"
               alt="Multylog Empilhadeiras"
               width={160}
               height={48}
