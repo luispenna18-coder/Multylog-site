@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { CheckCircle } from "lucide-react";
-import { SITE } from "@/lib/constants";
 
 const EQUIPMENT_TYPES = [
   "Empilhadeira Contrabalançada",
@@ -48,31 +47,12 @@ export default function QuoteForm() {
     setTouched({ nome: true, email: true, empresa: true, telefone: true, equipamento: true });
     if (!form.nome || !form.email || !form.empresa || !form.equipamento || !isValidPhone(form.telefone)) return;
 
-    // Dispara e-mail em background (não bloqueia o fluxo do usuário)
-    fetch("/api/cotacao", {
+    await fetch("/api/cotacao", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     }).catch(() => {});
 
-    // Abre WhatsApp com os dados
-    const msg = [
-      `Olá! Quero solicitar uma cotação de locação.`,
-      ``,
-      `*Nome:* ${form.nome}`,
-      `*Empresa:* ${form.empresa}`,
-      `*E-mail:* ${form.email}`,
-      `*Telefone:* ${form.telefone}`,
-      `*Equipamento:* ${form.equipamento}`,
-      form.mensagem ? `*Mensagem:* ${form.mensagem}` : "",
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    window.open(
-      `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`,
-      "_blank"
-    );
     setSubmitted(true);
   };
 
