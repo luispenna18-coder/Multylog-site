@@ -71,7 +71,7 @@ export default function ProjetoParafusinhoPage() {
             investir nas pessoas antes que o mercado as descarte por falta de
             oportunidade.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
             Foi com esse pensamento que nasceu o <strong>Projeto Parafusinho</strong> —
             uma iniciativa que seleciona jovens das comunidades do Recife, sem
             experiência prévia, e os treina diretamente dentro da nossa
@@ -82,21 +82,21 @@ export default function ProjetoParafusinhoPage() {
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
             O Parafusinho na Prática
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-5">
+          <p className="text-gray-600 text-lg leading-relaxed mb-5">
             O nome não é por acaso. O parafuso é a peça mais básica da
             mecânica — e dominar o básico com perfeição é o que diferencia
             um bom profissional. O programa começa do zero: como funciona um
             motor elétrico, o que é um circuito hidráulico, como identificar
             uma falha antes que ela vire um problema.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-5">
+          <p className="text-gray-600 text-lg leading-relaxed mb-5">
             Os jovens selecionados passam por um ciclo de formação dentro da
             própria oficina da Multylog, acompanhados pelos técnicos
             certificados STILL da equipe. A formação é prática desde o
             primeiro dia: não tem só sala de aula. Tem mão na graxa, ferramenta
             na mão, equipamento real na frente.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
             Ao longo do programa, os aprendizes passam por manutenção
             preventiva, diagnóstico elétrico, sistemas hidráulicos, carga e
             descarga de baterias tracionárias, e os procedimentos de segurança
@@ -107,7 +107,7 @@ export default function ProjetoParafusinhoPage() {
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
             Por que Recife Precisa Disso
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-5">
+          <p className="text-gray-600 text-lg leading-relaxed mb-5">
             O Nordeste vive um crescimento expressivo na demanda por profissionais
             técnicos qualificados — especialmente no setor de logística e
             intralogística, que avança junto com a expansão de centros de
@@ -115,7 +115,7 @@ export default function ProjetoParafusinhoPage() {
             especializados em equipamentos de movimentação de carga cresce mais
             rápido do que a oferta de formação técnica acessível.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
             O Parafusinho existe para fechar essa lacuna — e fazê-lo de dentro
             para fora. Não como caridade. Como um investimento real no futuro
             da nossa equipe e da nossa cidade.
@@ -124,14 +124,14 @@ export default function ProjetoParafusinhoPage() {
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
             O que Muda na Vida de Quem Passa pelo Programa
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-5">
+          <p className="text-gray-600 text-lg leading-relaxed mb-5">
             Quem entra no Parafusinho não entra só para aprender mecânica.
             Entra para aprender o que é responsabilidade, pontualidade, trabalho
             em equipe e orgulho pelo que faz. São valores que a Multylog leva
             a sério — e que queremos que cada aprendiz carregue para o resto
             da vida, independente de para onde a carreira os leve.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
             Os melhores do programa têm a chance de integrar o time fixo da
             Multylog — e é assim que o ciclo se fecha: a empresa que treinamos
             ontem, trabalhando conosco amanhã, atendendo nossos clientes com

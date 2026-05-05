@@ -71,7 +71,7 @@ export default function DiaDaCulturaPage() {
             de um propósito comum: fortalecer os laços da equipe e alinhar os valores
             que orientam o nosso jeito de trabalhar.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
             O evento aconteceu nas próprias instalações da empresa, no showroom e galpão
             da Multylog em Recife, transformados em palco para um dia diferente — longe
             da rotina operacional e focado nas pessoas.
@@ -93,13 +93,13 @@ export default function DiaDaCulturaPage() {
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
             A Dinâmica: Construindo Juntos
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-5">
+          <p className="text-gray-600 text-lg leading-relaxed mb-5">
             O ponto alto do evento foi a <strong>dinâmica de grupo com blocos de montar</strong>.
             Os colaboradores foram divididos em equipes e desafiados a construir estruturas
             coletivamente — cada grupo com seus próprios objetivos, mas todos dependendo
             da comunicação, da escuta e da colaboração para chegar ao resultado.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
             A atividade foi uma metáfora viva da cultura que a Multylog busca construir:
             ninguém entrega sozinho. É a soma das habilidades de cada um, alinhada a um
             propósito claro, que gera resultados extraordinários.
@@ -128,12 +128,12 @@ export default function DiaDaCulturaPage() {
           <h2 className="font-display text-3xl text-[#1C1C1E] tracking-wide mb-5">
             Alinhamento de Cultura: Mais que um Evento
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-5">
+          <p className="text-gray-600 text-lg leading-relaxed mb-5">
             Além das dinâmicas, o dia incluiu uma rodada de apresentações sobre os
             pilares da cultura Multylog — os valores que guiam decisões, relações com
             clientes e o comportamento esperado de todos dentro da empresa.
           </p>
-          <p className="text-gray-600 leading-relaxed mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
             Para a liderança, o Dia da Cultura é um investimento contínuo: construir uma
             empresa sólida começa com uma equipe que compartilha os mesmos valores e se
             orgulha de onde trabalha.
