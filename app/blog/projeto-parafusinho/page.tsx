@@ -49,7 +49,7 @@ export default function ProjetoParafusinhoPage() {
           <div className="relative w-full aspect-video rounded-xl overflow-hidden">
             <iframe
               src="https://www.youtube.com/embed/P6KvlA0YlsE"
-              title="Projeto Parafusinho — Multylog"
+              title="Projeto Parafusinho | Multylog"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
@@ -72,7 +72,7 @@ export default function ProjetoParafusinhoPage() {
             oportunidade.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
-            Foi com esse pensamento que nasceu o <strong>Projeto Parafusinho</strong> —
+            Foi com esse pensamento que nasceu o <strong>Projeto Parafusinho</strong>,
             uma iniciativa que seleciona jovens das comunidades do Recife, sem
             experiência prévia, e os treina diretamente dentro da nossa
             estrutura para se tornarem mecânicos especializados em
@@ -84,7 +84,7 @@ export default function ProjetoParafusinhoPage() {
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-5">
             O nome não é por acaso. O parafuso é a peça mais básica da
-            mecânica — e dominar o básico com perfeição é o que diferencia
+            mecânica. Dominar o básico com perfeição é o que diferencia
             um bom profissional. O programa começa do zero: como funciona um
             motor elétrico, o que é um circuito hidráulico, como identificar
             uma falha antes que ela vire um problema.
@@ -100,7 +100,7 @@ export default function ProjetoParafusinhoPage() {
             Ao longo do programa, os aprendizes passam por manutenção
             preventiva, diagnóstico elétrico, sistemas hidráulicos, carga e
             descarga de baterias tracionárias, e os procedimentos de segurança
-            exigidos pelos padrões STILL — a mesma formação que nossos técnicos
+            exigidos pelos padrões STILL, a mesma formação que nossos técnicos
             seniores recebem.
           </p>
 
@@ -109,14 +109,14 @@ export default function ProjetoParafusinhoPage() {
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-5">
             O Nordeste vive um crescimento expressivo na demanda por profissionais
-            técnicos qualificados — especialmente no setor de logística e
+            técnicos qualificados, especialmente no setor de logística e
             intralogística, que avança junto com a expansão de centros de
             distribuição, portos e indústrias na região. A demanda por mecânicos
             especializados em equipamentos de movimentação de carga cresce mais
             rápido do que a oferta de formação técnica acessível.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
-            O Parafusinho existe para fechar essa lacuna — e fazê-lo de dentro
+            O Parafusinho existe para fechar essa lacuna, fazendo isso de dentro
             para fora. Não como caridade. Como um investimento real no futuro
             da nossa equipe e da nossa cidade.
           </p>
@@ -128,12 +128,12 @@ export default function ProjetoParafusinhoPage() {
             Quem entra no Parafusinho não entra só para aprender mecânica.
             Entra para aprender o que é responsabilidade, pontualidade, trabalho
             em equipe e orgulho pelo que faz. São valores que a Multylog leva
-            a sério — e que queremos que cada aprendiz carregue para o resto
+            a sério. Queremos que cada aprendiz carregue esses valores para o resto
             da vida, independente de para onde a carreira os leve.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
             Os melhores do programa têm a chance de integrar o time fixo da
-            Multylog — e é assim que o ciclo se fecha: a empresa que treinamos
+            Multylog. É assim que o ciclo se fecha: a empresa que treinamos
             ontem, trabalhando conosco amanhã, atendendo nossos clientes com
             excelência.
           </p>

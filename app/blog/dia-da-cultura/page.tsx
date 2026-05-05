@@ -6,7 +6,7 @@ import { Calendar, ArrowLeft } from "lucide-react";
 export const metadata: Metadata = {
   title: "Dia da Cultura: Dinâmica de Grupo e Alinhamento de Valores | Multylog",
   description:
-    "A Multylog reuniu toda a equipe para um dia especial de dinâmicas de grupo e alinhamento da cultura da empresa — fortalecendo vínculos e reforçando os valores que nos guiam.",
+    "A Multylog reuniu toda a equipe para um dia especial de dinâmicas de grupo e alinhamento da cultura da empresa, fortalecendo vínculos e reforçando os valores que nos guiam.",
 };
 
 export default function DiaDaCulturaPage() {
@@ -66,14 +66,14 @@ export default function DiaDaCulturaPage() {
             Um Dia para Celebrar Quem Somos
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-5">
-            Em novembro de 2024, a Multylog realizou o seu <strong>Dia da Cultura</strong> —
+            Em novembro de 2024, a Multylog realizou o seu <strong>Dia da Cultura</strong>,
             um encontro pensado para reunir colaboradores de todos os setores em torno
             de um propósito comum: fortalecer os laços da equipe e alinhar os valores
             que orientam o nosso jeito de trabalhar.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
             O evento aconteceu nas próprias instalações da empresa, no showroom e galpão
-            da Multylog em Recife, transformados em palco para um dia diferente — longe
+            da Multylog em Recife, transformados em palco para um dia diferente, longe
             da rotina operacional e focado nas pessoas.
           </p>
 
@@ -96,7 +96,7 @@ export default function DiaDaCulturaPage() {
           <p className="text-gray-600 text-lg leading-relaxed mb-5">
             O ponto alto do evento foi a <strong>dinâmica de grupo com blocos de montar</strong>.
             Os colaboradores foram divididos em equipes e desafiados a construir estruturas
-            coletivamente — cada grupo com seus próprios objetivos, mas todos dependendo
+            coletivamente. Cada grupo tinha seus próprios objetivos, mas todos dependendo
             da comunicação, da escuta e da colaboração para chegar ao resultado.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
@@ -130,7 +130,7 @@ export default function DiaDaCulturaPage() {
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-5">
             Além das dinâmicas, o dia incluiu uma rodada de apresentações sobre os
-            pilares da cultura Multylog — os valores que guiam decisões, relações com
+            pilares da cultura Multylog: os valores que guiam decisões, relações com
             clientes e o comportamento esperado de todos dentro da empresa.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
@@ -149,7 +149,7 @@ export default function DiaDaCulturaPage() {
             />
           </div>
           <p className="text-gray-400 text-sm text-center mb-12 italic">
-            Parte da equipe ao final do encontro — energia e engajamento que definem a Multylog.
+            Parte da equipe ao final do encontro. Energia e engajamento que definem a Multylog.
           </p>
 
           {/* Foto equipe feminina */}
@@ -175,7 +175,7 @@ export default function DiaDaCulturaPage() {
             />
           </div>
           <p className="text-gray-400 text-sm text-center mb-12 italic">
-            A equipe Multylog reunida — esse é o time que move o Nordeste.
+            A equipe Multylog reunida. Esse é o time que move o Nordeste.
           </p>
 
           {/* CTA */}
