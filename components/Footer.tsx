@@ -38,9 +38,9 @@ export default function Footer() {
             </div>
 
             {/* Tagline */}
-            <p className="text-white/60 text-sm leading-relaxed text-center max-w-[260px]">
+            <p className="text-white text-sm leading-relaxed text-center max-w-[260px]">
               Representante autorizado STILL para Pernambuco, Paraíba e Alagoas.{" "}
-              <span className="font-semibold text-white/90">Mais de 25 anos movimentando o Nordeste.</span>
+              <span className="font-semibold">Mais de 25 anos movimentando o Nordeste.</span>
             </p>
 
           </div>
@@ -54,10 +54,10 @@ export default function Footer() {
           {/* Endereço 1 */}
           <div>
             <p className="font-semibold text-white text-sm mb-3">{SITE.addresses.multylog.label}</p>
-            <p className="text-white/60 text-sm leading-relaxed">{SITE.addresses.multylog.street}</p>
-            <p className="text-white/60 text-sm">{SITE.addresses.multylog.city}</p>
+            <p className="text-white text-sm leading-relaxed">{SITE.addresses.multylog.street}</p>
+            <p className="text-white text-sm">{SITE.addresses.multylog.city}</p>
             <a href={`tel:${SITE.phone.replace(/\D/g,"")}`}
-              className="text-white/60 text-sm hover:text-white transition-colors block mt-1">
+              className="text-white text-sm hover:text-white transition-colors block mt-1">
               {SITE.phone}
             </a>
             <div className="mt-5 rounded overflow-hidden w-full" style={{ height: 160 }}>
@@ -75,10 +75,10 @@ export default function Footer() {
           {/* Endereço 2 */}
           <div>
             <p className="font-semibold text-white text-sm mb-3">{SITE.addresses.multipecas.label}</p>
-            <p className="text-white/60 text-sm leading-relaxed">{SITE.addresses.multipecas.street}</p>
-            <p className="text-white/60 text-sm">{SITE.addresses.multipecas.city}</p>
+            <p className="text-white text-sm leading-relaxed">{SITE.addresses.multipecas.street}</p>
+            <p className="text-white text-sm">{SITE.addresses.multipecas.city}</p>
             <a href={`tel:${SITE.phone.replace(/\D/g,"")}`}
-              className="text-white/60 text-sm hover:text-white transition-colors block mt-1">
+              className="text-white text-sm hover:text-white transition-colors block mt-1">
               {SITE.phone}
             </a>
             <div className="mt-5 rounded overflow-hidden w-full" style={{ height: 160 }}>
@@ -97,10 +97,10 @@ export default function Footer() {
           <div className="flex flex-col">
             <p className="font-semibold text-white text-sm mb-3">E-mail</p>
             <a href={`mailto:${SITE.email}`}
-              className="text-white/60 text-sm hover:text-white transition-colors block">
+              className="text-white text-sm hover:text-white transition-colors block">
               {SITE.email}
             </a>
-            <p className="text-white/40 text-xs mt-1">{SITE.hours}</p>
+            <p className="text-white text-xs mt-1">{SITE.hours}</p>
 
             <div className="flex gap-3 mt-8">
               {[
@@ -125,7 +125,7 @@ export default function Footer() {
       {/* ── Barra inferior ── */}
       <div className="border-t border-white/10">
         <div className="site-container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-xs">
+          <p className="text-white text-xs">
             © {new Date().getFullYear()} Multylog Empilhadeiras. Todos os direitos reservados.
           </p>
         </div>

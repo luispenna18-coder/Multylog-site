@@ -4,6 +4,7 @@ import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { PRODUCTS, CATEGORY_LABELS, type Category } from "@/lib/products";
 
 type Filter = "todos" | "outros" | Category;
@@ -70,7 +71,7 @@ function MaquinasCatalog() {
               <button
                 key={f.key}
                 onClick={() => setActive(f.key)}
-                className={`px-5 py-2.5 rounded text-sm font-semibold transition-all ${
+                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                   active === f.key
                     ? "bg-[#CC0000] text-white"
                     : "bg-white text-[#1C1C1E] hover:bg-gray-200 border border-gray-200"
@@ -82,7 +83,7 @@ function MaquinasCatalog() {
           </div>
 
           {/* Count */}
-          <p className="text-gray-400 text-sm mb-6">{displayed.length} equipamento(s)</p>
+          <p className="text-gray-500 text-sm mb-6">{displayed.length} equipamento{displayed.length !== 1 ? "s" : ""}</p>
 
           {/* Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -111,28 +112,33 @@ function MaquinasCatalog() {
 
                 {/* Info */}
                 <div className="p-5 flex flex-col flex-1">
-                  {/* Specs com ícones */}
-                  <div className="flex items-center gap-5 mb-3">
+                  {/* Specs com ícones — estilo STILL */}
+                  <div className="flex items-stretch mb-4">
                     {product.liftHeight && (
-                      <span className="flex items-center gap-1.5 text-xs text-gray-500">
-                        <svg width="13" height="20" viewBox="0 0 13 20" fill="none" className="shrink-0 text-gray-400">
-                          <line x1="3" y1="19" x2="10" y2="19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                          <line x1="6.5" y1="19" x2="6.5" y2="8" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2"/>
-                          <path d="M3 10L6.5 4L10 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                        </svg>
-                        {product.liftHeight}
-                      </span>
+                      <>
+                        <div className="flex flex-col items-center gap-1 pr-4">
+                          {/* Ícone elevação */}
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className="text-gray-400">
+                            <line x1="6" y1="26" x2="22" y2="26" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeDasharray="3 2"/>
+                            <line x1="14" y1="24" x2="14" y2="10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                            <path d="M9 14L14 6L19 14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                          </svg>
+                          <span className="text-xs font-semibold text-[#CC0000]">{product.liftHeight}</span>
+                        </div>
+                        <div className="w-px bg-gray-200 mx-1 self-stretch" />
+                      </>
                     )}
-                    <span className="flex items-center gap-1.5 text-xs text-gray-500">
-                      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" className="shrink-0 text-gray-400">
-                        <path d="M1 5.5L9 1.5L17 5.5V13.5L9 15.5L1 13.5V5.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-                        <line x1="9" y1="1.5" x2="9" y2="15.5" stroke="currentColor" strokeWidth="1.5"/>
+                    <div className="flex flex-col items-center gap-1 pl-4">
+                      {/* Ícone capacidade (sacola/peso) */}
+                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className="text-gray-400">
+                        <path d="M8 11h12l-1.5 12H9.5L8 11Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
+                        <path d="M10 11c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
                       </svg>
-                      {product.capacity}
-                    </span>
+                      <span className="text-xs font-semibold text-[#CC0000]">{product.capacity}</span>
+                    </div>
                   </div>
 
-                  <h3 className="font-sans font-bold text-lg text-[#1C1C1E] mb-1">
+                  <h3 className="font-display text-xl text-[#1C1C1E] tracking-wide mb-1">
                     {product.name}
                   </h3>
 
@@ -143,14 +149,14 @@ function MaquinasCatalog() {
                       </span>
                     )}
                     {product.available?.includes("venda") && (
-                      <span className="text-xs bg-gray-100 text-gray-600 font-semibold px-2.5 py-1 rounded">
+                      <span className="text-xs bg-[#1C1C1E]/10 text-[#1C1C1E] font-semibold px-2.5 py-1 rounded">
                         Venda
                       </span>
                     )}
                   </div>
 
-                  <span className="mt-4 text-[#CC0000] text-sm font-semibold group-hover:underline">
-                    Saiba mais →
+                  <span className="mt-4 inline-flex items-center gap-1 text-[#CC0000] text-sm font-semibold group-hover:underline">
+                    Saiba mais <ArrowRight size={14} />
                   </span>
                 </div>
               </Link>

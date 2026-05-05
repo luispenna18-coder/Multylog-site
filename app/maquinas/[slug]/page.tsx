@@ -65,14 +65,14 @@ export default async function ProductPage({
       {/* Hero */}
       <section className="bg-[#1C1C1E] pt-32 pb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-            <Link href="/maquinas" className="hover:text-gray-300 transition-colors flex items-center gap-1">
+          <nav className="flex items-center gap-2 text-sm text-white/60 mb-6">
+            <Link href="/maquinas" className="hover:text-white transition-colors flex items-center gap-1 text-white font-medium">
               <ArrowLeft size={14} />
               Máquinas
             </Link>
-            <span>/</span>
-            <span className="text-gray-400">{CATEGORY_LABELS[product.category]}</span>
-            <span>/</span>
+            <span className="text-white/40">/</span>
+            <span className="text-white/70">{CATEGORY_LABELS[product.category]}</span>
+            <span className="text-white/40">/</span>
             <span className="text-white">{product.name}</span>
           </nav>
 
@@ -84,17 +84,17 @@ export default async function ProductPage({
           </h1>
           <div className="flex flex-wrap gap-2">
             {product.energy && (
-              <span className="bg-white/10 text-gray-300 text-xs font-medium px-3 py-1 rounded-full">
+              <span className="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">
                 {product.energy}
               </span>
             )}
             {product.available?.includes("locacao") && (
-              <span className="bg-[#CC0000]/20 text-[#FF6B6B] text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="bg-[#CC0000] text-white text-xs font-semibold px-3 py-1 rounded-full">
                 Disponível para Locação
               </span>
             )}
             {product.available?.includes("venda") && (
-              <span className="bg-white/10 text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">
                 Disponível para Venda
               </span>
             )}

@@ -9,8 +9,6 @@ export const metadata: Metadata = {
   description: "Compre empilhadeiras STILL novas e seminovos revisados no Nordeste. Representante autorizado com garantia e suporte técnico.",
 };
 
-const BASE = "https://tudoedesign.com.br/wp-content/uploads/2026/01";
-
 const BENEFITS = [
   {
     icon: ShieldCheck,
@@ -35,10 +33,10 @@ const BENEFITS = [
 ];
 
 const EQUIPMENT = [
-  { name: "Empilhadeira Contrabalançada", image: `${BASE}/RCE_20_25.webp`, href: "/maquinas?categoria=contrabalancada", model: "RCE 20-25" },
-  { name: "Retrátil",                     image: `${BASE}/FM-X_17-20.webp`, href: "/maquinas?categoria=retratil",        model: "FM-X 17/20" },
-  { name: "Patolada",                      image: `${BASE}/EGV_16_NG.png.webp`, href: "/maquinas?categoria=patolada",    model: "EGV 16 NG" },
-  { name: "Transpaleteira",               image: `${BASE}/ERX_27.png.webp`, href: "/maquinas?categoria=transpaleteira", model: "ERX 27" },
+  { name: "Empilhadeira Contrabalançada", image: "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_25_35/images/STILL_Fahrzeuge_Elektro-Stapler_RCE_25-35_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=32f2da67ef189857a69d1eb39a8dacb5", href: "/maquinas#rce-20-25", model: "RCE 20-25" },
+  { name: "Retrátil",                     image: "https://data.still.de/assets/products/Vehicles/Reach_Trucks/FM-X_17_20/images/STILL_BR_Product_FMX_800x800.png?w=1920&fit=max&fm=webp&s=6513f7ed80c85c9271e14debcc88ebc9",                                                                                                                                        href: "/maquinas#fmx-17-20",        model: "FM-X 17/20" },
+  { name: "Patolada",                     image: "https://data.still.de/assets/products/Vehicles/High_Lift_Pallet_Trucks/EGV_16_NG/images/STILL_BR_Product_EGV_16_NG_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=05dc690f6630fd829385495365cfd625",                                                                                                                  href: "/maquinas#egv-16-ng",        model: "EGV 16 NG" },
+  { name: "Transpaleteira",               image: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/STILL_BR_Product_ERX_800x800.png?w=1920&fit=max&fm=webp&s=2ca63156be30408f55377cf493f968cf",                                                                        href: "/maquinas#erx-27", model: "ERX 27" },
 ];
 
 export default function NovosESeminovosPage() {
@@ -49,21 +47,21 @@ export default function NovosESeminovosPage() {
         <div className="grid lg:grid-cols-[2fr_3fr] min-h-[480px]">
           {/* Left */}
           <div className="flex flex-col justify-center px-4 sm:px-10 lg:px-20 py-16">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#CC0000] mb-4">
-              Representante Oficial STILL — Nordeste
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#CC0000] mb-4">
+              Representante Oficial STILL no Nordeste
             </p>
             <h1 className="heading-xl font-display text-[#1C1C1E] tracking-wide mb-4 leading-tight">
               Novos e<br />Seminovos
             </h1>
             <p className="text-gray-500 text-lg mb-8 max-w-sm">
-              Soluções completas para sua intralogística
+              Equipamentos novos e revisados com garantia e suporte técnico no Nordeste.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
                 href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20solicitar%20uma%20cotação%20de%20compra%20de%20equipamento.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-bold px-8 py-3.5 rounded-xl transition-colors"
+                className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
               >
                 Solicitar Cotação
               </a>
@@ -92,11 +90,17 @@ export default function NovosESeminovosPage() {
       <section className="section-py bg-[#F5F5F7]">
         <div className="site-container">
           <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="w-6 h-0.5 bg-[#CC0000]" />
+              <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
+                Vantagens
+              </span>
+            </div>
             <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide">
               Por que Comprar com a Multylog?
             </h2>
-            <p className="text-gray-500 mt-3 max-w-xl mx-auto">
-              Seja equipamento novo ou seminovo revisado — você tem a segurança de comprar do representante oficial STILL no Nordeste.
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto text-lg">
+              Seja equipamento novo ou seminovo revisado, você tem a segurança de comprar do representante oficial STILL no Nordeste.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -124,18 +128,18 @@ export default function NovosESeminovosPage() {
               Modelos Disponíveis
             </span>
             <h2 className="heading-lg font-display text-[#1C1C1E] mt-2 tracking-wide">
-              Equipamentos Disponíveis
+              Nossa Linha STILL
             </h2>
-            <p className="text-gray-500 mt-3 max-w-xl mx-auto">
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto text-lg">
               Clique no equipamento para ver as especificações técnicas completas.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             {EQUIPMENT.map((eq) => (
               <Link
                 key={eq.name}
                 href={eq.href}
-                className="group bg-[#F5F5F7] rounded-xl overflow-hidden border border-gray-100 hover:border-[#CC0000]/40 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                className="group w-64 bg-[#F5F5F7] rounded-xl overflow-hidden border border-gray-100 hover:border-[#CC0000]/40 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="aspect-square bg-white relative">
                   <Image
@@ -146,7 +150,7 @@ export default function NovosESeminovosPage() {
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-[#1C1C1E] font-bold text-xl">{eq.name}</p>
+                  <p className="text-[#1C1C1E] font-semibold text-xl">{eq.name}</p>
                   <div className="flex items-center gap-1 mt-2 text-[#CC0000] text-xs font-semibold">
                     Ver specs <ArrowRight size={12} />
                   </div>
@@ -158,19 +162,32 @@ export default function NovosESeminovosPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#CC0000] py-24 lg:py-32">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="heading-lg font-display text-white tracking-wide mb-8">
-            Pronto para Investir?
-          </h2>
-          <a
-            href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20uma%20cotação%20de%20compra%20de%20empilhadeira.`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-[#CC0000] font-bold px-8 py-4 rounded-xl transition-colors text-lg"
-          >
-            Solicitar Cotação via WhatsApp
-          </a>
+      <section className="relative w-full overflow-hidden">
+        <Image
+          src="/images/banner-pronto-investir.png"
+          alt="Pronto para Investir?"
+          width={1440}
+          height={600}
+          className="w-full h-auto block"
+          quality={95}
+        />
+        {/* Cortina escura cobrindo a esquerda */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 38%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0) 72%)" }} />
+        {/* Texto sobre a cortina */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full px-8 sm:px-12 lg:px-20 flex flex-col items-start gap-6" style={{ maxWidth: "38%" }}>
+            <h2 className="font-display text-white tracking-wide leading-none whitespace-nowrap" style={{ fontSize: "clamp(2rem, 3.8vw, 4.5rem)" }}>
+              Pronto para Investir?
+            </h2>
+            <a
+              href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20uma%20cotação%20de%20compra%20de%20empilhadeira.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base"
+            >
+              Solicitar Cotação via WhatsApp
+            </a>
+          </div>
         </div>
       </section>
     </>

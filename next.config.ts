@@ -5,11 +5,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "tudoedesign.com.br",
-        pathname: "/wp-content/uploads/**",
-      },
-      {
-        protocol: "https",
         hostname: "www.skyjack.com",
         pathname: "/sites/default/files/**",
       },

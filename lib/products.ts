@@ -1,4 +1,3 @@
-const BASE = "https://tudoedesign.com.br/wp-content/uploads/2026/01";
 
 export type Category =
   | "retratil"
@@ -43,7 +42,7 @@ export const PRODUCTS: Product[] = ([
     capacity: "1.700 – 2.000 kg",
     liftHeight: "até 13.000 mm",
     energy: "Elétrica",
-    image: `${BASE}/FM-X_17-20.webp`,
+    image: "https://data.still.de/assets/products/Vehicles/Reach_Trucks/FM-X_17_20/images/STILL_BR_Product_FMX_800x800.png?w=1920&fit=max&fm=webp&s=6513f7ed80c85c9271e14debcc88ebc9",
     imagePadding: "p-2",
     featured: true,
     available: ["locacao", "venda"],
@@ -74,7 +73,7 @@ export const PRODUCTS: Product[] = ([
     capacity: "2.000 – 2.500 kg",
     liftHeight: "até 6.500 mm",
     energy: "Elétrica",
-    image: `${BASE}/RCE_20_25.webp`,
+    image: "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_25_35/images/STILL_Fahrzeuge_Elektro-Stapler_RCE_25-35_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=32f2da67ef189857a69d1eb39a8dacb5",
     featured: true,
     available: ["locacao", "venda"],
     brand: "STILL",
@@ -86,10 +85,11 @@ export const PRODUCTS: Product[] = ([
       "A nova RCE elétrica estará sempre pronta quando houver trabalho a fazer. Motor trifásico potente, visibilidade panorâmica e elevação de 6,50 m para uso interno e externo. Bateria Li-Ion com carregamento descentralizado, cabine ergonômica com mini-alavancas integradas, display colorido e componentes expostos em aço — não plástico — para máxima durabilidade.",
     datasheet: "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/pdf/RCE_20-25_BR_TD.pdf?mod=1733139936&download=1&s=c88050df08a60830b436ad47ab05b91b",
     gallery: [
-      `${BASE}/STILL_BR_Produkt_RCE_Galerie_Arbeitsplatz_4096x2160.jpg`,
-      `${BASE}/STILL_BR_Produkt_RCE_Galerie_Frontansicht_4096x2160.jpg`,
-      `${BASE}/STILL_BR_Produkt_RCE_Galerie_Fussraum_4096x2160.jpg`,
-      `${BASE}/STILL_BR_Produkt_RCE_Galerie_Heckansicht_4096x2160.jpg`,
+      "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Galerie_Arbeitsplatz_4096x2160.jpg?w=1920&fit=max&fm=webp&s=0c4c5fb1b0c27fb9da1583faca4b2d9b",
+      "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Einsatzslider_Frontansicht_4096x2160.jpg?w=1920&fit=max&fm=webp&s=99abba841b020e817686191350ad50a5",
+      "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Galerie_Fussraum_4096x2160.jpg?w=1920&fit=max&fm=webp&s=34c0186dbcfadfffac5a015e9959fb98",
+      "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Galerie_Heckansicht_4096x2160.jpg?w=1920&fit=max&fm=webp&s=aadd7801f3c0b080599e55fa671016bb",
+      "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Einsatzslider_Heckansicht_4096x2160.jpg?w=1920&fit=max&fm=webp&s=e283a92892c7b7ab834add05d5719fd1",
     ],
   },
   {
@@ -183,7 +183,7 @@ export const PRODUCTS: Product[] = ([
     capacity: "2.500 kg",
     liftHeight: "até 6.220 mm",
     energy: "GLP",
-    image: `${BASE}/Baoli-KBG25-073-White-scaled-1-e1769012326897-1027x800.png`,
+    image: "https://data.still.de/assets/baoli/Products/Internal_combustion_trucks/KBD_25-35/Baoli_KBD_30_G1_1024x1024_rgb.png?w=1920&fit=max&fm=webp&s=bc4249ad789a702a5aadf1cb3c4f25ea",
     available: ["locacao", "venda"],
     brand: "Baoli",
     speed: "12 km/h",
@@ -208,7 +208,7 @@ export const PRODUCTS: Product[] = ([
     capacity: "2.500 – 3.500 kg",
     liftHeight: "até 6.000 mm",
     energy: "Diesel",
-    image: `${BASE}/kbd30.jpg`,
+    image: "https://data.still.de/assets/baoli/Products/Internal_combustion_trucks/KBD_G_25-35_G1/Baoli_KBD_25_G1_3_Quarter_01.jpg?w=1920&fit=max&fm=webp&s=bedc91db3c6fccf2a0fc31aea818d66d",
     available: ["locacao", "venda"],
     brand: "Baoli",
     intensityOfUse: "Média",
@@ -259,7 +259,7 @@ export const PRODUCTS: Product[] = ([
     capacity: "1.600 kg",
     liftHeight: "até 5.466 mm",
     energy: "Elétrica",
-    image: `${BASE}/EGV_16_NG.png.webp`,
+    image: "https://data.still.de/assets/products/Vehicles/High_Lift_Pallet_Trucks/EGV_16_NG/images/STILL_BR_Product_EGV_16_NG_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=05dc690f6630fd829385495365cfd625",
     featured: true,
     available: ["locacao", "venda"],
     brand: "STILL",
@@ -286,7 +286,7 @@ export const PRODUCTS: Product[] = ([
     capacity: "1.600 kg",
     liftHeight: "até 5.997 mm",
     energy: "Elétrica",
-    image: `${BASE}/EGV_16_SF.png.webp`,
+    image: "https://data.still.de/assets/products/Vehicles/High_Lift_Pallet_Trucks/EGV-SF_16/images/STILL_BR_Product_EGV_16_SF_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=b52d6e56b3163c29b0347bbc9eb84945",
     available: ["locacao", "venda"],
     brand: "STILL",
     speed: "6 km/h",
@@ -313,7 +313,7 @@ export const PRODUCTS: Product[] = ([
     category: "transpaleteira",
     capacity: "2.700 kg",
     energy: "Elétrica",
-    image: `${BASE}/ERX_27.png.webp`,
+    image: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/STILL_BR_Product_ERX_800x800.png?w=1920&fit=max&fm=webp&s=2ca63156be30408f55377cf493f968cf",
     featured: true,
     available: ["locacao", "venda"],
     brand: "STILL",
@@ -324,16 +324,6 @@ export const PRODUCTS: Product[] = ([
     description:
       "Paleteira elétrica que combina ergonomia, agilidade e robustez. Ideal para movimentação horizontal de materiais e carga/descarga de caminhões e contêineres, incluindo docas niveladoras. Bloqueio de bateria com sensor, potente motor AC de corrente em cadeia e direção elétrica precisa.",
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/pdfs/ERX_BR_TD.pdf?mod=1648804133&download=1&s=4f96aa2f6f05ec77e447a048be49f4a7",
-    gallery: [
-      `${BASE}/ERX_2231_728x450.jpg`,
-      `${BASE}/ERX_2260_728x450.jpg`,
-      `${BASE}/ERX_2263_728x450.jpg`,
-      `${BASE}/ERX_2296_728x450.jpg`,
-      `${BASE}/ERX_2359_728x450.jpg`,
-      `${BASE}/ERX_2366_728x450.jpg`,
-      `${BASE}/ERX_2367_728x450.jpg`,
-      `${BASE}/ERX_2373_728x450.jpg`,
-    ],
   },
   {
     id: "exh-20",
@@ -341,7 +331,7 @@ export const PRODUCTS: Product[] = ([
     category: "transpaleteira",
     capacity: "2.000 kg",
     energy: "Elétrica (Lítio-Íon)",
-    image: `${BASE}/EXH_14-20.png.webp`,
+    image: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/images/STILL_Produkt_EXH_14-20_Mobile_800x800.png?w=1920&fit=max&fm=webp&s=66f967c12f12eef150f8198b9ed8d979",
     available: ["locacao", "venda"],
     brand: "STILL",
     speed: "6 km/h",
@@ -351,16 +341,6 @@ export const PRODUCTS: Product[] = ([
     description:
       "Compacta e versátil para aplicações exigentes. A EXH 20 tem ergonomia única no guidão com controles intuitivos para operação com uma mão. Display LED touch integrado. O OptiSpeed ajusta automaticamente a velocidade conforme o ângulo do guidão para transporte seguro em alta velocidade e manobras cuidadosas em corredores estreitos.",
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/pdf/EXH_20_BR_TD.pdf",
-    gallery: [
-      `${BASE}/STILL_Produkt_EXH_14-20_Galerie_Ablagefach-Batteriehaube_01_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH_14-20_Galerie_Antriebsrad-und-Stuetzraeder_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH_14-20_Galerie_Frontansicht_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH_14-20_Galerie_Frontdiagonale-links_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH_14-20_Galerie_Lastschutzgitter-Heckdiagonale-links_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH_14-20_Galerie_Seitenansicht-rechts_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH_14-20_Galerie_Sicht-auf-Gabeln_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH_14-20_Galerie_Vogelperspektive_4K.jpg`,
-    ],
   },
   {
     id: "exh-sf-16c-20c",
@@ -369,7 +349,7 @@ export const PRODUCTS: Product[] = ([
     capacity: "1.600 – 2.000 kg",
     liftHeight: "até 125 mm",
     energy: "Elétrica",
-    image: `${BASE}/EXH-SF_20C.png.webp`,
+    image: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/images/STILL_BR_Product_EXH-SF_20C_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=d545af2dc3a7ee25ef35fba0a12ba574",
     available: ["locacao", "venda"],
     brand: "STILL",
     speed: "8 km/h",
@@ -379,11 +359,6 @@ export const PRODUCTS: Product[] = ([
     description:
       "Agilidade e operação intuitiva elevadas a uma nova dimensão. A EXH-SF é o assistente inteligente para transporte horizontal de cargas com plataforma dobrável para operador embarcado. Direção elétrica, guidão inovador com display LED integrado, Curve Speed Control e tecnologia Li-Ion com carregamento rápido nas pausas operacionais.",
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/pdf/EXH-SF_20C_BR_TD.pdf?mod=1733389550&download=1&s=fd92f000b0b4ecde0297c2298c4a1b04",
-    gallery: [
-      `${BASE}/STILL_Produkt_EXH-SF_16-20C_Galerie_Batteriehaube_Plastik_Folienhalter_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH-SF_16-20C_Galerie_Zugang_RFID_4K.jpg`,
-      `${BASE}/STILL_Produkt_EXH-SF_16-20C_Galerie_Zugang_Schluessel_4K.jpg`,
-    ],
   },
   {
     id: "ech-15c",
@@ -391,7 +366,7 @@ export const PRODUCTS: Product[] = ([
     category: "transpaleteira",
     capacity: "1.500 kg",
     energy: "Elétrica",
-    image: `${BASE}/ECH-12C-15C.png.webp`,
+    image: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/images/STILL_Produkt_ECH-12C-15C_Mobile_800x800.png?w=1920&fit=max&fm=webp&s=e81a0d48061711c81bc6e6b454e62d7e",
     available: ["locacao", "venda"],
     brand: "STILL",
     speed: "4 km/h",
@@ -401,12 +376,6 @@ export const PRODUCTS: Product[] = ([
     description:
       "A alternativa ideal de paleteira elétrica compacta. Com dimensões reduzidas e peso operacional de apenas 115 kg, é a parceira perfeita para transporte horizontal em rotas curtas e espaços confinados. Bateria de íon-lítio para carregamento completo ou parcial a qualquer momento, sem fadiga do operador.",
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/pdf/ECH_PRT_TD.pdf?mod=1755532902&download=1&s=163220830b06c4b153effb169c35b063",
-    gallery: [
-      `${BASE}/STILL_Produkt_ECH_12C_15C_Antriebsrad_4096x2160.jpg`,
-      `${BASE}/STILL_Produkt_ECH_12C_15C_Rollen-Doppelt_4096x2160.jpg`,
-      `${BASE}/STILL_Produkt_ECH_12C_15C_Rollen-Einfach_4096x2160.jpg`,
-      `${BASE}/STILL_Produkt_ECH-15C_Schleichfahrt-1_4096x2160.jpg`,
-    ],
   },
   {
     id: "linde-t20-t25",

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Package, Wrench, ShieldCheck, Clock, CheckCircle } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import ServiceForm from "@/components/ServiceForm";
 
 export const metadata: Metadata = {
   title: "Peças e Serviços | Multipeças — Multylog",
@@ -54,9 +55,44 @@ export default function PecasServicosPage() {
                   <Icon size={22} className="text-[#CC0000]" />
                 </div>
                 <h3 className="font-display text-2xl text-[#1C1C1E] tracking-wide mb-3">{title}</h3>
-                <p className="text-gray-600 leading-relaxed">{desc}</p>
+                <p className="text-gray-600 leading-relaxed text-lg">{desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Atendimento ── */}
+      <section className="bg-[#F5F5F7] py-16 lg:py-24">
+        <div className="site-container">
+          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
+            <div className="lg:sticky lg:top-28">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="w-6 h-0.5 bg-[#CC0000]" />
+                <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
+                  Solicite atendimento
+                </span>
+              </div>
+              <h2
+                className="font-display font-normal text-[#1C1C1E] tracking-wide leading-none mb-5"
+                style={{ fontSize: "clamp(1.8rem, 3vw, 3.2rem)" }}
+              >
+                Abra um Chamado Técnico
+              </h2>
+              <div className="w-12 h-0.5 bg-[#CC0000] mb-6" />
+              <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+                Preencha o formulário e nossa equipe técnica entra em contato para agendar o atendimento.
+              </p>
+              <a
+                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Preciso%20de%20assistência%20técnica%20para%20minha%20empilhadeira.%20Pode%20me%20ajudar%3F`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
+              >
+                Ou fale pelo WhatsApp
+              </a>
+            </div>
+            <ServiceForm />
           </div>
         </div>
       </section>
@@ -72,7 +108,7 @@ export default function PecasServicosPage() {
               <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide mt-2 mb-5">
                 Não Apenas STILL
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-6 text-lg">
                 Nossa equipe técnica está preparada para atender empilhadeiras de diversas marcas.
                 Se você já tem equipamentos de outro fabricante, também podemos cuidar da
                 manutenção e fornecer as peças necessárias.
@@ -92,18 +128,12 @@ export default function PecasServicosPage() {
               </h3>
               <p className="text-gray-400 mb-6">Descreva o problema e nossa equipe entra em contato.</p>
               <a
-                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Preciso%20de%20assistência%20técnica.`}
+                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Preciso%20de%20assistência%20técnica%20para%20minha%20empilhadeira.%20Pode%20me%20ajudar%3F`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors mb-3 w-full text-center"
+                className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors w-full text-center"
               >
-                Via WhatsApp
-              </a>
-              <a
-                href="mailto:comercial@multylog.com.br"
-                className="inline-block border border-gray-600 hover:border-white text-gray-300 hover:text-white font-semibold px-7 py-3.5 rounded-xl transition-colors w-full text-center"
-              >
-                Via E-mail
+                Solicitar via WhatsApp
               </a>
             </div>
           </div>
