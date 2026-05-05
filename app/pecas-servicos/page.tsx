@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { Package, Wrench, ShieldCheck, Clock, CheckCircle } from "lucide-react";
+import { Package, Wrench, ShieldCheck, Clock } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import ServiceForm from "@/components/ServiceForm";
 
@@ -104,7 +103,7 @@ export default function PecasServicosPage() {
       </section>
 
       {/* Multibrand */}
-      <section className="section-py bg-white">
+      <section className="section-py bg-[#F5F5F7]">
         <div className="site-container">
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             <div>
