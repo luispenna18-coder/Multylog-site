@@ -17,6 +17,15 @@ const SERVICES = [
   { icon: Clock, title: "Atendimento Prioritário", desc: "Clientes de locação têm prioridade no atendimento técnico. SLA definido em contrato." },
 ];
 
+const PARTS = [
+  { src: "/images/pecas/garfos.png",            label: "Garfos" },
+  { src: "/images/pecas/rodas.png",             label: "Rodas e Pneus" },
+  { src: "/images/pecas/filtros.png",           label: "Filtros" },
+  { src: "/images/pecas/assentos.png",          label: "Assentos" },
+  { src: "/images/pecas/placas-eletronicas.png",label: "Placas Eletrônicas" },
+  { src: "/images/pecas/kit-manutencao.png",    label: "Kits de Manutenção" },
+];
+
 
 export default function PecasServicosPage() {
   return (
@@ -56,6 +65,38 @@ export default function PecasServicosPage() {
                 </div>
                 <h3 className="font-display text-2xl text-[#1C1C1E] tracking-wide mb-3">{title}</h3>
                 <p className="text-gray-600 leading-relaxed text-lg">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Galeria de Peças ── */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="site-container">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="w-6 h-0.5 bg-[#CC0000]" />
+            <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
+              Estoque Próprio
+            </span>
+          </div>
+          <h2 className="font-display text-[#1C1C1E] tracking-wide mb-10" style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}>
+            Peças Genuínas em Recife
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {PARTS.map(({ src, label }) => (
+              <div key={label} className="flex flex-col items-center gap-3">
+                <div className="w-full aspect-square bg-[#F5F5F7] rounded-xl overflow-hidden flex items-center justify-center p-4">
+                  <Image
+                    src={src}
+                    alt={label}
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-contain"
+                    quality={90}
+                  />
+                </div>
+                <span className="text-sm font-medium text-[#1C1C1E] text-center leading-tight">{label}</span>
               </div>
             ))}
           </div>
