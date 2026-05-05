@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -43,46 +42,32 @@ export default function SobrePage() {
             <div>
               <div className="flex items-center gap-2 mb-5">
                 <span className="w-6 h-0.5 bg-[#CC0000]" />
-                <span className="text-[#CC0000] text-xs font-semibold uppercase tracking-widest">
+                <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
                   Nossa História
                 </span>
               </div>
               <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide mb-4">
-                Tradição e Expertise em Intralogística
+                Tradição em Empilhadeiras
               </h2>
               <div className="w-12 h-0.5 bg-[#CC0000] mb-6" />
-              <p className="text-gray-600 text-lg leading-relaxed mb-5">
-                A Multylog Empilhadeiras nasceu em Recife com um propósito claro: oferecer soluções
-                completas em movimentação de cargas para as empresas do Nordeste. Ao longo de mais
-                de 25 anos, nos tornamos muito mais que uma locadora.
+              <p className="text-gray-600 text-lg leading-relaxed mb-5 text-justify">
+                A Multylog Empilhadeiras nasceu em 1998, fundada por Romero Penna em Recife com um
+                propósito direto: ser o parceiro de confiança das empresas do Nordeste em
+                movimentação de cargas. O que começou como uma operação focada em locação cresceu
+                ao longo de quase três décadas até se tornar referência em empilhadeiras na região.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-5">
-                Como representante exclusivo da STILL para Pernambuco, Paraíba e Alagoas, fazemos
-                parte do ecossistema KION Group — um dos maiores grupos de equipamentos de
-                movimentação do mundo —, o que nos permite oferecer tecnologia de ponta com o
-                atendimento personalizado de uma empresa familiar.
+              <p className="text-gray-600 text-lg leading-relaxed mb-5 text-justify">
+                Em 2025, conquistamos a representação exclusiva da STILL para Pernambuco, Paraíba e
+                Alagoas, passando a integrar o ecossistema KION Group, um dos maiores grupos de
+                empilhadeiras do mundo. Essa conquista nos permite entregar ao cliente tecnologia de
+                ponta com o compromisso e a proximidade de quem conhece o Nordeste há mais de 27 anos.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Nossa divisão Multipeças garante que sua operação nunca para: peças genuínas STILL,
-                técnicos certificados e atendimento prioritário para manutenção preventiva e
-                corretiva.
+              <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
+                Mais do que apenas locar equipamentos, oferecemos uma solução 360°: locação, peças
+                e manutenção. Com estoque próprio em Recife, técnicos certificados e atendimento
+                ágil, a Multylog está ao lado do cliente antes, durante e depois da venda.
               </p>
 
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  "Empresa familiar há 25+ anos",
-                  "Representante oficial STILL",
-                  "Técnicos certificados STILL",
-                  "Estoque próprio em Recife",
-                  "Atendimento em PE, PB e AL",
-                  "Parte do KION Group",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2">
-                    <CheckCircle size={16} className="text-[#CC0000] flex-shrink-0" />
-                    <span className="text-gray-700 text-sm font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Photo */}
@@ -108,7 +93,7 @@ export default function SobrePage() {
             <h2 className="heading-lg font-display text-[#1C1C1E] mt-2 tracking-wide">
               Conheça Nossos Gestores
             </h2>
-            <p className="text-gray-500 mt-3 max-w-xl mx-auto">
+            <p className="text-gray-500 mt-3 max-w-2xl mx-auto text-lg">
               Nossa equipe é formada por profissionais de diversas áreas para oferecer as melhores soluções em movimentação de cargas.
             </p>
           </div>
@@ -119,13 +104,13 @@ export default function SobrePage() {
                 name: "Romero Penna",
                 role: "CEO / FUNDADOR",
                 linkedin: "https://br.linkedin.com/in/romero-penna-00946840",
-                image: "https://tudoedesign.com.br/wp-content/uploads/2026/01/gestores_multylog-06-scaled.png",
+                image: "/images/team/romero-penna.png",
               },
               {
                 name: "Tereza Penna",
                 role: "DIRETORA COMERCIAL",
                 linkedin: "https://br.linkedin.com/in/tereza-arteiro-penna-86a97a137",
-                image: "https://tudoedesign.com.br/wp-content/uploads/2026/01/gestores_multylog-07-scaled.png",
+                image: "/images/team/tereza-penna.png",
               },
             ].map((person) => (
               <div key={person.name} className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#CC0000]/30 hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center text-center w-64">
@@ -134,7 +119,7 @@ export default function SobrePage() {
                     src={person.image}
                     alt={person.name}
                     fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300 scale-125" style={{ objectPosition: "center 60%" }}
                   />
                 </div>
                 <h3 className="font-display text-2xl text-[#1C1C1E] tracking-wide">{person.name}</h3>
@@ -158,17 +143,17 @@ export default function SobrePage() {
 
       {/* ── Road Timeline ── */}
       <section className="bg-[#F0F0F2] pt-14 pb-32">
-        <div className="text-center mb-8">
+        <div className="site-container text-center mb-8">
           <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
             Linha do Tempo
           </span>
           <h2 className="font-display text-4xl lg:text-5xl text-[#1C1C1E] mt-1 tracking-wide">
             Nossa Trajetória
           </h2>
-          <p className="text-gray-600 mt-2 text-sm">Longo caminho para chegarmos até aqui</p>
+          <p className="text-gray-600 mt-2 text-lg">Mais de 25 anos construindo o Nordeste logístico</p>
         </div>
         <Image
-          src="/images/trajetoria.png"
+          src="/alteracoes-leo/trajetoria.png"
           alt="Nossa Trajetória — linha do tempo Multylog"
           width={1260}
           height={596}

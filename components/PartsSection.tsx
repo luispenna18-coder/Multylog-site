@@ -51,7 +51,7 @@ export default function PartsSection() {
             {/* Badge */}
             <div className="flex items-center gap-2 mb-4">
               <span className="w-6 h-0.5 bg-[#CC0000]" />
-              <span className="text-[#CC0000] text-xs font-semibold uppercase tracking-widest">
+              <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
                 Peças e Serviços
               </span>
             </div>

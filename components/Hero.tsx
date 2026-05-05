@@ -42,7 +42,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: 2,
-    image: "/images/banner-multylog-02.jpg",
+    image: "/images/banner-multylog-02.png",
     headline: "4 Soluções para\nSua Operação",
     subheadline: "Locação · Venda · Peças · Serviços",
     cta1: { label: "Solicitar Cotação", href: `https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação.%20Pode%20me%20ajudar%3F`, external: true },
@@ -51,6 +51,9 @@ const SLIDES: Slide[] = [
     textCenter: true,
     textDark: true,
     headlineSize: "clamp(1.8rem, 2.8vw, 3.4rem)",
+    bgColor: "#FFFFFF",
+    objectFit: "contain",
+    objectPosition: "left center",
   },
 ];
 
@@ -129,18 +132,17 @@ export default function Hero() {
     >
       {/* Banner image / bg color */}
       <div className="absolute inset-0" style={{ background: slide.bgColor ?? undefined }}>
-        {!slide.bgColor && (
-          <Image
-            key={slide.id}
-            src={slide.image}
-            alt={slide.headline.replace("\n", " ")}
-            fill
-            className="object-cover hero-slide-enter" style={{ objectPosition: slide.objectPosition ?? "center center" }}
-            priority={slide.id === 1}
-            sizes="(max-width: 768px) 100vw, (max-width: 1400px) 100vw, 1400px"
-            quality={90}
-          />
-        )}
+        <Image
+          key={slide.id}
+          src={slide.image}
+          alt={slide.headline.replace("\n", " ")}
+          fill
+          className={`hero-slide-enter ${slide.objectFit === "contain" ? "object-contain" : "object-cover"}`}
+          style={{ objectPosition: slide.objectPosition ?? "center center" }}
+          priority={slide.id === 1}
+          sizes="(max-width: 768px) 100vw, (max-width: 1400px) 100vw, 1400px"
+          quality={90}
+        />
         <div className="absolute inset-0" style={{ background: slide.overlay ?? undefined }} />
       </div>
 

@@ -315,7 +315,7 @@ export default function TrabalheConoscoPage() {
       {/* ── Projeto Parafusinho ──────────────────────────────────────── */}
       <section className="bg-[#F5F5F7] section-py">
         <div className="site-container flex flex-col items-center text-center">
-          <p className="text-[#CC0000] text-xs font-semibold uppercase tracking-widest mb-2">
+          <p className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest mb-2">
             Formação Técnica da Multylog
           </p>
           <h2 className="font-display text-4xl lg:text-5xl text-[#1C1C1E] tracking-wide mb-8">

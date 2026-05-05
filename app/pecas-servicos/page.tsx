@@ -16,7 +16,6 @@ const SERVICES = [
   { icon: Clock, title: "Atendimento Prioritário", desc: "Clientes de locação têm prioridade no atendimento técnico. SLA definido em contrato." },
 ];
 
-const BRANDS = ["STILL", "Linde", "Toyota", "Hyster", "Yale", "Crown", "Baoli", "Mitsubishi"];
 
 export default function PecasServicosPage() {
   return (
@@ -65,7 +64,7 @@ export default function PecasServicosPage() {
       {/* Multibrand */}
       <section className="section-py bg-white">
         <div className="site-container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center">
             <div>
               <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
                 Atendimento Multimarca
@@ -78,20 +77,14 @@ export default function PecasServicosPage() {
                 Se você já tem equipamentos de outro fabricante, também podemos cuidar da
                 manutenção e fornecer as peças necessárias.
               </p>
-              <div className="flex flex-wrap gap-2">
-                {BRANDS.map((brand) => (
-                  <span
-                    key={brand}
-                    className={`px-3 py-1.5 rounded text-sm font-semibold ${
-                      brand === "STILL"
-                        ? "bg-[#CC0000] text-white"
-                        : "bg-[#F5F5F7] text-gray-700"
-                    }`}
-                  >
-                    {brand}
-                  </span>
-                ))}
-              </div>
+              <Image
+                src="/images/logos-marcas.png"
+                alt="Marcas atendidas: STILL, Linde, Toyota, Hyster, Yale, Crown, Baoli, Mitsubishi"
+                width={760}
+                height={48}
+                className="w-full h-20 object-contain object-left -ml-1"
+                quality={90}
+              />
             </div>
             <div className="bg-[#1C1C1E] rounded-2xl p-8 text-center">
               <h3 className="font-display text-3xl text-white tracking-wide mb-3">

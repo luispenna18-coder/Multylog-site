@@ -19,42 +19,40 @@ const BENEFITS = [
   {
     icon: Truck,
     title: "Entrega Rápida no Nordeste",
-    body: "Cobertura em Pernambuco, Paraíba e Alagoas com estoque próprio. Logística ágil para Recife e região metropolitana. Suas operações não param esperando por equipamento.",
+    body: "Cobertura em PE, PB, AL, RN e SE com estoque próprio em Recife. Logística ágil para sua operação não parar.",
   },
   {
     icon: ShieldCheck,
     title: "Operação Sem Preocupações",
-    body: "Em caso de quebra ou manutenção, realizamos substituição do equipamento. Assistência técnica especializada sempre disponível para manter sua operação funcionando.",
+    body: "Substituição garantida em caso de quebra. Assistência técnica sempre disponível para manter sua operação.",
   },
   {
     icon: DollarSign,
-    title: "Investimento Previsível",
-    body: "Valor mensal fixo que inclui manutenção preventiva e corretiva, peças de reposição e suporte técnico. Você planeja seus custos com precisão, sem imprevistos.",
+    title: "Custo Previsível",
+    body: "Mensalidade fixa com manutenção preventiva, corretiva e peças incluídas. Sem surpresas no orçamento.",
   },
   {
     icon: Wrench,
     title: "Assistência Técnica Especializada",
-    body: "Técnicos certificados e treinados diretamente pela STILL. Peças genuínas disponíveis. Atendimento prioritário para clientes de locação em toda nossa área de cobertura.",
+    body: "Técnicos certificados com peças genuínas. Atendimento prioritário para clientes de locação.",
   },
   {
     icon: Sliders,
     title: "Flexibilidade Operacional",
-    body: "Ajuste a quantidade de equipamentos conforme picos sazonais ou mudanças na operação. Contratos flexíveis que acompanham as necessidades da sua empresa, sem amarras.",
+    body: "Ajuste a frota conforme a demanda. Contratos flexíveis que acompanham as necessidades da sua empresa.",
   },
   {
     icon: TrendingUp,
-    title: "Otimização Financeira",
-    body: "Despesa operacional dedutível. Não imobiliza recursos que podem ser investidos no core business. Acesso a equipamentos de última geração sem comprometer seu caixa.",
+    title: "Vantagem Financeira",
+    body: "Despesa operacional dedutível. Sem imobilização de capital: invista no seu negócio, não no equipamento.",
   },
 ];
 
-const BASE = "https://tudoedesign.com.br/wp-content/uploads/2026/01";
-
 const EQUIPMENT = [
-  { name: "Empilhadeira Contrabalançada", image: `${BASE}/RCE_20_25.webp`, href: "/maquinas?categoria=contrabalancada", brands: ["STILL", "Baoli", "Linde"] },
-  { name: "Retrátil", image: `${BASE}/FM-X_17-20.webp`, href: "/maquinas?categoria=retratil", brands: ["STILL"] },
-  { name: "Patolada", image: `${BASE}/EGV_16_NG.png.webp`, href: "/maquinas?categoria=patolada", brands: ["STILL"] },
-  { name: "Transpaleteira", image: `${BASE}/ERX_27.png.webp`, href: "/maquinas?categoria=transpaleteira", brands: ["STILL"] },
+  { name: "Empilhadeira Contrabalançada", image: "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_25_35/images/STILL_Fahrzeuge_Elektro-Stapler_RCE_25-35_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=32f2da67ef189857a69d1eb39a8dacb5", href: "/maquinas?categoria=contrabalancada", brands: ["STILL", "Baoli", "Linde"] },
+  { name: "Retrátil", image: "https://data.still.de/assets/products/Vehicles/Reach_Trucks/FM-X_17_20/images/STILL_BR_Product_FMX_800x800.png?w=1920&fit=max&fm=webp&s=6513f7ed80c85c9271e14debcc88ebc9", href: "/maquinas?categoria=retratil", brands: ["STILL"] },
+  { name: "Patolada", image: "https://data.still.de/assets/products/Vehicles/High_Lift_Pallet_Trucks/EGV_16_NG/images/STILL_BR_Product_EGV_16_NG_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=05dc690f6630fd829385495365cfd625", href: "/maquinas?categoria=patolada", brands: ["STILL"] },
+  { name: "Transpaleteira", image: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/STILL_BR_Product_ERX_800x800.png?w=1920&fit=max&fm=webp&s=2ca63156be30408f55377cf493f968cf", href: "/maquinas?categoria=transpaleteira", brands: ["STILL"] },
   { name: "Plataforma Elevatória", image: "https://www.skyjack.com/sites/default/files/styles/cms_bootstrap_12_12/public/2024-02/spec_sj3213micro-c.jpg?itok=406PauLx", href: "/maquinas", brands: ["Skyjack"] },
 ];
 
@@ -87,7 +85,7 @@ const COMPARISON = [
   {
     label: "Proteção contra Obsolescência",
     compra: "Risco de desvalorização e revenda difícil",
-    locacao: "Sem risco de ativo — troca quando quiser",
+    locacao: "Sem risco de ativo, troca quando quiser",
   },
 ];
 
@@ -117,6 +115,14 @@ export default function LocacaoPage() {
             </h1>
             <div className="w-12 h-0.5 bg-[#CC0000] mt-4 mb-6" />
             <div className="flex flex-wrap gap-3">
+              <a
+                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação%20de%20locação.%20Pode%20me%20ajudar%3F`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+              >
+                Solicitar Cotação
+              </a>
               <Link
                 href="/maquinas"
                 className="inline-flex items-center gap-2 border border-white/70 hover:border-white text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
@@ -152,24 +158,16 @@ export default function LocacaoPage() {
                 >
                   <Icon size={28} strokeWidth={1.25} className={isActive ? "text-white" : "text-[#CC0000]"} />
                   <div>
-                    <h3 className={`font-sans font-bold text-base leading-snug mb-1.5 ${isActive ? "text-white" : "text-[#1C1C1E]"}`}>
+                    <h3 className={`font-sans font-bold text-lg leading-snug mb-1.5 ${isActive ? "text-white" : "text-[#1C1C1E]"}`}>
                       {title}
                     </h3>
-                    <p className={`font-sans text-sm leading-relaxed ${isActive ? "text-white/90" : "text-[#3D3D3D]"}`}>
+                    <p className={`font-sans text-base leading-relaxed ${isActive ? "text-white/90" : "text-[#3D3D3D]"}`}>
                       {body}
                     </p>
                   </div>
                 </button>
               );
             })}
-          </div>
-          <div className="flex flex-wrap gap-3 mt-12">
-            <Link
-              href="/maquinas"
-              className="inline-flex items-center gap-2 border border-gray-400 hover:border-gray-700 text-[#1C1C1E] font-semibold px-7 py-3.5 rounded-xl transition-colors"
-            >
-              Ver Equipamentos
-            </Link>
           </div>
         </div>
       </section>
@@ -182,7 +180,7 @@ export default function LocacaoPage() {
           <div className="mb-10">
             <div className="flex items-center justify-center gap-3 mb-8">
               <span className="w-6 h-0.5 bg-[#CC0000]" />
-              <span className="text-[#CC0000] text-xs font-semibold uppercase tracking-widest">Tabela Comparativa</span>
+              <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">Tabela Comparativa</span>
               <span className="w-6 h-0.5 bg-[#CC0000]" />
             </div>
             <div className="hidden sm:grid grid-cols-[1fr_140px_1fr] items-center gap-6">
@@ -244,11 +242,11 @@ export default function LocacaoPage() {
                 <div className="sm:hidden px-4 py-4 flex flex-col gap-3">
                   <span className="text-[#1C1C1E] font-bold text-[10px] uppercase tracking-widest text-center bg-[#F5F5F7] py-1 rounded">{label}</span>
                   <div className="flex items-center gap-3">
-                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#1C1C1E] flex items-center justify-center text-white text-xs font-bold">✓</span>
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#1C1C1E] flex items-center justify-center text-white text-xs font-bold"></span>
                     <span className="text-[#1C1C1E] font-semibold text-sm leading-snug">{locacao}</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#F0F0F0] flex items-center justify-center text-gray-400 text-xs font-bold">✕</span>
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#F0F0F0] flex items-center justify-center text-gray-400 text-xs font-bold"></span>
                     <span className="text-gray-500 text-sm leading-snug">{compra}</span>
                   </div>
                 </div>
@@ -257,13 +255,13 @@ export default function LocacaoPage() {
                 <div className="hidden sm:grid grid-cols-[1fr_160px_1fr] items-stretch">
                   <div className="flex items-center justify-end gap-3 px-5 py-4 border-r border-gray-200">
                     <span className="text-gray-800 text-sm leading-snug text-right">{compra}</span>
-                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#F0F0F0] flex items-center justify-center text-gray-400 text-xs font-bold">✕</span>
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#F0F0F0] flex items-center justify-center text-gray-400 text-xs font-bold"></span>
                   </div>
                   <div className="flex items-center justify-center px-3 py-4 bg-[#F5F5F7] border-x border-gray-200">
                     <span className="text-[#1C1C1E] font-bold text-[10px] sm:text-xs uppercase tracking-wide leading-tight text-center">{label}</span>
                   </div>
                   <div className="flex items-center gap-3 px-5 py-4">
-                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#1C1C1E] flex items-center justify-center text-white text-xs font-bold">✓</span>
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#1C1C1E] flex items-center justify-center text-white text-xs font-bold"></span>
                     <span className="text-[#1C1C1E] font-semibold text-sm leading-snug">{locacao}</span>
                   </div>
                 </div>
@@ -279,10 +277,11 @@ export default function LocacaoPage() {
       {/* ── Banner intermediário ──────────────────────────────────────── */}
       <section className="relative overflow-hidden" style={{ height: "clamp(240px, 32vw, 460px)" }}>
         <Image
-          src="/images/locacao-galpao-09.jpg"
+          src="/alteracoes-leo/banner_inferior_locacao_maquina_still"
           alt="Empilhadeira em operação no galpão"
           fill
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: "30% center" }}
           sizes="100vw"
           quality={90}
         />
@@ -296,7 +295,7 @@ export default function LocacaoPage() {
               Com a Locação<br />Seu Negócio<br />Nunca Para
             </h2>
             <a
-              href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20solicitar%20uma%20cotação%20de%20locação.`}
+              href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação%20de%20locação.%20Pode%20me%20ajudar%3F`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center border border-white text-white text-sm font-semibold uppercase tracking-widest px-7 py-3 rounded-xl hover:bg-white hover:text-[#1C1C1E] transition-colors"
@@ -380,10 +379,10 @@ export default function LocacaoPage() {
               <div className="w-12 h-0.5 bg-[#CC0000] mb-6" />
               <Steps />
               <a
-                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20uma%20cotação%20de%20locação%20de%20empilhadeiras.`}
+                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação%20de%20locação.%20Pode%20me%20ajudar%3F`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
               >
                 Ou fale pelo WhatsApp
               </a>

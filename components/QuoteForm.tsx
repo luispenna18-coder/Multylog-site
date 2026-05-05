@@ -43,11 +43,19 @@ export default function QuoteForm() {
     setTouched((prev) => ({ ...prev, [e.target.name]: true }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setTouched({ nome: true, telefone: true, equipamento: true });
-    if (!isValidPhone(form.telefone)) return;
+    setTouched({ nome: true, email: true, empresa: true, telefone: true, equipamento: true });
+    if (!form.nome || !form.email || !form.empresa || !form.equipamento || !isValidPhone(form.telefone)) return;
 
+    // Dispara e-mail em background (não bloqueia o fluxo do usuário)
+    fetch("/api/cotacao", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    }).catch(() => {});
+
+    // Abre WhatsApp com os dados
     const msg = [
       `Olá! Quero solicitar uma cotação de locação.`,
       ``,
@@ -72,7 +80,7 @@ export default function QuoteForm() {
     return (
       <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-8 lg:p-10 flex flex-col items-center justify-center text-center gap-5 min-h-[420px]">
         <CheckCircle size={52} className="text-[#CC0000]" />
-        <h3 className="font-display text-3xl text-[#1C1C1E] tracking-wide">SOLICITAÇÃO ENVIADA!</h3>
+        <h3 className="font-display text-3xl text-[#1C1C1E] tracking-wide">Solicitação Enviada!</h3>
         <p className="text-gray-500 text-base max-w-sm leading-relaxed">
           O WhatsApp foi aberto com os seus dados. Nossa equipe responde em até 24h com uma proposta personalizada.
         </p>
@@ -99,7 +107,7 @@ export default function QuoteForm() {
       {/* Row 1: Nome + Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className={label}>Nome completo</label>
+          <label className={label}>Nome completo <span className="text-[#CC0000]">*</span></label>
           <input
             name="nome"
             value={form.nome}
@@ -107,11 +115,14 @@ export default function QuoteForm() {
             onBlur={handleBlur}
             placeholder="João Silva"
             required
-            className={input}
+            className={`${input} ${touched.nome && !form.nome ? "border-[#CC0000]" : ""}`}
           />
+          {touched.nome && !form.nome && (
+            <p className="text-[#CC0000] text-xs mt-1.5">Campo obrigatório.</p>
+          )}
         </div>
         <div>
-          <label className={label}>E-mail</label>
+          <label className={label}>E-mail <span className="text-[#CC0000]">*</span></label>
           <input
             name="email"
             type="email"
@@ -119,23 +130,31 @@ export default function QuoteForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="joao@empresa.com.br"
-            className={input}
+            required
+            className={`${input} ${touched.email && !form.email ? "border-[#CC0000]" : ""}`}
           />
+          {touched.email && !form.email && (
+            <p className="text-[#CC0000] text-xs mt-1.5">Campo obrigatório.</p>
+          )}
         </div>
       </div>
 
       {/* Row 2: Empresa + Telefone */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className={label}>Empresa</label>
+          <label className={label}>Empresa <span className="text-[#CC0000]">*</span></label>
           <input
             name="empresa"
             value={form.empresa}
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Razão social"
-            className={input}
+            required
+            className={`${input} ${touched.empresa && !form.empresa ? "border-[#CC0000]" : ""}`}
           />
+          {touched.empresa && !form.empresa && (
+            <p className="text-[#CC0000] text-xs mt-1.5">Campo obrigatório.</p>
+          )}
         </div>
         <div>
           <label className={label}>
@@ -160,7 +179,7 @@ export default function QuoteForm() {
 
       {/* Tipo de equipamento */}
       <div>
-        <label className={label}>Tipo de equipamento</label>
+        <label className={label}>Tipo de equipamento <span className="text-[#CC0000]">*</span></label>
         <div className="relative">
           <select
             name="equipamento"

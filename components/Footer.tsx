@@ -19,7 +19,7 @@ export default function Footer() {
 
             {/* Logo */}
             <Image
-              src="https://tudoedesign.com.br/wp-content/uploads/2021/09/logo_multylog_home_branca.png"
+              src="/images/logo-multylog-branca.png"
               alt="Multylog Empilhadeiras"
               width={180}
               height={54}

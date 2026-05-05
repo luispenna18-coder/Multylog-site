@@ -58,12 +58,12 @@ export default function AboutSection() {
               <h2 className="heading-lg font-display text-[#1C1C1E] mt-2 mb-6 tracking-wide">
                 Muito Mais que uma Locadora
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+              <p className="text-gray-600 text-lg leading-relaxed mb-6 text-justify">
                 Somos uma empresa familiar com mais de 25 anos de experiência em movimentação de
                 cargas intralogísticas. Como representante exclusivo da STILL em Pernambuco, Paraíba
                 e Alagoas, oferecemos soluções completas de locação, venda, assistência técnica e peças.
               </p>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 text-lg leading-relaxed mb-8 text-justify">
                 Também atendemos Rio Grande do Norte e Sergipe com serviços de locação, manutenção
                 e peças, com estoque próprio em Recife, equipe certificada e o compromisso de
                 manter sua operação funcionando sem imprevistos.
