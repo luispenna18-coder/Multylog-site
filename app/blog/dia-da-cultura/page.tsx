@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, ArrowLeft, Tag } from "lucide-react";
+import { Calendar, ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Dia da Cultura: Dinâmica de Grupo e Alinhamento de Valores | Multylog",
@@ -185,7 +185,7 @@ export default function DiaDaCulturaPage() {
             </p>
             <Link
               href="/trabalhe-conosco"
-              className="inline-block bg-[#CC0000] text-white font-semibold px-8 py-3 rounded-lg hover:bg-red-700 transition-colors"
+              className="inline-block bg-[#CC0000] text-white font-semibold px-8 py-3 rounded-xl hover:bg-[#A80000] transition-colors"
             >
               Trabalhe Conosco
             </Link>

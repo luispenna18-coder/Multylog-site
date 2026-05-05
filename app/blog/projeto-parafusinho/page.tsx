@@ -160,13 +160,13 @@ export default function ProjetoParafusinhoPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/sobre"
-                className="inline-block bg-[#CC0000] text-white font-semibold px-8 py-3 hover:bg-[#A80000] transition-colors"
+                className="inline-block bg-[#CC0000] text-white font-semibold px-8 py-3 rounded-xl hover:bg-[#A80000] transition-colors"
               >
                 Conheça a Multylog
               </Link>
               <Link
                 href="/trabalhe-conosco"
-                className="inline-block border border-gray-300 text-[#1C1C1E] font-semibold px-8 py-3 hover:border-gray-500 transition-colors"
+                className="inline-block border border-gray-300 text-[#1C1C1E] font-semibold px-8 py-3 rounded-xl hover:border-gray-500 transition-colors"
               >
                 Trabalhe Conosco
               </Link>
