@@ -103,41 +103,6 @@ export default function PecasServicosPage() {
         </div>
       </section>
 
-      {/* ── Atendimento ── */}
-      <section className="bg-[#F5F5F7] py-16 lg:py-24">
-        <div className="site-container">
-          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
-            <div className="lg:sticky lg:top-28">
-              <div className="flex items-center gap-2 mb-5">
-                <span className="w-6 h-0.5 bg-[#CC0000]" />
-                <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
-                  Solicite atendimento
-                </span>
-              </div>
-              <h2
-                className="font-display font-normal text-[#1C1C1E] tracking-wide leading-none mb-5"
-                style={{ fontSize: "clamp(1.8rem, 3vw, 3.2rem)" }}
-              >
-                Abra um Chamado Técnico
-              </h2>
-              <div className="w-12 h-0.5 bg-[#CC0000] mb-6" />
-              <p className="text-gray-600 leading-relaxed mb-8 text-lg">
-                Preencha o formulário e nossa equipe técnica entra em contato para agendar o atendimento.
-              </p>
-              <a
-                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Preciso%20de%20assistência%20técnica%20para%20minha%20empilhadeira.%20Pode%20me%20ajudar%3F`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
-              >
-                Ou fale pelo WhatsApp
-              </a>
-            </div>
-            <ServiceForm />
-          </div>
-        </div>
-      </section>
-
       {/* Multibrand */}
       <section className="section-py bg-white">
         <div className="site-container">
@@ -177,6 +142,41 @@ export default function PecasServicosPage() {
                 Solicitar via WhatsApp
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Atendimento ── */}
+      <section className="bg-[#F5F5F7] py-16 lg:py-24">
+        <div className="site-container">
+          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
+            <div className="lg:sticky lg:top-28">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="w-6 h-0.5 bg-[#CC0000]" />
+                <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
+                  Solicite atendimento
+                </span>
+              </div>
+              <h2
+                className="font-display font-normal text-[#1C1C1E] tracking-wide leading-none mb-5"
+                style={{ fontSize: "clamp(1.8rem, 3vw, 3.2rem)" }}
+              >
+                Abra um Chamado Técnico
+              </h2>
+              <div className="w-12 h-0.5 bg-[#CC0000] mb-6" />
+              <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+                Preencha o formulário e nossa equipe técnica entra em contato para agendar o atendimento.
+              </p>
+              <a
+                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Preciso%20de%20assistência%20técnica%20para%20minha%20empilhadeira.%20Pode%20me%20ajudar%3F`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
+              >
+                Ou fale pelo WhatsApp
+              </a>
+            </div>
+            <ServiceForm />
           </div>
         </div>
       </section>
