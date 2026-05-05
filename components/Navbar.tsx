@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS, SITE } from "@/lib/constants";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -62,13 +62,15 @@ export default function Navbar() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
-            <Link
-              href="/locacao"
+            <a
+              href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação.%20Pode%20me%20ajudar%3F`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 bg-[#CC0000] hover:bg-[#A80000] text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-xl transition-colors whitespace-nowrap"
             >
               <span className="hidden sm:inline">Solicitar Cotação</span>
               <span className="sm:hidden">Cotação</span>
-            </Link>
+            </a>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="lg:hidden text-gray-600 hover:text-[#1C1C1E] p-1"
@@ -97,12 +99,14 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/locacao"
+            <a
+              href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação.%20Pode%20me%20ajudar%3F`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-3 text-center bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-4 py-3 rounded-xl transition-colors"
             >
               Solicitar Cotação
-            </Link>
+            </a>
           </nav>
         </div>
       )}

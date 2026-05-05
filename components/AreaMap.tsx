@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import FadeUp from "@/components/FadeUp";
+import { SITE } from "@/lib/constants";
 
 const HIGHLIGHTED = ["PE", "PB", "AL", "RN", "SE"];
 
@@ -185,12 +185,14 @@ export default function AreaMap() {
                 Nossa sede em <span className="text-[#1C1C1E] font-medium">Recife (PE)</span> garante
                 estoque próprio e logística ágil para atendimento rápido em toda a região.
               </p>
-              <Link
-                href="/locacao"
-                className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white text-sm font-semibold px-5 py-2.5 rounded transition-colors"
+              <a
+                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação.%20Pode%20me%20ajudar%3F`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
               >
                 Solicitar Cotação
-              </Link>
+              </a>
             </div>
           </div>
           </FadeUp>

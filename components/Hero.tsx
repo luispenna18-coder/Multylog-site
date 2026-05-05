@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { SITE } from "@/lib/constants";
 
 interface Slide {
   id: number;
@@ -13,7 +14,7 @@ interface Slide {
   headlineAccent?: string;
   services?: { label: string; desc: string; href: string; bg?: string }[];
   subheadline: string;
-  cta1: { label: string; href: string };
+  cta1: { label: string; href: string; external?: boolean };
   cta2?: { label: string; href: string };
   overlay?: string;
   bgColor?: string;
@@ -32,7 +33,7 @@ const SLIDES: Slide[] = [
     image: "/images/banner-still-03.jpg",
     headline: "Sua Operação\nNão Pode Parar",
     subheadline: "",
-    cta1: { label: "Solicitar Cotação", href: "/locacao" },
+    cta1: { label: "Solicitar Cotação", href: `https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação.%20Pode%20me%20ajudar%3F`, external: true },
     cta2: { label: "Ver Equipamentos", href: "/maquinas" },
     overlay: "linear-gradient(to right, rgba(5,5,7,0.75) 0%, rgba(5,5,7,0.55) 32%, rgba(5,5,7,0.0) 46%)",
     objectPosition: "center center",
@@ -44,7 +45,7 @@ const SLIDES: Slide[] = [
     image: "/images/banner-multylog-02.jpg",
     headline: "4 Soluções para\nSua Operação",
     subheadline: "Locação · Venda · Peças · Serviços",
-    cta1: { label: "Solicitar Cotação", href: "/locacao" },
+    cta1: { label: "Solicitar Cotação", href: `https://wa.me/${SITE.whatsapp}?text=Olá!%20Vi%20o%20site%20da%20Multylog%20e%20gostaria%20de%20solicitar%20uma%20cotação.%20Pode%20me%20ajudar%3F`, external: true },
     cta2: { label: "Conheça a Multylog", href: "/sobre" },
     accentColor: "#CC0000",
     textCenter: true,
@@ -103,9 +104,9 @@ export default function Hero() {
         <div className="w-12 h-0.5 bg-[#CC0000] mx-auto mb-5" />
         <p className="text-gray-600 text-lg mb-8 leading-relaxed">{slide2.subheadline}</p>
         <div className="flex flex-col gap-3 items-center">
-          <Link href={slide2.cta1.href} className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-all group">
+          <a href={slide2.cta1.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-all group">
             {slide2.cta1.label} <ArrowRight size={15} />
-          </Link>
+          </a>
           {slide2.cta2 && (
             <Link href={slide2.cta2.href} className="inline-flex items-center justify-center font-semibold px-7 py-3.5 rounded-xl border border-gray-400 text-gray-600 hover:border-[#1C1C1E] hover:text-[#1C1C1E] transition-all">
               {slide2.cta2.label}
@@ -183,13 +184,14 @@ export default function Hero() {
           {/* CTAs + Serviços alinhados */}
           <div className="inline-flex flex-col gap-3">
             <div className={`flex items-center gap-3 ${slide.textCenter ? "justify-center" : ""}`}>
-              <Link
+              <a
                 href={slide.cta1.href}
+                {...(slide.cta1.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-all group"
               >
                 {slide.cta1.label}
                 <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
-              </Link>
+              </a>
               {slide.cta2 && (
                 <Link
                   href={slide.cta2.href}
