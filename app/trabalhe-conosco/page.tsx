@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Mountain, Eye } from "lucide-react";
+import { Mountain, Eye, ShieldCheck, Users, Settings, Star, ClipboardList } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -257,9 +257,15 @@ export default function TrabalheConoscoPage() {
 
               {/* 5 ícones */}
               <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mb-12">
-                {VALUE_ITEMS.map(({ icon, label }) => (
-                  <div key={label} className="flex flex-col items-center text-center gap-3 text-[#CC0000]">
-                    {icon}
+                {[
+                  { icon: ShieldCheck,   label: "Caráter é\ninegociável" },
+                  { icon: Users,         label: "Trabalho\nem Equipe" },
+                  { icon: Settings,      label: "Encantamento" },
+                  { icon: Star,          label: "Somos parceiros\nna produtividade" },
+                  { icon: ClipboardList, label: "Excelência com\nMelhoria Contínua" },
+                ].map(({ icon: Icon, label }) => (
+                  <div key={label} className="flex flex-col items-center text-center gap-3">
+                    <Icon size={56} strokeWidth={1.25} className="text-[#CC0000]" />
                     <p className="text-base text-[#1C1C1E] font-medium leading-snug whitespace-pre-line">{label}</p>
                   </div>
                 ))}
