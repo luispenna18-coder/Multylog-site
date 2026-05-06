@@ -178,7 +178,7 @@ export default function TrabalheConoscoPage() {
                   {/* bandeira */}
                   <path d="M26 2L33 4.5L26 7Z" fill="#CC0000"/>
                 </svg>
-                <h2 className="font-display text-[#1C1C1E] tracking-wide text-3xl lg:text-4xl uppercase">
+                <h2 className="font-display text-[#1C1C1E] tracking-wide text-4xl lg:text-5xl uppercase">
                   Nossa Missão
                 </h2>
               </div>
@@ -198,7 +198,7 @@ export default function TrabalheConoscoPage() {
                   {/* pupila */}
                   <circle cx="26" cy="26" r="3" fill="#CC0000"/>
                 </svg>
-                <h2 className="font-display text-[#1C1C1E] tracking-wide text-3xl lg:text-4xl uppercase">
+                <h2 className="font-display text-[#1C1C1E] tracking-wide text-4xl lg:text-5xl uppercase">
                   Nossa Visão
                 </h2>
               </div>
@@ -251,7 +251,7 @@ export default function TrabalheConoscoPage() {
               <h2 className="font-display text-[#1C1C1E] text-4xl lg:text-5xl tracking-wide mb-2">
                 Nossos Valores
               </h2>
-              <p className="text-gray-600 text-base mb-10">
+              <p className="text-gray-600 text-lg mb-10">
                 Movimentar cargas e impulsionar entregas, por meio de atendimento ágil e operações sob medida.
               </p>
 
