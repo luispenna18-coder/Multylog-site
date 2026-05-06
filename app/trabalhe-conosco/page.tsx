@@ -452,12 +452,12 @@ export default function TrabalheConoscoPage() {
           <h2 className="font-display text-4xl lg:text-5xl text-white tracking-wide mb-4">
             Quer Fazer Parte do Time?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+          <p className="text-white mb-8 max-w-xl mx-auto">
             Envie seu currículo para nosso e-mail. Analisamos todos os perfis e entraremos em
             contato quando surgir uma oportunidade alinhada ao seu perfil.
           </p>
           <a
-            href="mailto:rh@multylog.com.br"
+            href="mailto:rh@multylog.com.br?subject=Envio%20de%20Curr%C3%ADculo"
             className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-8 py-4 rounded-xl transition-colors"
           >
             Enviar Currículo
