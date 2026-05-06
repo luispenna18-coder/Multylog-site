@@ -252,7 +252,7 @@ export default function TrabalheConoscoPage() {
                 Nossos Valores
               </h2>
               <p className="text-gray-600 text-lg mb-10">
-                Movimentar cargas e impulsionar entregas, por meio de atendimento ágil e operações sob medida.
+                Os princípios que guiam cada decisão, cada atendimento e cada relação dentro da Multylog.
               </p>
 
               {/* 5 ícones */}
