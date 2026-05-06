@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   try {
     await resend.emails.send({
       from: "Site Multylog <onboarding@resend.dev>",
-      to: ["admcomercial@multylog.com.br", "luispenna18@gmail.com"],
+      to: "luispenna18@gmail.com",
       replyTo: email,
       subject: `Nova solicitação de atendimento — ${nome} (${empresa})`,
       html: `
