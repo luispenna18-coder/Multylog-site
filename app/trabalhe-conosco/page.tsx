@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Mountain, Eye, ShieldCheck, Users, Settings, Star, ClipboardList } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import CurriculoForm from "@/components/CurriculoForm";
 
 export const metadata: Metadata = {
   title: "Trabalhe Conosco | Multylog Empilhadeiras",
@@ -290,7 +291,7 @@ export default function TrabalheConoscoPage() {
 
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="mailto:rh@multylog.com.br?subject=Envio%20de%20Currículo"
+                  href="#enviar-curriculo"
                   className="inline-flex items-center bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
                 >
                   Enviar Currículo
@@ -446,22 +447,38 @@ export default function TrabalheConoscoPage() {
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────────────────────────── */}
-      <section className="bg-[#1C1C1E] section-py">
-        <div className="site-container text-center">
-          <h2 className="font-display text-4xl lg:text-5xl text-white tracking-wide mb-4">
-            Quer Fazer Parte do Time?
-          </h2>
-          <p className="text-white mb-8 max-w-xl mx-auto">
-            Envie seu currículo para nosso e-mail. Analisamos todos os perfis e entraremos em
-            contato quando surgir uma oportunidade alinhada ao seu perfil.
-          </p>
-          <a
-            href="mailto:rh@multylog.com.br?subject=Envio%20de%20Curr%C3%ADculo"
-            className="inline-block bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-8 py-4 rounded-xl transition-colors"
-          >
-            Enviar Currículo
-          </a>
+      {/* ── Enviar Currículo ─────────────────────────────────────────── */}
+      <section id="enviar-curriculo" className="bg-[#F5F5F7] py-16 lg:py-24">
+        <div className="site-container">
+          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
+            <div className="lg:sticky lg:top-28">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="w-6 h-0.5 bg-[#CC0000]" />
+                <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">
+                  Faça parte do time
+                </span>
+              </div>
+              <h2
+                className="font-display font-normal text-[#1C1C1E] tracking-wide leading-none mb-5"
+                style={{ fontSize: "clamp(1.8rem, 3vw, 3.2rem)" }}
+              >
+                Envie seu Currículo
+              </h2>
+              <div className="w-12 h-0.5 bg-[#CC0000] mb-6" />
+              <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+                Analisamos todos os perfis e entraremos em contato quando surgir uma oportunidade alinhada ao seu perfil.
+              </p>
+              <a
+                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Gostaria%20de%20saber%20sobre%20vagas%20na%20Multylog.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
+              >
+                Ou fale pelo WhatsApp
+              </a>
+            </div>
+            <CurriculoForm />
+          </div>
         </div>
       </section>
     </>
