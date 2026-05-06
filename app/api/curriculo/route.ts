@@ -22,7 +22,7 @@ export async function POST(req: Request) {
   try {
     await resend.emails.send({
       from: "Site Multylog <onboarding@resend.dev>",
-      to: "luispenna18@gmail.com",
+      to: "luispenna@multylog.com.br",
       replyTo: email,
       subject: `Novo currículo — ${nome}${cargo ? ` (${cargo})` : ""}`,
       html: `

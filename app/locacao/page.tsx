@@ -277,7 +277,7 @@ export default function LocacaoPage() {
       {/* ── Banner intermediário ──────────────────────────────────────── */}
       <section className="relative overflow-hidden" style={{ height: "clamp(240px, 32vw, 460px)" }}>
         <Image
-          src="/alteracoes-leo/banner_inferior_locacao_maquina_still"
+          src="/images/locacao-banner-still.jpg"
           alt="Empilhadeira em operação no galpão"
           fill
           className="object-cover"
