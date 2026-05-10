@@ -98,39 +98,26 @@ export default function Hero() {
 
   return (
     <>
-    {/* ── Mobile: só slide 2, com imagem de fundo ── */}
-    <section className="sm:hidden relative overflow-hidden mt-16 flex items-center justify-center bg-[#1C1C1E]" style={{ minHeight: "clamp(420px, 60vh, 600px)" }}>
-      {/* Imagem de fundo — foto da equipe com empilhadeiras */}
+    {/* ── Mobile: foto da equipe centralizada no casal ── */}
+    <section className="sm:hidden relative overflow-hidden mt-16 bg-[#1C1C1E]" style={{ height: "clamp(460px, 68vh, 620px)" }}>
       <Image
         src="/images/banner-still-03.jpg"
         alt="Equipe Multylog com empilhadeiras"
         fill
         className="object-cover"
-        style={{ objectPosition: "center center" }}
+        style={{ objectPosition: "center 52%" }}
         priority
         sizes="100vw"
-        quality={90}
+        quality={95}
       />
-      {/* Overlay para legibilidade do texto */}
-      <div className="absolute inset-0" style={{ background: "rgba(5,5,7,0.60)" }} />
+      {/* Gradiente: topo e bordas sutis, base mais escura para o texto */}
+      <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(5,5,7,0.20) 0%, rgba(5,5,7,0.02) 35%, rgba(5,5,7,0.02) 60%, rgba(5,5,7,0.72) 100%)" }} />
 
-      {/* Conteúdo */}
-      <div className="relative z-10 text-center px-6 py-16 max-w-sm mx-auto">
-        <h1 className="font-display text-white leading-none tracking-wide whitespace-pre-line mb-5" style={{ fontSize: "clamp(2.4rem, 10vw, 3.2rem)" }}>
-          {slide2.headline}
-        </h1>
-        <div className="w-12 h-0.5 bg-[#CC0000] mx-auto mb-5" />
-        <p className="text-gray-200 text-lg mb-8 leading-relaxed">{slide2.subheadline}</p>
-        <div className="flex flex-col gap-3 items-center">
-          <a href={slide2.cta1.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-all group">
-            {slide2.cta1.label} <ArrowRight size={15} />
-          </a>
-          {slide2.cta2 && (
-            <Link href={slide2.cta2.href} className="inline-flex items-center justify-center font-semibold px-7 py-3.5 rounded-xl border border-white/40 text-white hover:border-white transition-all">
-              {slide2.cta2.label}
-            </Link>
-          )}
-        </div>
+      {/* Texto na base do banner */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 pb-7 text-center px-6">
+        <p className="text-white font-semibold text-sm tracking-[0.18em] uppercase">
+          Locação · Venda · Peças · Serviços
+        </p>
       </div>
     </section>
 
