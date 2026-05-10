@@ -324,6 +324,17 @@ export const PRODUCTS: Product[] = ([
     controlType: "Operador em Pé",
     description:
       "Paleteira elétrica que combina ergonomia, agilidade e robustez. Ideal para movimentação horizontal de materiais e carga/descarga de caminhões e contêineres, incluindo docas niveladoras. Bloqueio de bateria com sensor, potente motor AC de corrente em cadeia e direção elétrica precisa.",
+    gallery: [
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2359_728x450.jpg?w=380&h=300&fit=max&s=dfab51433726701830c7e04da1fbe300",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2367_728x450.jpg?w=380&h=300&fit=max&s=6a760a44335be0aceddd96881393c279",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2231_728x450.jpg?w=380&h=300&fit=max&s=4dbf085819654d14489c073a39e3b8ea",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2373_728x450.jpg?w=380&h=300&fit=max&s=c4ee41631a7586e9c219da04e919c4d8",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2375_728x450.jpg?w=380&h=300&fit=max&s=6fcced013482eeac199c91a4c555f3d8",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2260_728x450.jpg?w=380&h=300&fit=max&s=8968fd49c935f4bf649c5fa1f8656107",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2263_728x450.jpg?w=380&h=300&fit=max&s=ff141b2fe8526b311421567adac1ba6c",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2296_728x450.jpg?w=380&h=300&fit=max&s=b3bc7b9479807dbd30e93e3ca264b314",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/ERX_2366_728x450.jpg?w=380&h=300&fit=max&s=c02b9e7fec6274c56298a5d3c6ca6cd8",
+    ],
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/pdfs/ERX_BR_TD.pdf?mod=1648804133&download=1&s=4f96aa2f6f05ec77e447a048be49f4a7",
   },
   {
@@ -341,6 +352,15 @@ export const PRODUCTS: Product[] = ([
     controlType: "Operador em Pé",
     description:
       "Compacta e versátil para aplicações exigentes. A EXH 20 tem ergonomia única no guidão com controles intuitivos para operação com uma mão. Display LED touch integrado. O OptiSpeed ajusta automaticamente a velocidade conforme o ângulo do guidão para transporte seguro em alta velocidade e manobras cuidadosas em corredores estreitos.",
+    gallery: [
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/images/STILL_Produkt_EXH_14-20_Galerie_Einsatz_01_4K.jpg?w=1920&fit=max&fm=webp&s=6d5286dbf7dc9f032cba07f04939d3b4",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/images/STILL_Produkt_EXH_14-20_Galerie_Einsatz_02_4K.jpg?w=1920&fit=max&fm=webp&s=b3a67bfeeb743744fd6cd46d2872ce4b",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/images/STILL_Produkt_EXH_14-20_Galerie_Ablagefach-Batteriehaube_01_4K.jpg?w=1920&fit=max&fm=webp&s=f25596a1d5df4ed768ded241729dd123",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/images/STILL_Produkt_EXH_14-20_Galerie_Zubehoerbuegel_4K.jpg?w=1920&fit=max&fm=webp&s=70b00173f6e62c0e1c10610e74d8ab7d",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/images/STILL_Produkt_EXH_14-20_Einsatz-Slider_Detailaufnahme-Deichsel_4K.jpg?w=1920&fit=max&fm=webp&s=4394f24ebcb0cf5ab0674f5c7e2fc140",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/images/STILL_Produkt_EXH_14-20_Einsatz-Slider_Einsatz_4K.jpg?w=1920&fit=max&fm=webp&s=a3a62248f31889d93c6a72c1f6b1721a",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/images/STILL_Produkt_EXH_14-20_Einsatz-Slider_Touch-Display_4K.jpg?w=1920&fit=max&fm=webp&s=b07e4e54dd94df3be363c0faa6df42c9",
+    ],
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/pdf/EXH_20_BR_TD.pdf",
   },
   {
@@ -359,6 +379,15 @@ export const PRODUCTS: Product[] = ([
     controlType: "Operador em Pé",
     description:
       "Agilidade e operação intuitiva elevadas a uma nova dimensão. A EXH-SF 20 é o assistente inteligente para transporte horizontal de cargas com plataforma dobrável para operador embarcado. Direção elétrica, guidão inovador com display LED integrado, Curve Speed Control e tecnologia Li-Ion com carregamento rápido nas pausas operacionais.",
+    gallery: [
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/images/STILL_Produkt_EXH-SF_16C-20C_Content_SEF_Einbauladegeraet_1440x960.jpg?w=1920&fit=max&fm=webp&s=a8b8c7abd1b4e1b40690a7857f9bcbf1",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/images/STILL_Produkt_EXH-SF_16C-20C_Content_SEF_Batterie-Haube_1440x960.jpg?w=1920&fit=max&fm=webp&s=b91b61c214d15789eb517af7a85a478b",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/images/STILL_Produkt_EXH-SF_16C-20C_Content_SEF_Deichsel_LED-Display_1440x960.jpg?w=1920&fit=max&fm=webp&s=85cd69a689c6abbfface7bc198225aea",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/images/STILL_Produkt_EXH-SF_16-20C_Einsatz-Slider_Deichsel_LED-Display_4K.jpg?w=1920&fit=max&fm=webp&s=16c7cc8846cb1d8f0c90c93469ae4900",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/images/STILL_Produkt_EXH-SF_16-20C_Einsatz-Slider_Vogelperspektive_4K.jpg?w=1920&fit=max&fm=webp&s=839164ea94877254a1d085f172c84e3b",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/images/STILL_Produkt_EXH-SF_16-20C_Einsatz-Slider_Seitenbuegel_4K.jpg?w=1920&fit=max&fm=webp&s=ee32025ea7aaafff9f958dca8b651431",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/images/STILL_Produkt_EXH-SF_16-20C_Einsatz-Slider_On-Board-Charger_4K.jpg?w=1920&fit=max&fm=webp&s=386ec249d0b2bb59830d012722c12d26",
+    ],
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/pdf/EXH-SF_20C_BR_TD.pdf?mod=1733389550&download=1&s=fd92f000b0b4ecde0297c2298c4a1b04",
   },
   {
@@ -376,6 +405,14 @@ export const PRODUCTS: Product[] = ([
     controlType: "Operador em Pé",
     description:
       "A alternativa ideal de paleteira elétrica compacta. Com dimensões reduzidas e peso operacional de apenas 115 kg, é a parceira perfeita para transporte horizontal em rotas curtas e espaços confinados. Bateria de íon-lítio para carregamento completo ou parcial a qualquer momento, sem fadiga do operador.",
+    gallery: [
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/images/STILL_Produkt_ECH_12C_15C_Antriebsrad_4096x2160.jpg?w=380&h=300&fit=max&s=9788943f1a16b4d5061af6de41cfc7a4",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/images/STILL_Produkt_ECH_12C_15C_Rollen-Doppelt_4096x2160.jpg?w=380&h=300&fit=max&s=766a64c579a706cfa9e3b992bdc68a42",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/images/STILL_Produkt_ECH_12C_15C_Rollen-Einfach_4096x2160.jpg?w=380&h=300&fit=max&s=14111201cbf3fef4c62ceb9123ca5477",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/images/STILL_Produkt_ECH-15C_Schleichfahrt-1_4096x2160.jpg?w=380&h=300&fit=max&s=1b6beb7cc78d63b0c03b14c632c98978",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/images/STILL_Produkt_ECH_15C_Batteriewechsel-2_4096x2160.jpg?w=380&h=300&fit=max&s=6a67876d460e3dc75cb05dc6d403a377",
+      "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/images/ECH_15C-Heckdiagonale_Zoom_4094x2160.jpg?w=1920&fit=max&fm=webp&s=3a500297b26485fd61fcdd0c8e4c8a5a",
+    ],
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ECH_12_C_15_C/pdf/ECH_PRT_TD.pdf?mod=1755532902&download=1&s=163220830b06c4b153effb169c35b063",
   },
   {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Package, Wrench, ShieldCheck, Clock } from "lucide-react";
+import { Package, Wrench, ShieldCheck, Clock, Phone } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import ServiceForm from "@/components/ServiceForm";
 
@@ -166,14 +166,25 @@ export default function PecasServicosPage() {
               <p className="text-gray-600 leading-relaxed mb-8 text-lg">
                 Preencha o formulário e nossa equipe técnica entra em contato para agendar o atendimento.
               </p>
-              <a
-                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Preciso%20de%20assistência%20técnica%20para%20minha%20empilhadeira.%20Pode%20me%20ajudar%3F`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
-              >
-                Ou fale pelo WhatsApp
-              </a>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="tel:+5581992511657"
+                  className="inline-flex items-center gap-3 text-[#1C1C1E] font-semibold text-base hover:text-[#CC0000] transition-colors"
+                >
+                  <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-[#F5F5F7]">
+                    <Phone size={18} className="text-[#CC0000]" />
+                  </span>
+                  +55 (81) 99251-1657
+                </a>
+                <a
+                  href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Preciso%20de%20assistência%20técnica%20para%20minha%20empilhadeira.%20Pode%20me%20ajudar%3F`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
+                >
+                  Ou fale pelo WhatsApp
+                </a>
+              </div>
             </div>
             <ServiceForm />
           </div>

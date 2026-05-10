@@ -98,20 +98,34 @@ export default function Hero() {
 
   return (
     <>
-    {/* ── Mobile: só slide 2, fundo off-white ── */}
-    <section className="sm:hidden bg-[#F5F5F7] mt-16 flex items-center justify-center" style={{ minHeight: "clamp(420px, 60vh, 600px)" }}>
-      <div className="text-center px-6 py-16 max-w-sm mx-auto">
-        <h1 className="font-display text-gray-700 leading-none tracking-wide whitespace-pre-line mb-5" style={{ fontSize: "clamp(2.4rem, 10vw, 3.2rem)" }}>
+    {/* ── Mobile: só slide 2, com imagem de fundo ── */}
+    <section className="sm:hidden relative overflow-hidden mt-16 flex items-center justify-center" style={{ minHeight: "clamp(420px, 60vh, 600px)" }}>
+      {/* Imagem de fundo */}
+      <Image
+        src="/images/banner-multylog-02.png"
+        alt="Equipe Multylog com empilhadeiras"
+        fill
+        className="object-cover object-center"
+        priority
+        sizes="100vw"
+        quality={90}
+      />
+      {/* Overlay escuro para legibilidade */}
+      <div className="absolute inset-0" style={{ background: "rgba(10,10,14,0.55)" }} />
+
+      {/* Conteúdo */}
+      <div className="relative z-10 text-center px-6 py-16 max-w-sm mx-auto">
+        <h1 className="font-display text-white leading-none tracking-wide whitespace-pre-line mb-5" style={{ fontSize: "clamp(2.4rem, 10vw, 3.2rem)" }}>
           {slide2.headline}
         </h1>
         <div className="w-12 h-0.5 bg-[#CC0000] mx-auto mb-5" />
-        <p className="text-gray-600 text-lg mb-8 leading-relaxed">{slide2.subheadline}</p>
+        <p className="text-gray-200 text-lg mb-8 leading-relaxed">{slide2.subheadline}</p>
         <div className="flex flex-col gap-3 items-center">
           <a href={slide2.cta1.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-all group">
             {slide2.cta1.label} <ArrowRight size={15} />
           </a>
           {slide2.cta2 && (
-            <Link href={slide2.cta2.href} className="inline-flex items-center justify-center font-semibold px-7 py-3.5 rounded-xl border border-gray-400 text-gray-600 hover:border-[#1C1C1E] hover:text-[#1C1C1E] transition-all">
+            <Link href={slide2.cta2.href} className="inline-flex items-center justify-center font-semibold px-7 py-3.5 rounded-xl border border-white/40 text-white hover:border-white transition-all">
               {slide2.cta2.label}
             </Link>
           )}
