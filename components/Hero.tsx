@@ -102,10 +102,11 @@ export default function Hero() {
     <section className="sm:hidden relative overflow-hidden mt-16 flex items-center justify-center" style={{ minHeight: "clamp(420px, 60vh, 600px)" }}>
       {/* Imagem de fundo */}
       <Image
-        src="/images/banner-multylog-02.png"
+        src="/images/banner-multylog-02.jpg"
         alt="Equipe Multylog com empilhadeiras"
         fill
-        className="object-cover object-center"
+        className="object-cover"
+        style={{ objectPosition: "center center" }}
         priority
         sizes="100vw"
         quality={90}
