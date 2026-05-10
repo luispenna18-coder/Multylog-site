@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Novos e Seminovos | Multylog Empilhadeiras",
+  title: "Vendas | Multylog Empilhadeiras",
   description: "Compre empilhadeiras STILL novas e seminovos revisados no Nordeste. Representante autorizado com garantia e suporte técnico.",
 };
 
@@ -51,7 +51,7 @@ export default function NovosESeminovosPage() {
               Representante Oficial STILL no Nordeste
             </p>
             <h1 className="heading-xl font-display text-[#1C1C1E] tracking-wide mb-4 leading-tight">
-              Novos e<br />Seminovos
+              Vendas
             </h1>
             <p className="text-gray-500 text-lg mb-8 max-w-sm">
               Equipamentos novos e revisados com garantia e suporte técnico no Nordeste.
@@ -164,7 +164,7 @@ export default function NovosESeminovosPage() {
       {/* ── CTA ── */}
       <section className="relative w-full overflow-hidden">
         <Image
-          src="/images/banner-pronto-investir.png"
+          src="/images/pronto-investir-novo.png"
           alt="Pronto para Investir?"
           width={1440}
           height={600}

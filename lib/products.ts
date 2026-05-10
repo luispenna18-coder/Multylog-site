@@ -90,6 +90,7 @@ export const PRODUCTS: Product[] = ([
       "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Galerie_Fussraum_4096x2160.jpg?w=1920&fit=max&fm=webp&s=34c0186dbcfadfffac5a015e9959fb98",
       "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Galerie_Heckansicht_4096x2160.jpg?w=1920&fit=max&fm=webp&s=aadd7801f3c0b080599e55fa671016bb",
       "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Einsatzslider_Heckansicht_4096x2160.jpg?w=1920&fit=max&fm=webp&s=e283a92892c7b7ab834add05d5719fd1",
+      "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_20-25_BR/images/STILL_BR_Produkt_RCE_Einsatzslider_Arbeitsplatz_4096x2160.jpg?w=1920&fit=max&fm=webp&s=e3649218c8ae0ab3d6e8f087877d8b40",
     ],
   },
   {

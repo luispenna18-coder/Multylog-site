@@ -28,7 +28,7 @@ export const NAV_LINKS = [
   { label: "Início", href: "/" },
   { label: "Sobre", href: "/sobre" },
   { label: "Locação", href: "/locacao" },
-  { label: "Novos e Seminovos", href: "/novos-seminovos" },
+  { label: "Vendas", href: "/novos-seminovos" },
   { label: "Máquinas", href: "/maquinas" },
   { label: "Peças e Serviços", href: "/pecas-servicos" },
   { label: "Blog", href: "/blog" },
