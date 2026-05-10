@@ -32,6 +32,5 @@ export const NAV_LINKS = [
   { label: "Máquinas", href: "/maquinas" },
   { label: "Peças e Serviços", href: "/pecas-servicos" },
   { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/faq" },
   { label: "Trabalhe Conosco", href: "/trabalhe-conosco" },
 ];
