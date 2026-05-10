@@ -42,24 +42,19 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-0.5">
-            {NAV_LINKS.map((link, i) => (
-              <>
-                {i === 6 && (
-                  <span key="sep" className="mx-1 h-4 w-px bg-gray-200 self-center" />
-                )}
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`px-2.5 py-2 text-sm font-medium transition-colors rounded-md whitespace-nowrap ${
-                    pathname === link.href
-                      ? "text-[#CC0000]"
-                      : "text-gray-600 hover:text-[#1C1C1E]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </>
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-5 px-6">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                  pathname === link.href
+                    ? "text-[#CC0000]"
+                    : "text-gray-600 hover:text-[#1C1C1E]"
+                }`}
+              >
+                {link.label}
+              </Link>
             ))}
           </nav>
 
