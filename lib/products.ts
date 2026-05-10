@@ -343,8 +343,8 @@ export const PRODUCTS: Product[] = ([
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH_14-20_Plus/pdf/EXH_20_BR_TD.pdf",
   },
   {
-    id: "exh-sf-16c-20c",
-    name: "EXH-SF 16C/20C",
+    id: "exh-sf-20",
+    name: "EXH-SF 20",
     category: "transpaleteira",
     capacity: "1.600 – 2.000 kg",
     liftHeight: "até 125 mm",
@@ -357,12 +357,12 @@ export const PRODUCTS: Product[] = ([
     applicationType: "Carga/Descarga Lateral",
     controlType: "Operador em Pé",
     description:
-      "Agilidade e operação intuitiva elevadas a uma nova dimensão. A EXH-SF é o assistente inteligente para transporte horizontal de cargas com plataforma dobrável para operador embarcado. Direção elétrica, guidão inovador com display LED integrado, Curve Speed Control e tecnologia Li-Ion com carregamento rápido nas pausas operacionais.",
+      "Agilidade e operação intuitiva elevadas a uma nova dimensão. A EXH-SF 20 é o assistente inteligente para transporte horizontal de cargas com plataforma dobrável para operador embarcado. Direção elétrica, guidão inovador com display LED integrado, Curve Speed Control e tecnologia Li-Ion com carregamento rápido nas pausas operacionais.",
     datasheet: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/EXH-SF_16-20C/pdf/EXH-SF_20C_BR_TD.pdf?mod=1733389550&download=1&s=fd92f000b0b4ecde0297c2298c4a1b04",
   },
   {
-    id: "ech-15c",
-    name: "ECH 15C",
+    id: "ech-20",
+    name: "ECH 20",
     category: "transpaleteira",
     capacity: "1.500 kg",
     energy: "Elétrica",
@@ -379,7 +379,7 @@ export const PRODUCTS: Product[] = ([
   },
   {
     id: "linde-t20-t25",
-    name: "T20 – T25 FP (Linde)",
+    name: "T20 – T25 SP (Linde)",
     category: "transpaleteira",
     capacity: "2.000 – 2.500 kg",
     energy: "Elétrica",
@@ -390,7 +390,7 @@ export const PRODUCTS: Product[] = ([
     applicationType: "Carga/Descarga Lateral",
     controlType: "Operador em Pé",
     description:
-      "A linha T20-T25 FP da Linde são paleteiras elétricas de alta performance para cargas de 2.000 a 2.500 kg. Combinam robustez, ergonomia e eficiência energética para operações intensas em armazéns e centros de distribuição.",
+      "A linha T20-T25 SP da Linde são paleteiras elétricas de alta performance para cargas de 2.000 a 2.500 kg. Combinam robustez, ergonomia e eficiência energética para operações intensas em armazéns e centros de distribuição.",
     gallery: [
       "https://www.linde-mh.com/media/3D_Product/turntables/03_Pallet_Trucks/BR1154-01_T20SR/BR1154-01_T20SR_00000_1x1w640.png",
       "https://www.linde-mh.com/media/3D_Product/turntables/03_Pallet_Trucks/BR1154-01_T20SR/BR1154-01_T20SR_00009_1x1w640.png",
