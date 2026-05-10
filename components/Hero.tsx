@@ -99,10 +99,10 @@ export default function Hero() {
   return (
     <>
     {/* ── Mobile: só slide 2, com imagem de fundo ── */}
-    <section className="sm:hidden relative overflow-hidden mt-16 flex items-center justify-center" style={{ minHeight: "clamp(420px, 60vh, 600px)" }}>
-      {/* Imagem de fundo */}
+    <section className="sm:hidden relative overflow-hidden mt-16 flex items-center justify-center bg-[#1C1C1E]" style={{ minHeight: "clamp(420px, 60vh, 600px)" }}>
+      {/* Imagem de fundo — foto da equipe com empilhadeiras */}
       <Image
-        src="/images/banner-multylog-02.jpg"
+        src="/images/banner-still-03.jpg"
         alt="Equipe Multylog com empilhadeiras"
         fill
         className="object-cover"
@@ -111,8 +111,8 @@ export default function Hero() {
         sizes="100vw"
         quality={90}
       />
-      {/* Overlay escuro para legibilidade */}
-      <div className="absolute inset-0" style={{ background: "rgba(10,10,14,0.55)" }} />
+      {/* Overlay para legibilidade do texto */}
+      <div className="absolute inset-0" style={{ background: "rgba(5,5,7,0.60)" }} />
 
       {/* Conteúdo */}
       <div className="relative z-10 text-center px-6 py-16 max-w-sm mx-auto">
