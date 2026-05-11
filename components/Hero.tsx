@@ -105,7 +105,7 @@ export default function Hero() {
         alt="Equipe Multylog com empilhadeiras"
         fill
         className="object-cover"
-        style={{ objectPosition: "center top" }}
+        style={{ objectPosition: "center 70%" }}
         priority
         sizes="100vw"
         quality={95}
