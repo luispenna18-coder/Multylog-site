@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Mountain, Eye, ShieldCheck, Users, Settings, Star, ClipboardList } from "lucide-react";
-import { SITE } from "@/lib/constants";
 import CurriculoForm from "@/components/CurriculoForm";
 
 export const metadata: Metadata = {
@@ -264,22 +263,12 @@ export default function TrabalheConoscoPage() {
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="#enviar-curriculo"
-                  className="inline-flex items-center bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
-                >
-                  Enviar Currículo
-                </a>
-                <a
-                  href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Gostaria%20de%20saber%20sobre%20vagas%20na%20Multylog.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center border border-gray-400 hover:border-[#1C1C1E] text-[#1C1C1E] font-semibold px-7 py-3.5 rounded-xl transition-colors"
-                >
-                  Vagas na Multylog
-                </a>
-              </div>
+              <a
+                href="#enviar-curriculo"
+                className="inline-flex items-center bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+              >
+                Enviar Currículo
+              </a>
 
             </div>
 
@@ -443,14 +432,6 @@ export default function TrabalheConoscoPage() {
               <p className="text-gray-600 leading-relaxed mb-8 text-lg">
                 Analisamos todos os perfis e entraremos em contato quando surgir uma oportunidade alinhada ao seu perfil.
               </p>
-              <a
-                href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Gostaria%20de%20saber%20sobre%20vagas%20na%20Multylog.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
-              >
-                Ou fale pelo WhatsApp
-              </a>
             </div>
             <CurriculoForm />
           </div>
