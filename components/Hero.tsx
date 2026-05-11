@@ -101,11 +101,11 @@ export default function Hero() {
     {/* ── Mobile: foto da equipe centralizada no casal ── */}
     <section className="sm:hidden relative overflow-hidden mt-16 bg-[#1C1C1E]" style={{ minHeight: "clamp(420px, 60vh, 600px)" }}>
       <Image
-        src="/images/banner-still-03.jpg"
+        src="/images/banner-mobile.png"
         alt="Equipe Multylog com empilhadeiras"
         fill
         className="object-cover"
-        style={{ objectPosition: "55% 52%" }}
+        style={{ objectPosition: "center top" }}
         priority
         sizes="100vw"
         quality={95}
