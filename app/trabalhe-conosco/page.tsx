@@ -142,9 +142,9 @@ export default function TrabalheConoscoPage() {
   return (
     <>
       {/* ── Hero ────────────────────────────────────────────────────── */}
-      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(400px,52vh,600px)]">
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(500px,70vh,780px)]">
         <Image
-          src="/images/team-fachada.jpg"
+          src="/images/banner-trabalhe-conosco.png"
           alt="Equipe Multylog"
           fill
           className="object-cover object-center"
@@ -152,15 +152,6 @@ export default function TrabalheConoscoPage() {
           sizes="100vw"
           quality={90}
         />
-        <div className="absolute inset-0" style={{ background: "rgba(10,18,30,0.75)" }} />
-        <div className="site-container relative h-full flex items-end pb-12 lg:pb-16">
-          <div>
-            <h1 className="font-display text-white tracking-wide leading-none whitespace-pre-line mb-4" style={{ fontSize: "clamp(2.2rem, 3.4vw, 4rem)" }}>
-              {"Construa sua Trajetória\nna Multylog"}
-            </h1>
-            <div className="w-12 h-0.5 bg-[#CC0000]" />
-          </div>
-        </div>
       </section>
 
       {/* ── Missão & Visão ───────────────────────────────────────────── */}
@@ -170,15 +161,7 @@ export default function TrabalheConoscoPage() {
 
             <div>
               <div className="flex items-center gap-4 mb-4">
-                {/* Montanha com bandeira */}
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  {/* triângulo da montanha */}
-                  <path d="M4 44L26 8L48 44H4Z" stroke="#CC0000" strokeWidth="2.8" strokeLinejoin="round"/>
-                  {/* mastro da bandeira no topo */}
-                  <line x1="26" y1="8" x2="26" y2="2" stroke="#CC0000" strokeWidth="2.8" strokeLinecap="round"/>
-                  {/* bandeira */}
-                  <path d="M26 2L33 4.5L26 7Z" fill="#CC0000"/>
-                </svg>
+                <Image src="/images/icone-missao.png" alt="Missão" width={52} height={52} className="flex-shrink-0" />
                 <h2 className="font-display text-[#1C1C1E] tracking-wide text-4xl lg:text-5xl uppercase">
                   Nossa Missão
                 </h2>
@@ -190,15 +173,7 @@ export default function TrabalheConoscoPage() {
 
             <div>
               <div className="flex items-center gap-4 mb-4">
-                {/* Olho */}
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  {/* forma do olho */}
-                  <path d="M4 26C4 26 12 12 26 12C40 12 48 26 48 26C48 26 40 40 26 40C12 40 4 26 4 26Z" stroke="#CC0000" strokeWidth="2.8" strokeLinejoin="round"/>
-                  {/* íris */}
-                  <circle cx="26" cy="26" r="7" stroke="#CC0000" strokeWidth="2.8"/>
-                  {/* pupila */}
-                  <circle cx="26" cy="26" r="3" fill="#CC0000"/>
-                </svg>
+                <Image src="/images/icone-visao.png" alt="Visão" width={52} height={52} className="flex-shrink-0" />
                 <h2 className="font-display text-[#1C1C1E] tracking-wide text-4xl lg:text-5xl uppercase">
                   Nossa Visão
                 </h2>
@@ -257,17 +232,17 @@ export default function TrabalheConoscoPage() {
               </p>
 
               {/* 5 ícones */}
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mb-12">
+              <div className="flex flex-wrap gap-x-16 gap-y-6 mb-12 justify-start -ml-1">
                 {[
-                  { icon: ShieldCheck,   label: "Caráter é\ninegociável" },
-                  { icon: Users,         label: "Trabalho\nem Equipe" },
-                  { icon: Settings,      label: "Encantamento" },
-                  { icon: Star,          label: "Somos parceiros\nna produtividade" },
-                  { icon: ClipboardList, label: "Excelência com\nMelhoria Contínua" },
-                ].map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex flex-col items-center text-center gap-3">
-                    <Icon size={56} strokeWidth={1.25} className="text-[#CC0000]" />
-                    <p className="text-base text-[#1C1C1E] font-medium leading-snug whitespace-pre-line">{label}</p>
+                  { src: "/images/icone-carater.png",      label: "Caráter é\nInegociável" },
+                  { src: "/images/icone-equipe.png",       label: "Trabalho\nem Equipe" },
+                  { src: "/images/icone-encantamento.png", label: "Encantamento\ndo Cliente" },
+                  { src: "/images/icone-parceiros.png",    label: "Parceiros na\nProdutividade" },
+                  { src: "/images/icone-excelencia.png",   label: "Excelência com\nMelhoria Contínua" },
+                ].map(({ src, label }) => (
+                  <div key={label} className="flex flex-col items-center text-center gap-3 w-28">
+                    <Image src={src} alt={label} width={80} height={80} />
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#1C1C1E] leading-snug">{label}</p>
                   </div>
                 ))}
               </div>

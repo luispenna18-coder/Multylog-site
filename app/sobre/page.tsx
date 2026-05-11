@@ -119,7 +119,7 @@ export default function SobrePage() {
                     src={person.image}
                     alt={person.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300 scale-125" style={{ objectPosition: "center 60%" }}
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="font-display text-2xl text-[#1C1C1E] tracking-wide">{person.name}</h3>

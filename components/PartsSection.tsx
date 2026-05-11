@@ -33,7 +33,7 @@ export default function PartsSection() {
       <FadeUp direction="right" delay={0.15} className="hidden lg:block">
         <div className="absolute right-0 inset-y-0 w-[48%] pointer-events-none">
           <Image
-            src="/images/parts/still-exploded.png"
+            src="/images/parts/pecas-novo.png"
             alt="Empilhadeira STILL com peças explodidas"
             fill
             className="object-contain object-right-center"
@@ -101,7 +101,7 @@ export default function PartsSection() {
         <FadeUp direction="right" delay={0.1} className="lg:hidden mt-10">
           <div className="relative w-full aspect-[4/3]">
             <Image
-              src="/images/parts/still-exploded.png"
+              src="/images/parts/pecas-novo.png"
               alt="Empilhadeira STILL com peças explodidas"
               fill
               className="object-contain object-center"
