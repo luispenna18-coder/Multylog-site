@@ -162,7 +162,35 @@ export default function NovosESeminovosPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="relative w-full overflow-hidden">
+      {/* Mobile */}
+      <section className="sm:hidden relative w-full overflow-hidden" style={{ minHeight: "320px" }}>
+        <Image
+          src="/images/pronto-investir-novo.png"
+          alt="Pronto para Investir?"
+          fill
+          className="object-cover object-center"
+          quality={90}
+        />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0.3) 100%)" }} />
+        <div className="absolute inset-0 flex items-center px-6 py-14">
+          <div className="flex flex-col gap-5">
+            <h2 className="font-display text-white tracking-wide leading-none text-4xl">
+              Pronto para Investir?
+            </h2>
+            <a
+              href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20uma%20cotação%20de%20compra%20de%20empilhadeira.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base self-start"
+            >
+              Solicitar Cotação via WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Desktop */}
+      <section className="hidden sm:block relative w-full overflow-hidden">
         <Image
           src="/images/pronto-investir-novo.png"
           alt="Pronto para Investir?"
@@ -171,9 +199,7 @@ export default function NovosESeminovosPage() {
           className="w-full h-auto block"
           quality={95}
         />
-        {/* Cortina escura cobrindo a esquerda */}
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 38%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0) 72%)" }} />
-        {/* Texto sobre a cortina */}
         <div className="absolute inset-0 flex items-center">
           <div className="w-full px-8 sm:px-12 lg:px-20 flex flex-col items-start gap-6" style={{ maxWidth: "38%" }}>
             <h2 className="font-display text-white tracking-wide leading-none whitespace-nowrap" style={{ fontSize: "clamp(2rem, 3.8vw, 4.5rem)" }}>
