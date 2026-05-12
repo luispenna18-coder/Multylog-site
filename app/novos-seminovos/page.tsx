@@ -168,10 +168,10 @@ export default function NovosESeminovosPage() {
           src="/images/pronto-investir-novo.png"
           alt="Pronto para Investir?"
           fill
-          className="object-cover object-center"
+          className="object-cover object-right"
           quality={90}
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0.3) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0.15) 100%)" }} />
         <div className="absolute inset-0 flex items-center px-6 py-14">
           <div className="flex flex-col gap-5">
             <h2 className="font-display text-white tracking-wide leading-none text-4xl">
