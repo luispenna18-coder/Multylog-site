@@ -141,7 +141,7 @@ export default function TrabalheConoscoPage() {
   return (
     <>
       {/* ── Hero ────────────────────────────────────────────────────── */}
-      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem]" style={{ height: "clamp(260px, 50vw, 520px)" }}>
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem]" style={{ height: "clamp(320px, 56vw, 520px)" }}>
         <Image
           src="/images/banner-trabalhe-conosco.png"
           alt="Equipe Multylog"
