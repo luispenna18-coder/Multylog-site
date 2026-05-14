@@ -29,7 +29,7 @@ const PARTS = [
 export default function PecasServicosPage() {
   return (
     <>
-      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(400px,52vh,600px)]">
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-[16/5]">
         <Image
           src="/images/pecas-servicos-banner.jpg"
           alt="Técnico Multylog realizando manutenção"

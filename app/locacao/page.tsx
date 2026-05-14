@@ -97,7 +97,7 @@ export default function LocacaoPage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(400px,52vh,600px)]">
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-[16/5]">
         <Image
           src="/images/locacao-banner.jpg"
           alt="Empilhadeiras STILL no galpão"
@@ -275,7 +275,7 @@ export default function LocacaoPage() {
       </section>
 
       {/* ── Banner intermediário ──────────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ height: "clamp(240px, 32vw, 460px)" }}>
+      <section className="relative overflow-hidden aspect-[4/3] md:aspect-[16/5]">
         <Image
           src="/images/locacao-banner-still.jpg"
           alt="Empilhadeira em operação no galpão"

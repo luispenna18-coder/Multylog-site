@@ -155,7 +155,7 @@ export default function TrabalheConoscoPage() {
       </section>
 
       {/* Desktop banner — landscape original */}
-      <section className="hidden sm:block relative w-full overflow-hidden mt-[4.5rem]" style={{ height: "clamp(320px, 50vw, 520px)" }}>
+      <section className="hidden sm:block relative w-full overflow-hidden mt-[4.5rem] aspect-[16/5]">
         <Image
           src="/images/banner-trabalhe-conosco.png"
           alt="Equipe Multylog"

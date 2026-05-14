@@ -99,7 +99,7 @@ export default function Hero() {
   return (
     <>
     {/* ── Mobile: foto da equipe centralizada no casal ── */}
-    <section className="sm:hidden relative overflow-hidden mt-16 bg-[#1C1C1E]" style={{ minHeight: "clamp(420px, 60vh, 600px)" }}>
+    <section className="sm:hidden relative overflow-hidden mt-16 bg-[#1C1C1E] aspect-[3/4]">
       <Image
         src="/images/banner-mobile.png"
         alt="Equipe Multylog com empilhadeiras"
@@ -124,7 +124,7 @@ export default function Hero() {
     {/* ── Desktop: carrossel completo ── */}
     <section
       className="hidden sm:block relative w-full overflow-hidden bg-[#1C1C1E] cursor-grab active:cursor-grabbing mt-16 lg:mt-[4.5rem]"
-      style={{ height: "clamp(520px, 68vh, 780px)" }}
+      style={{ aspectRatio: "16/7" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => { setPaused(false); dragStart.current = null; }}
       onMouseDown={(e) => handleDragStart(e.clientX)}

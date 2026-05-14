@@ -11,7 +11,7 @@ export default function SobrePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-auto md:h-[clamp(400px,52vh,600px)]">
+      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem] aspect-[4/3] md:aspect-[16/5]">
         <Image
           src="/images/sobre-whatsapp.jpg"
           alt="Multylog Empilhadeiras"
