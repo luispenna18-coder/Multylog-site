@@ -163,27 +163,29 @@ export default function NovosESeminovosPage() {
 
       {/* ── CTA ── */}
       {/* Mobile */}
-      <section className="sm:hidden relative w-full overflow-hidden" style={{ minHeight: "320px" }}>
+      <section className="sm:hidden relative w-full overflow-hidden" style={{ minHeight: "380px" }}>
         <Image
           src="/images/pronto-investir-novo.png"
           alt="Pronto para Investir?"
           fill
-          className="object-cover object-right"
+          className="object-cover"
+          style={{ objectPosition: "72% top" }}
           quality={90}
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0.15) 100%)" }} />
-        <div className="absolute inset-0 flex items-center px-6 py-14">
-          <div className="flex flex-col gap-5">
-            <h2 className="font-display text-white tracking-wide leading-none text-4xl">
+        {/* Gradient covers only the left ~50% — right side keeps the collaborator visible */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.88) 30%, rgba(0,0,0,0.20) 50%, rgba(0,0,0,0) 62%)" }} />
+        <div className="absolute inset-0 flex items-center px-5 py-10">
+          <div className="flex flex-col gap-4 w-[52%]">
+            <h2 className="font-display text-white tracking-wide leading-tight text-2xl">
               Pronto para Investir?
             </h2>
             <a
               href={`https://wa.me/${SITE.whatsapp}?text=Olá!%20Quero%20uma%20cotação%20de%20compra%20de%20empilhadeira.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base self-start"
+              className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-4 py-3 rounded-xl transition-colors text-sm self-start"
             >
-              Solicitar Cotação via WhatsApp
+              Solicitar Cotação
             </a>
           </div>
         </div>
