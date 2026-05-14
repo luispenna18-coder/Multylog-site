@@ -44,9 +44,9 @@ export default function NovosESeminovosPage() {
     <>
       {/* ── HERO — Banner STILL ── */}
       <section className="bg-white pt-20">
-        <div className="grid lg:grid-cols-[2fr_3fr] min-h-[480px]">
+        <div className="grid lg:grid-cols-[2fr_3fr]">
           {/* Left */}
-          <div className="flex flex-col justify-center px-4 sm:px-10 lg:px-20 py-16">
+          <div className="flex flex-col justify-center px-4 sm:px-10 lg:px-20 py-14 lg:py-20">
             <p className="text-sm font-semibold uppercase tracking-widest text-[#CC0000] mb-4">
               Representante Oficial STILL no Nordeste
             </p>
@@ -74,7 +74,7 @@ export default function NovosESeminovosPage() {
             </div>
           </div>
           {/* Right — STILL banner */}
-          <div className="relative min-h-[320px]">
+          <div className="relative aspect-[4/3] lg:aspect-auto">
             <Image
               src="/images/banner-still-forca.jpg"
               alt="Do seu jeito, com a nossa força — STILL"
