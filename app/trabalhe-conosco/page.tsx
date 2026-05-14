@@ -141,7 +141,21 @@ export default function TrabalheConoscoPage() {
   return (
     <>
       {/* ── Hero ────────────────────────────────────────────────────── */}
-      <section className="relative w-full overflow-hidden mt-16 lg:mt-[4.5rem]" style={{ height: "clamp(320px, 56vw, 520px)" }}>
+      {/* Mobile banner — portrait, composição própria */}
+      <section className="sm:hidden relative w-full overflow-hidden mt-16" style={{ aspectRatio: "1063/1093" }}>
+        <Image
+          src="/images/banner-trabalhe-conosco-mobile.png"
+          alt="Equipe Multylog"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+          quality={90}
+        />
+      </section>
+
+      {/* Desktop banner — landscape original */}
+      <section className="hidden sm:block relative w-full overflow-hidden mt-[4.5rem]" style={{ height: "clamp(320px, 50vw, 520px)" }}>
         <Image
           src="/images/banner-trabalhe-conosco.png"
           alt="Equipe Multylog"
