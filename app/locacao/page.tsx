@@ -387,7 +387,7 @@ export default function LocacaoPage() {
                 Ou fale pelo WhatsApp
               </a>
             </div>
-            <QuoteForm />
+            <QuoteForm type="locacao" />
           </div>
         </div>
       </section>

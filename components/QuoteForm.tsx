@@ -18,7 +18,7 @@ function isValidPhone(v: string) {
   return v.replace(/\D/g, "").length >= 10;
 }
 
-export default function QuoteForm() {
+export default function QuoteForm({ type = "compra" }: { type?: "compra" | "locacao" }) {
   const [submitted, setSubmitted] = useState(false);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [form, setForm] = useState({
@@ -50,7 +50,7 @@ export default function QuoteForm() {
     await fetch("/api/cotacao", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify({ ...form, type }),
     }).catch(() => {});
 
     setSubmitted(true);

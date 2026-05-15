@@ -5,20 +5,24 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { nome, email, empresa, telefone, equipamento, mensagem } = body;
+  const { nome, email, empresa, telefone, equipamento, mensagem, type } = body;
 
   if (!nome || !email || !empresa || !equipamento || !telefone) {
     return NextResponse.json({ error: "Campos obrigatórios ausentes." }, { status: 400 });
   }
+
+  const isLocacao = type === "locacao";
+  const subjectLabel = isLocacao ? "Nova solicitação de locação" : "Nova solicitação de compra";
+  const titleLabel = isLocacao ? "Nova Solicitação de Locação" : "Nova Solicitação de Compra";
 
   try {
     await resend.emails.send({
       from: "Site Multylog <luispenna@multylog.com.br>",
       to: ["admcomercial@multylog.com.br", "luispenna@multylog.com.br"],
       replyTo: email,
-      subject: `Nova cotação — ${nome} (${empresa})`,
+      subject: `${subjectLabel} — ${nome} (${empresa})`,
       html: `
-        <h2 style="color:#CC0000;font-family:sans-serif;">Nova Solicitação de Cotação</h2>
+        <h2 style="color:#CC0000;font-family:sans-serif;">${titleLabel}</h2>
         <table style="font-family:sans-serif;font-size:15px;border-collapse:collapse;width:100%;max-width:520px;">
           <tr><td style="padding:8px 0;color:#888;width:140px;">Nome</td><td style="padding:8px 0;font-weight:600;">${nome}</td></tr>
           <tr><td style="padding:8px 0;color:#888;">Empresa</td><td style="padding:8px 0;font-weight:600;">${empresa}</td></tr>
