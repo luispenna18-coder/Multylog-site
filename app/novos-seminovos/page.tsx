@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight, ShieldCheck, Wrench, TrendingUp, Clock } from "lucide-react";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
+import QuoteForm from "@/components/QuoteForm";
 
 export const metadata: Metadata = {
   title: "Vendas | Multylog Empilhadeiras",
@@ -215,6 +216,27 @@ export default function NovosESeminovosPage() {
             >
               Solicitar Cotação via WhatsApp
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Formulário de Cotação ── */}
+      <section className="section-py bg-[#F5F5F7]">
+        <div className="site-container">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <span className="w-6 h-0.5 bg-[#CC0000]" />
+                <span className="text-[#CC0000] text-sm font-semibold uppercase tracking-widest">Contato</span>
+              </div>
+              <h2 className="heading-lg font-display text-[#1C1C1E] tracking-wide">
+                Solicite uma Cotação
+              </h2>
+              <p className="text-gray-500 mt-3 text-lg">
+                Preencha o formulário e nossa equipe entra em contato com uma proposta personalizada.
+              </p>
+            </div>
+            <QuoteForm />
           </div>
         </div>
       </section>
