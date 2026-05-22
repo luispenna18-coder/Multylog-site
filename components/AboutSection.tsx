@@ -25,7 +25,7 @@ export default function AboutSection() {
                   className="object-cover object-center"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-[#E2E2E5] rounded-xl px-5 py-4 shadow-xl border border-gray-300">
+              <div className="absolute bottom-2 right-2 sm:-bottom-4 sm:-right-4 bg-[#E2E2E5] rounded-xl px-5 py-4 shadow-xl border border-gray-300">
                 <p className="text-xs text-gray-500 uppercase tracking-widest mb-2 text-center">Representante Exclusivo</p>
                 <div className="flex items-center justify-center gap-3">
                   <Image

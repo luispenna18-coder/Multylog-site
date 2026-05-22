@@ -245,7 +245,7 @@ export default function TrabalheConoscoPage() {
               </p>
 
               {/* 5 ícones */}
-              <div className="flex flex-wrap gap-x-16 gap-y-6 mb-12 justify-start -ml-1">
+              <div className="flex flex-wrap gap-x-16 gap-y-6 mb-12 justify-center sm:justify-start sm:-ml-1">
                 {[
                   { src: "/images/icone-carater.png",      label: "Caráter é\nInegociável" },
                   { src: "/images/icone-equipe.png",       label: "Trabalho\nem Equipe" },

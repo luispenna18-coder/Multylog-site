@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { Analytics } from "@vercel/analytics/next";
 
 const bebas = DM_Sans({
   weight: ["600", "700", "800"],
@@ -122,9 +123,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 overflow-x-clip">{children}</main>
         <Footer />
         <WhatsAppFloat />
+        <Analytics />
       </body>
     </html>
   );
