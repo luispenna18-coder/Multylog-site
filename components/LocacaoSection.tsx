@@ -28,10 +28,24 @@ const RadioIcon = () => (
     <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
   </svg>
 );
-const TruckIcon = () => (
-  <svg width="16" height="16" fill="none" stroke="#CC0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-    <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/>
-    <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+const ForkliftIcon = () => (
+  <svg width="16" height="16" fill="none" stroke="#CC0000" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    {/* mastro vertical */}
+    <line x1="6" y1="2" x2="6" y2="15"/>
+    {/* garfo superior */}
+    <line x1="6" y1="4" x2="1" y2="4"/>
+    {/* garfo inferior */}
+    <line x1="6" y1="8" x2="1" y2="8"/>
+    {/* corpo da empilhadeira */}
+    <path d="M6 15 L6 11 L18 11 L18 15"/>
+    {/* cabine */}
+    <rect x="10" y="7" width="8" height="4" rx="1"/>
+    {/* roda traseira */}
+    <circle cx="16" cy="17.5" r="2.5"/>
+    {/* roda dianteira */}
+    <circle cx="7" cy="17.5" r="2.5"/>
+    {/* base */}
+    <line x1="6" y1="15" x2="18" y2="15"/>
   </svg>
 );
 const PulseIcon = () => (
@@ -74,7 +88,7 @@ const CARDS = [
     badge: "Frota Variada",
     title: "Nova ou Usada",
     chips: [
-      { icon: <TruckIcon />, label: "Frota Variada" },
+      { icon: <ForkliftIcon />, label: "Frota Variada" },
       { icon: <PulseIcon />, label: "Alta Disponibilidade" },
     ],
   },
