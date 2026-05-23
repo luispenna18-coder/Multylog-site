@@ -75,12 +75,13 @@ export default function NovosESeminovosPage() {
             </div>
           </div>
           {/* Right — STILL banner */}
-          <div className="order-1 lg:order-2 relative aspect-[4/3] lg:aspect-auto">
+          <div className="order-1 lg:order-2 relative aspect-[4/3] lg:aspect-auto overflow-hidden">
             <Image
               src="/images/banner-still-forca.jpg"
               alt="Do seu jeito, com a nossa força — STILL"
               fill
-              className="object-cover object-center"
+              className="object-cover"
+              style={{ objectPosition: "30% center" }}
               priority
             />
           </div>
