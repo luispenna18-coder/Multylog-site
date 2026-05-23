@@ -75,6 +75,10 @@ body {
   animation: fadeIn 0.8s ease forwards;
 }
 
+/* Hide scrollbar on carousels */
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
 /* Counter animation */
 @keyframes countUp {
   from { opacity: 0; transform: translateY(16px); }

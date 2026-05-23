@@ -47,7 +47,7 @@ export default function NovosESeminovosPage() {
       <section className="bg-white pt-20">
         <div className="grid lg:grid-cols-[2fr_3fr]">
           {/* Left */}
-          <div className="flex flex-col justify-center px-4 sm:px-10 lg:px-20 py-14 lg:py-20">
+          <div className="order-2 lg:order-1 flex flex-col justify-center px-4 sm:px-10 lg:px-20 py-14 lg:py-20">
             <p className="text-sm font-semibold uppercase tracking-widest text-[#CC0000] mb-4">
               Representante Oficial STILL no Nordeste
             </p>
@@ -75,7 +75,7 @@ export default function NovosESeminovosPage() {
             </div>
           </div>
           {/* Right — STILL banner */}
-          <div className="relative aspect-[4/3] lg:aspect-auto">
+          <div className="order-1 lg:order-2 relative aspect-[4/3] lg:aspect-auto">
             <Image
               src="/images/banner-still-forca.jpg"
               alt="Do seu jeito, com a nossa força — STILL"
@@ -135,7 +135,34 @@ export default function NovosESeminovosPage() {
               Clique no equipamento para ver as especificações técnicas completas.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-5">
+          {/* Mobile — carrossel horizontal */}
+          <div className="sm:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 scrollbar-none">
+            {EQUIPMENT.map((eq) => (
+              <Link
+                key={eq.name}
+                href={eq.href}
+                className="group snap-start shrink-0 w-56 bg-[#F5F5F7] rounded-xl overflow-hidden border border-gray-100"
+              >
+                <div className="aspect-square bg-white relative">
+                  <Image
+                    src={eq.image}
+                    alt={eq.model}
+                    fill
+                    className="object-contain p-6"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-[#1C1C1E] font-semibold text-base leading-tight">{eq.name}</p>
+                  <div className="flex items-center gap-1 mt-2 text-[#CC0000] text-xs font-semibold">
+                    Ver specs <ArrowRight size={12} />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Desktop — grade normal */}
+          <div className="hidden sm:flex flex-wrap justify-center gap-5">
             {EQUIPMENT.map((eq) => (
               <Link
                 key={eq.name}
