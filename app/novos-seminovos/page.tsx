@@ -81,7 +81,7 @@ export default function NovosESeminovosPage() {
               alt="Do seu jeito, com a nossa força — STILL"
               fill
               className="object-cover"
-              style={{ objectPosition: "30% center" }}
+              style={{ objectPosition: "70% center" }}
               priority
             />
           </div>
