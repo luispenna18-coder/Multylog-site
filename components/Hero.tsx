@@ -113,12 +113,6 @@ export default function Hero() {
       {/* Gradiente: topo e bordas sutis, base mais escura para o texto */}
       <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(5,5,7,0.20) 0%, rgba(5,5,7,0.02) 35%, rgba(5,5,7,0.02) 60%, rgba(5,5,7,0.72) 100%)" }} />
 
-      {/* Texto na base do banner */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 pb-7 text-center px-6">
-        <p className="text-white font-semibold text-sm tracking-[0.18em] uppercase">
-          Locação · Venda · Peças · Serviços
-        </p>
-      </div>
     </section>
 
     {/* ── Desktop: carrossel completo ── */}
