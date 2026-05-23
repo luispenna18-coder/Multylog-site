@@ -13,9 +13,6 @@ export default function BrandsStrip() {
               <p className="text-[#1C1C1E] font-bold text-xl sm:text-2xl lg:text-3xl leading-tight tracking-tight">
                 Somos Representantes Exclusivos
               </p>
-              <p className="text-[#CC0000] font-bold text-xl sm:text-2xl lg:text-3xl leading-tight tracking-tight mt-0.5">
-                Pernambuco&nbsp;•&nbsp;Paraíba&nbsp;•&nbsp;Alagoas
-              </p>
             </div>
 
             {/* Divisor */}
