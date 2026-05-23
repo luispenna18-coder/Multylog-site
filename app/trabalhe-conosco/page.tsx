@@ -142,9 +142,9 @@ export default function TrabalheConoscoPage() {
     <>
       {/* ── Hero ────────────────────────────────────────────────────── */}
       {/* Mobile banner — portrait, composição própria */}
-      <section className="sm:hidden relative w-full overflow-hidden mt-16" style={{ aspectRatio: "1063/1093" }}>
+      <section className="sm:hidden relative w-full overflow-hidden mt-16" style={{ aspectRatio: "1/1" }}>
         <Image
-          src="/images/banner-trabalhe-conosco-mobile.png"
+          src="/images/banner-trabalhe-conosco-mobile.jpg"
           alt="Equipe Multylog"
           fill
           className="object-cover object-center"
