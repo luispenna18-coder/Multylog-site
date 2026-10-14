@@ -34,10 +34,10 @@ const BENEFITS = [
 ];
 
 const EQUIPMENT = [
-  { name: "Empilhadeira Contrabalançada", image: "https://data.still.de/assets/products/Vehicles/Electric_Forklift_Trucks/RCE_25_35/images/STILL_Fahrzeuge_Elektro-Stapler_RCE_25-35_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=32f2da67ef189857a69d1eb39a8dacb5", href: "/maquinas#rce-20-25", model: "RCE 20-25" },
-  { name: "Retrátil",                     image: "https://data.still.de/assets/products/Vehicles/Reach_Trucks/FM-X_17_20/images/STILL_BR_Product_FMX_800x800.png?w=1920&fit=max&fm=webp&s=6513f7ed80c85c9271e14debcc88ebc9",                                                                                                                                        href: "/maquinas#fmx-17-20",        model: "FM-X 17/20" },
-  { name: "Patolada",                     image: "https://data.still.de/assets/products/Vehicles/High_Lift_Pallet_Trucks/EGV_16_NG/images/STILL_BR_Product_EGV_16_NG_Teaser_800x800.png?w=1920&fit=max&fm=webp&s=05dc690f6630fd829385495365cfd625",                                                                                                                  href: "/maquinas#egv-16-ng",        model: "EGV 16 NG" },
-  { name: "Transpaleteira",               image: "https://data.still.de/assets/products/Vehicles/Low_Lift_Pallet_trucks/ERX_27/images/STILL_BR_Product_ERX_800x800.png?w=1920&fit=max&fm=webp&s=2ca63156be30408f55377cf493f968cf",                                                                        href: "/maquinas#erx-27", model: "ERX 27" },
+  { name: "Empilhadeira Contrabalançada", image: "/images/machines/rce-20-25/principal.webp", href: "/maquinas#rce-20-25", model: "RCE 20-25" },
+  { name: "Retrátil",                     image: "/images/machines/fmx-17-20/principal.webp",                                                                                                                                        href: "/maquinas#fmx-17-20",        model: "FM-X 17/20" },
+  { name: "Patolada",                     image: "/images/machines/egv-16-ng/principal.webp",                                                                                                                  href: "/maquinas#egv-16-ng",        model: "EGV 16 NG" },
+  { name: "Transpaleteira",               image: "/images/machines/erx-27/principal.webp",                                                                        href: "/maquinas#erx-27", model: "ERX 27" },
 ];
 
 export default function NovosESeminovosPage() {

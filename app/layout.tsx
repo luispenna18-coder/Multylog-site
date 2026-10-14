@@ -47,7 +47,7 @@ const organizationSchema = {
   description:
     "Representante autorizado STILL para Pernambuco, Paraíba e Alagoas. Mais de 25 anos de experiência em locação, venda, manutenção e peças de empilhadeiras.",
   url: "https://www.multylog.com.br",
-  logo: "https://www.multylog.com.br/images/logo.png",
+  logo: "https://www.multylog.com.br/images/logo-multylog.png",
   image: "https://www.multylog.com.br/images/team.jpg",
   telephone: "+55-81-3224-0715",
   email: "comercial@multylog.com.br",
