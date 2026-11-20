@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { ArrowRight, BatteryCharging, Clock, CreditCard, ShieldCheck, Truck, Wrench } from "lucide-react";
+import { ArrowRight, BatteryCharging, Clock, ShieldCheck, Truck, Wrench } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import FadeUp from "@/components/FadeUp";
 import Countdown from "./Countdown";
@@ -26,10 +26,9 @@ type Offer = {
   /** Preço em destaque */
   price: number;
   pricePrefix: string; // "A partir de", "10x de"…
-  priceNote?: string;
   configs: { label: string; price: string }[];
   terms: string; // base de ICMS / FOB
-  payment: string; // condição de pagamento conforme a circular
+  payment: string; // condição de pagamento, exibida abaixo do preço
 };
 
 const brl = (n: number) => `R$ ${n.toLocaleString("pt-BR")}`;
@@ -47,14 +46,13 @@ const OFFERS: Offer[] = [
     badges: ["Pronta-entrega", "10x direto KION"],
     price: 10800,
     pricePrefix: "Por apenas",
-    priceNote: "ou em 10x de R$ 1.080 direto com a KION",
     configs: [
       { label: "Preço da máquina", price: "R$ 10.800" },
       { label: "Sinal de 10% (na compra)", price: "R$ 1.080" },
       { label: "+ 9 parcelas (30 a 270 dias)", price: "9x R$ 1.080" },
     ],
     terms: "Base ICMS 12%",
-    payment: "10x direto com a KION: sinal de 10% + 9 parcelas de R$ 1.080 (30 a 270 dias). Sujeito a análise de crédito.",
+    payment: "Em 10x de R$ 1.080 direto com a KION (sujeito a análise de crédito)",
   },
   {
     id: "exh-20",
@@ -71,7 +69,7 @@ const OFFERS: Offer[] = [
       { label: "Bateria Li-Ion 175Ah + carregador 100A", price: "R$ 47.300" },
     ],
     terms: "Base ICMS 12% · Máquina padrão, sem acessórios adicionais",
-    payment: "À vista.",
+    payment: "À vista",
   },
   {
     id: "exh-sf-20",
@@ -88,7 +86,7 @@ const OFFERS: Offer[] = [
       { label: "Bateria Li-Ion 175Ah + carregador 100A", price: "R$ 61.500" },
     ],
     terms: "Base ICMS 12% · Máquina padrão, sem acessórios adicionais",
-    payment: "À vista.",
+    payment: "À vista",
   },
   {
     id: "erx-27",
@@ -105,7 +103,7 @@ const OFFERS: Offer[] = [
       { label: "Com bateria de lítio 205Ah + carregador", price: "R$ 75.000" },
     ],
     terms: "Base ICMS 12% · FOB Indaiatuba/SP · Enquanto durarem os estoques",
-    payment: "À vista.",
+    payment: "À vista",
   },
   {
     id: "egv-16-ng",
@@ -122,7 +120,7 @@ const OFFERS: Offer[] = [
       { label: "Com bateria de lítio 280Ah + carregador", price: "R$ 83.645" },
     ],
     terms: "Base ICMS 12% · FOB Indaiatuba/SP",
-    payment: "À vista.",
+    payment: "À vista",
   },
   {
     id: "egv16-sf",
@@ -138,7 +136,7 @@ const OFFERS: Offer[] = [
       { label: "Com bateria de lítio 270Ah + carregador", price: "R$ 99.000" },
     ],
     terms: "Base ICMS 12% · FOB Indaiatuba/SP",
-    payment: "À vista.",
+    payment: "À vista",
   },
   {
     id: "rc-44-25c",
@@ -156,7 +154,7 @@ const OFFERS: Offer[] = [
       { label: "Mastro 6.375 mm", price: "R$ 144.818" },
     ],
     terms: "Base ICMS 12% · Não acompanha cilindro de GLP · Conforme disponibilidade",
-    payment: "À vista.",
+    payment: "À vista",
   },
   {
     id: "rce-20-25",
@@ -177,7 +175,7 @@ const OFFERS: Offer[] = [
     ],
     terms:
       "Base ICMS 12% · Nacional: FOB Indaiatuba/SP · Importada: FOB Varginha/MG, configuração fixa",
-    payment: "À vista.",
+    payment: "À vista",
   },
   {
     id: "fmx-17-20",
@@ -198,7 +196,7 @@ const OFFERS: Offer[] = [
     ],
     terms:
       "Base ICMS 12% · Carregador 380V trifásico · Inclui faróis de trabalho, sinalizador e safety light",
-    payment: "À vista.",
+    payment: "À vista",
   },
 ];
 
@@ -230,7 +228,7 @@ export default function BlackFridayPage() {
       >
         <a href="#ofertas" aria-label="Ver ofertas MultyBlack" className="absolute inset-0 block">
           <Image
-            src="/images/banner-multyblack-capa.webp"
+            src="/images/banner-multyblack-capa-v2.webp"
             alt="MultyBlack — Empilhadeiras STILL novas, 9 modelos em oferta a partir de R$ 10.800. Condições especiais por tempo limitado."
             fill
             className="object-cover"
@@ -336,18 +334,18 @@ export default function BlackFridayPage() {
             </p>
           </FadeUp>
 
-          {/* Cada card ocupa 7 linhas de um subgrid: imagem, título, specs, preço, configurações e CTA
+          {/* Cada card ocupa 6 linhas de um subgrid: imagem, título, specs, preço, configurações e CTA
               ficam na mesma altura em todos os cards da fileira. */}
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-6">
             {OFFERS.map((o, i) => (
               <FadeUp
                 key={o.id}
                 delay={(i % 3) * 0.08}
-                className="grid grid-rows-subgrid row-span-7 gap-y-0"
+                className="grid grid-rows-subgrid row-span-6 gap-y-0"
               >
                 <article
                   id={o.id}
-                  className="grid grid-rows-subgrid row-span-7 gap-y-0 bg-white rounded-xl border border-gray-100 hover:border-[#CC0000]/30 hover:shadow-md transition-all overflow-hidden scroll-mt-24"
+                  className="grid grid-rows-subgrid row-span-6 gap-y-0 bg-white rounded-xl border border-gray-100 hover:border-[#CC0000]/30 hover:shadow-md transition-all overflow-hidden scroll-mt-24"
                 >
                   {/* 1 · Imagem */}
                   <div className="relative aspect-[4/3] bg-white border-b border-gray-100">
@@ -401,7 +399,7 @@ export default function BlackFridayPage() {
                         <span className="text-[#CC0000] text-3xl">R$</span>
                         {o.price.toLocaleString("pt-BR")}
                       </p>
-                      {o.priceNote && <p className="text-white/60 text-xs mt-2">{o.priceNote}</p>}
+                      <p className="text-white/70 text-xs mt-2">{o.payment}</p>
                     </div>
                   </div>
 
@@ -420,17 +418,7 @@ export default function BlackFridayPage() {
                     <p className="text-gray-400 text-xs leading-relaxed">{o.terms}</p>
                   </div>
 
-                  {/* 6 · Condição de pagamento */}
-                  <div className="px-6 pb-5">
-                    <div className="h-full rounded-xl bg-[#F5F5F7] border-l-2 border-[#CC0000] px-4 py-3">
-                      <p className="flex items-center gap-1.5 text-[#1C1C1E] text-xs font-semibold uppercase tracking-widest mb-1">
-                        <CreditCard size={13} className="text-[#CC0000]" /> Condição de pagamento
-                      </p>
-                      <p className="text-gray-600 text-sm leading-relaxed">{o.payment}</p>
-                    </div>
-                  </div>
-
-                  {/* 7 · CTA */}
+                  {/* 6 · CTA */}
                   <div className="flex flex-col gap-2 px-6 pb-6">
                     <a
                       href={wa(

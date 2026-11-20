@@ -32,7 +32,7 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     id: 0,
-    image: "/images/banner-multyblack-capa.webp",
+    image: "/images/banner-multyblack-capa-v2.webp",
     headline: "MultyBlack — Empilhadeiras STILL novas, 9 modelos em oferta a partir de R$ 10.800",
     subheadline: "",
     cta1: { label: "", href: "" },
