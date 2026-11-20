@@ -29,7 +29,11 @@ interface Slide {
   fullBanner?: { href: string; external?: boolean };
 }
 
-const SLIDES: Slide[] = [
+// Campanha MultyBlack: enquanto true, o hero mostra só o banner da Black Friday
+// (sem os outros slides nem a foto da equipe no mobile). Volte para false ao fim da campanha.
+const SOMENTE_BLACK = true;
+
+const TODOS_SLIDES: Slide[] = [
   {
     id: 0,
     image: "/images/banner-multyblack-capa-v2.webp",
@@ -67,6 +71,8 @@ const SLIDES: Slide[] = [
   },
 ];
 
+const SLIDES = SOMENTE_BLACK ? TODOS_SLIDES.filter((s) => s.fullBanner) : TODOS_SLIDES;
+
 const INTERVAL = 4000;
 
 export default function Hero() {
@@ -90,7 +96,7 @@ export default function Hero() {
   const prev = useCallback(() => goTo((current - 1 + SLIDES.length) % SLIDES.length), [current, goTo]);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || SLIDES.length < 2) return;
     const timer = setInterval(next, INTERVAL);
     return () => clearInterval(timer);
   }, [paused, next]);
@@ -104,14 +110,29 @@ export default function Hero() {
     dragStart.current = null;
   };
 
-  const slide = SLIDES[current];
+  const slide = SLIDES[current] ?? SLIDES[0];
 
-  const slide2 = SLIDES[1];
 
   return (
     <>
-    {/* ── Mobile: foto da equipe centralizada no casal ── */}
+    {/* ── Mobile: arte MultyBlack (leva à landing) ── */}
     <section className="sm:hidden relative overflow-hidden mt-16 bg-[#1C1C1E] aspect-[3/4]">
+      <Link href="/black-friday" aria-label="Ver ofertas MultyBlack" className="absolute inset-0 block">
+        <Image
+          src="/images/banner-multyblack-capa-mobile.webp"
+          alt="MultyBlack — Empilhadeiras STILL novas a partir de R$ 10.800. Condições especiais por tempo limitado."
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+          quality={90}
+        />
+      </Link>
+    </section>
+
+    {/* ── Mobile: foto da equipe centralizada no casal (oculta durante a campanha) ── */}
+    {!SOMENTE_BLACK && (
+    <section className="sm:hidden relative overflow-hidden bg-[#1C1C1E] aspect-[3/4]">
       <Image
         src="/images/banner-mobile.png"
         alt="Equipe Multylog com empilhadeiras"
@@ -126,6 +147,7 @@ export default function Hero() {
       <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(5,5,7,0.20) 0%, rgba(5,5,7,0.02) 35%, rgba(5,5,7,0.02) 60%, rgba(5,5,7,0.72) 100%)" }} />
 
     </section>
+    )}
 
     {/* ── Desktop: carrossel completo ── */}
     <section
@@ -260,6 +282,21 @@ export default function Hero() {
       )}
 
     </section>
+
+    {/* ── Botão da campanha, abaixo do banner ── */}
+    {SOMENTE_BLACK && (
+      <div className="bg-[#1C1C1E] py-6 sm:py-8">
+        <div className="site-container flex justify-center">
+          <Link
+            href="/black-friday"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-10 py-3.5 rounded-xl transition-colors group"
+          >
+            Venha conferir
+            <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        </div>
+      </div>
+    )}
     </>
   );
 }

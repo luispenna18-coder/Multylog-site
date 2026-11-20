@@ -221,6 +221,21 @@ const wa = (text: string) => `https://wa.me/${SITE.whatsapp}?text=${encodeURICom
 export default function BlackFridayPage() {
   return (
     <>
+      {/* ── CAPA (mobile): arte vertical ── */}
+      <section className="sm:hidden relative w-full overflow-hidden bg-[#1C1C1E] mt-16 aspect-[3/4]">
+        <a href="#ofertas" aria-label="Ver ofertas MultyBlack" className="absolute inset-0 block">
+          <Image
+            src="/images/banner-multyblack-capa-mobile.webp"
+            alt="MultyBlack — Empilhadeiras STILL novas a partir de R$ 10.800. Condições especiais por tempo limitado."
+            fill
+            className="object-cover"
+            sizes="100vw"
+            quality={90}
+            priority
+          />
+        </a>
+      </section>
+
       {/* ── CAPA (desktop/tablet): arte MultyBlack ── */}
       <section
         className="hidden sm:block relative w-full overflow-hidden bg-[#1C1C1E] mt-16 lg:mt-[4.5rem]"
@@ -240,7 +255,7 @@ export default function BlackFridayPage() {
       </section>
 
       {/* ── HERO: texto no mobile; contagem + CTAs em todas as telas ── */}
-      <section className="relative overflow-hidden bg-[#1C1C1E] mt-16 sm:mt-0">
+      <section className="relative overflow-hidden bg-[#1C1C1E]">
         {/* brilhos vermelhos */}
         <div
           aria-hidden
@@ -250,43 +265,24 @@ export default function BlackFridayPage() {
               "radial-gradient(55% 70% at 100% 0%, rgba(204,0,0,0.38) 0%, rgba(204,0,0,0) 60%), radial-gradient(45% 60% at 0% 100%, rgba(204,0,0,0.22) 0%, rgba(204,0,0,0) 60%)",
           }}
         />
-        <div aria-hidden className="absolute inset-x-0 top-0 h-1 bg-[#CC0000] sm:hidden" />
 
-        <div className="site-container relative py-14 sm:py-8">
-          <div className="sm:hidden">
-            <div className="flex items-center gap-2 mb-5">
-              <span className="w-6 h-0.5 bg-[#CC0000]" />
-              <span className="text-[#CC0000] text-xs font-semibold uppercase tracking-widest">
-                Black Friday Multylog · até 30/11
-              </span>
-            </div>
+        <div className="site-container relative py-8">
+          <h1 className="sr-only">
+            MultyBlack — Black Friday Multylog: empilhadeiras STILL novas com preço de campanha
+          </h1>
 
-            <h1 className="font-display leading-[0.9] tracking-wide text-white text-6xl mb-4">
-              Multy<span className="text-[#CC0000]">Black</span>
-            </h1>
-
-            <p className="font-display text-2xl tracking-wide text-white/90 mb-4">
-              Empilhadeiras STILL com preço de campanha
-            </p>
-
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Transpaleteiras, patoladas, retráteis e contrabalançadas novas, direto de fábrica,
-              a partir de <strong className="text-white">R$ 10.800</strong>. Condições especiais por tempo limitado.
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
+          <div className="flex flex-col items-center text-center sm:flex-row sm:items-end sm:justify-between sm:text-left gap-6 sm:gap-8">
             <div>
-              <p className="text-white/50 text-xs font-semibold uppercase tracking-widest mb-3 flex items-center gap-2">
+              <p className="text-white/50 text-xs font-semibold uppercase tracking-widest mb-3 flex items-center justify-center sm:justify-start gap-2">
                 <Clock size={14} /> As ofertas terminam em
               </p>
               <Countdown deadline={DEADLINE} />
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <a
                 href="#ofertas"
-                className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors group"
+                className="inline-flex items-center justify-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors group"
               >
                 Ver ofertas
                 <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
@@ -295,7 +291,7 @@ export default function BlackFridayPage() {
                 href={wa("Olá! Vi as ofertas MultyBlack no site da Multylog e gostaria de falar com um consultor.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center border border-white/40 hover:border-white text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+                className="inline-flex items-center justify-center bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
               >
                 Falar com consultor
               </a>
@@ -306,7 +302,7 @@ export default function BlackFridayPage() {
         {/* faixa de urgência */}
         <div className="relative bg-[#CC0000] text-white overflow-hidden">
           <div className="site-container flex flex-wrap items-center justify-center gap-x-8 gap-y-1 py-3 text-xs sm:text-sm font-semibold uppercase tracking-widest">
-            <span>9 modelos em oferta</span>
+            <span className="hidden sm:inline">9 modelos em oferta</span>
             <span aria-hidden className="hidden sm:inline">•</span>
             <span>Estoque limitado</span>
             <span aria-hidden className="hidden sm:inline">•</span>
@@ -316,9 +312,9 @@ export default function BlackFridayPage() {
       </section>
 
       {/* ── OFERTAS ── */}
-      <section id="ofertas" className="bg-[#1C1C1E] py-16 lg:py-24 scroll-mt-20">
+      <section id="ofertas" className="bg-[#1C1C1E] py-12 sm:py-16 lg:py-24 scroll-mt-20">
         <div className="site-container">
-          <FadeUp className="mb-12">
+          <FadeUp className="mb-8 sm:mb-12">
             <div className="flex items-center gap-2 mb-5">
               <span className="w-6 h-0.5 bg-[#CC0000]" />
               <span className="text-[#CC0000] text-xs sm:text-sm font-semibold uppercase tracking-widest">
@@ -348,12 +344,12 @@ export default function BlackFridayPage() {
                   className="grid grid-rows-subgrid row-span-6 gap-y-0 bg-white rounded-xl border border-gray-100 hover:border-[#CC0000]/30 hover:shadow-md transition-all overflow-hidden scroll-mt-24"
                 >
                   {/* 1 · Imagem */}
-                  <div className="relative aspect-[4/3] bg-white border-b border-gray-100">
+                  <div className="relative aspect-[16/10] sm:aspect-[4/3] bg-white border-b border-gray-100">
                     <Image
                       src={o.image}
                       alt={`STILL ${o.name}`}
                       fill
-                      className="object-contain p-5"
+                      className="object-contain p-4 sm:p-5"
                       sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 420px"
                     />
                     <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
@@ -372,7 +368,7 @@ export default function BlackFridayPage() {
                   </div>
 
                   {/* 2 · Título */}
-                  <div className="px-6 pt-6 pb-4">
+                  <div className="px-5 sm:px-6 pt-5 sm:pt-6 pb-4">
                     <p className="text-[#CC0000] text-xs font-semibold uppercase tracking-widest mb-1">
                       {o.category}
                     </p>
@@ -383,7 +379,7 @@ export default function BlackFridayPage() {
                   </div>
 
                   {/* 3 · Specs */}
-                  <ul className="flex flex-wrap content-start gap-1.5 px-6 pb-5">
+                  <ul className="flex flex-wrap content-start gap-1.5 px-5 sm:px-6 pb-5">
                     {o.specs.map((s) => (
                       <li key={s} className="bg-[#F5F5F7] text-[#1C1C1E] text-xs font-medium px-2.5 py-1 rounded-full">
                         {s}
@@ -392,10 +388,10 @@ export default function BlackFridayPage() {
                   </ul>
 
                   {/* 4 · Preço */}
-                  <div className="px-6 pb-4">
+                  <div className="px-5 sm:px-6 pb-4">
                     <div className="h-full bg-[#1C1C1E] rounded-xl px-5 py-4">
                       <p className="text-white/60 text-xs font-semibold uppercase tracking-widest">{o.pricePrefix}</p>
-                      <p className="flex items-baseline gap-2 font-display text-5xl leading-none tracking-wide text-white mt-1 tabular-nums">
+                      <p className="flex items-baseline gap-2 font-display text-5xl leading-none tracking-wide text-white mt-1 tabular-nums whitespace-nowrap">
                         <span className="text-[#CC0000] text-3xl">R$</span>
                         {o.price.toLocaleString("pt-BR")}
                       </p>
@@ -404,7 +400,7 @@ export default function BlackFridayPage() {
                   </div>
 
                   {/* 5 · Configurações */}
-                  <div className="px-6 pb-5">
+                  <div className="px-5 sm:px-6 pb-5">
                     <ul className="divide-y divide-gray-100 text-sm mb-4">
                       {o.configs.map((c) => (
                         <li key={c.label} className="grid grid-cols-[1fr_auto] items-baseline gap-4 py-2">
@@ -419,7 +415,7 @@ export default function BlackFridayPage() {
                   </div>
 
                   {/* 6 · CTA */}
-                  <div className="flex flex-col gap-2 px-6 pb-6">
+                  <div className="flex flex-col gap-2 px-5 sm:px-6 pb-5 sm:pb-6">
                     <a
                       href={wa(
                         `Olá! Vi a oferta MultyBlack da STILL ${o.name} (${o.pricePrefix.toLowerCase()} ${brl(o.price)}) no site e quero garantir essa condição.`
@@ -517,7 +513,7 @@ export default function BlackFridayPage() {
             href={wa("Olá! Quero aproveitar as ofertas MultyBlack da Multylog. Pode me ajudar?")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe59] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#A80000] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
           >
             Garantir pelo WhatsApp
             <ArrowRight size={15} />

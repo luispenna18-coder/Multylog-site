@@ -20,9 +20,13 @@ export default function Countdown({ deadline }: { deadline: string }) {
   const [t, setT] = useState<ReturnType<typeof diff> | null>(null);
 
   useEffect(() => {
-    setT(diff(target));
-    const id = setInterval(() => setT(diff(target)), 1000);
-    return () => clearInterval(id);
+    const tick = () => setT(diff(target));
+    const first = setTimeout(tick, 0);
+    const id = setInterval(tick, 1000);
+    return () => {
+      clearTimeout(first);
+      clearInterval(id);
+    };
   }, [target]);
 
   if (t?.over) {
