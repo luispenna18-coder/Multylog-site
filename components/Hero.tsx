@@ -25,9 +25,19 @@ interface Slide {
   textCenter?: boolean;
   textDark?: boolean;
   headlineSize?: string;
+  /** Banner pronto (arte com texto embutido): mostra a imagem inteira, sem texto/CTAs, e o slide todo vira link */
+  fullBanner?: { href: string; external?: boolean };
 }
 
 const SLIDES: Slide[] = [
+  {
+    id: 0,
+    image: "/images/banner-multyblack-capa.webp",
+    headline: "MultyBlack — Empilhadeiras STILL novas, 9 modelos em oferta a partir de R$ 10.800",
+    subheadline: "",
+    cta1: { label: "", href: "" },
+    fullBanner: { href: "/black-friday" },
+  },
   {
     id: 1,
     image: "/images/banner-still-03.jpg",
@@ -64,6 +74,7 @@ export default function Hero() {
   const [paused, setPaused] = useState(false);
   const [animating, setAnimating] = useState(false);
   const dragStart = useRef<number | null>(null);
+  const didDrag = useRef(false);
 
   const goTo = useCallback(
     (index: number) => {
@@ -88,7 +99,8 @@ export default function Hero() {
   const handleDragEnd = (x: number) => {
     if (dragStart.current === null) return;
     const diff = dragStart.current - x;
-    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+    didDrag.current = Math.abs(diff) > 50;
+    if (didDrag.current) diff > 0 ? next() : prev();
     dragStart.current = null;
   };
 
@@ -126,6 +138,29 @@ export default function Hero() {
       onTouchStart={(e) => handleDragStart(e.touches[0].clientX)}
       onTouchEnd={(e) => handleDragEnd(e.changedTouches[0].clientX)}
     >
+      {slide.fullBanner ? (
+        <a
+          key={slide.id}
+          href={slide.fullBanner.href}
+          {...(slide.fullBanner.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          aria-label={slide.headline}
+          draggable={false}
+          onClick={(e) => { if (didDrag.current) e.preventDefault(); }}
+          className="absolute inset-0 block"
+        >
+          <Image
+            src={slide.image}
+            alt={slide.headline}
+            fill
+            draggable={false}
+            className="hero-slide-enter object-cover"
+            priority
+            sizes="100vw"
+            quality={90}
+          />
+        </a>
+      ) : (
+      <>
       {/* Banner image / bg color */}
       <div className="absolute inset-0" style={{ background: slide.bgColor ?? undefined }}>
         <Image
@@ -135,7 +170,7 @@ export default function Hero() {
           fill
           className={`hero-slide-enter ${slide.objectFit === "contain" ? "object-contain" : "object-cover"}`}
           style={{ objectPosition: slide.objectPosition ?? "center center" }}
-          priority={slide.id === 1}
+          priority={current === 0}
           sizes="(max-width: 768px) 100vw, (max-width: 1400px) 100vw, 1400px"
           quality={90}
         />
@@ -221,7 +256,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
+      </>
+      )}
 
     </section>
     </>
